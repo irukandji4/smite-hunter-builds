@@ -3,9 +3,22 @@ import hashlib
 import itertools
 import json
 import os
+from dataclasses import dataclass
 from typing import *
 
 import requests
+from tqdm import tqdm
+
+from item import Item
+
+
+@dataclass
+class Scenario:
+    fight_length: float
+    enemy_prots: int
+
+
+squishy = Scenario(fight_length=2, enemy_prots=100)
 
 
 class Smite:
@@ -13,15 +26,18 @@ class Smite:
 
     def __init__(self):
         # Smite API stuff.
-        self.dev_id = None
-        self.auth_key = None
-        self.session = None
+        self.dev_id: str | None = None
+        self.auth_key: str | None = None
+        self.session: str | None = None
         # Builds stuff.
-        self.all_items = None
-        self.starter_items = None
-        self.normal_items = None
-        self.items = None
-        self.all_gods = None
+        self.all_gods: list | None = None
+        self.avg_hunter_basic_attack: int | None = None
+        self.avg_hunter_attack_speed: float | None = None
+        self.all_items: list | None = None
+        self.starter_items: dict | None = None
+        self.normal_items: dict | None = None
+        self.items_raw: dict | None = None
+        self.items: dict[str, Item] | None = None
 
     def get_credentials(self):
         self.dev_id = os.getenv("SMITE_DEV_ID")
@@ -36,6 +52,7 @@ class Smite:
         return requests.get(Smite.base_url + "/pingjson")
 
     def create_session(self):
+        self.session = None
         self.session = self.call_method("createsession").json()["session_id"]
 
     def create_signature(self, method_name: str, timestamp: str):
@@ -74,7 +91,7 @@ class Smite:
         with open(filename, "r") as f:
             self.all_gods = json.load(f)
 
-    def get_items(self):
+    def get_items_raw(self):
         self.starter_items = []
         self.normal_items = []
         for item in self.all_items:
@@ -138,10 +155,10 @@ class Smite:
             x["DeviceName"]: x
             for x in sorted(self.normal_items, key=lambda x: x["DeviceName"])
         }
-        self.items = self.starter_items | self.normal_items
+        self.items_raw = self.starter_items | self.normal_items
 
     def print_passives(self):
-        for item_name, item in self.items.items():
+        for item_name, item in self.items_raw.items():
             passive = item["ItemDescription"]["SecondaryDescription"]
             if passive:
                 print(item_name)
@@ -150,15 +167,31 @@ class Smite:
 
     def print_stat_descs(self):
         all_stat_descs = set()
-        for item in self.items.values():
+        for item in self.items_raw.values():
             stats = item["ItemDescription"]["Menuitems"]
             for stat in stats:
                 all_stat_descs.add(stat["Description"])
         for stat_desc in sorted(all_stat_descs):
             print(stat_desc)
 
-    def gen_combinations(
-        self, must_include_item_names: List[str] = [], build_size: int = 6
+    def get_avg_hunter_stats(self):
+        hunters = [x for x in self.all_gods if x["Roles"] == "Hunter"]
+        basic_attack_sum = sum(
+            x["PhysicalPower"] + 20 * x["PhysicalPowerPerLevel"] for x in hunters
+        )
+        attack_speed_sum = sum(
+            x["AttackSpeed"] + 20 * x["AttackSpeedPerLevel"] for x in hunters
+        )
+        self.avg_hunter_basic_attack = basic_attack_sum / len(hunters)
+        self.avg_hunter_attack_speed = attack_speed_sum / len(hunters)
+
+    def get_items(self):
+        self.items = {}
+        for item_name, item_raw in self.items_raw.items():
+            self.items[item_name] = Item.from_item_raw(item_raw)
+
+    def generate_combinations(
+        self, must_include_item_names: List[str], build_size: int
     ):
         if len(must_include_item_names) > build_size:
             raise ValueError("Too many must include items")
@@ -178,3 +211,25 @@ class Smite:
         ):
             for p in itertools.product(*c):
                 yield must_include_item_names + list(p)
+
+    def get_builds(
+        self,
+        scenario: Scenario,
+        must_include_item_names: List[str],
+        build_size: int = 6,
+    ):
+        builds = {}
+        for build in tqdm(
+            list(self.generate_combinations(must_include_item_names, build_size))
+        ):
+            build_item = Item(
+                basic_attack=self.avg_hunter_basic_attack,
+                attack_speed=self.avg_hunter_attack_speed,
+            )
+            for item_name in build:
+                build_item += self.items[item_name]
+            dps = build_item.compute_dps(
+                fight_length=scenario.fight_length, enemy_prots=scenario.enemy_prots
+            )
+            builds[dps] = build
+        return builds
