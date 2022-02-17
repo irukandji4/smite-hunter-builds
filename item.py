@@ -58,7 +58,7 @@ class Item:
             one_auto_after_crit * (1 + self.basic_attack_multiplier)
             + self.yellow_aa_damage
         )
-        capped_attack_speed = max(self.attack_speed, ATTACK_SPEED_CAP)
+        capped_attack_speed = min(self.attack_speed, ATTACK_SPEED_CAP)
         aa_damage_before_mitigations = one_auto * capped_attack_speed * fight_length
         enemy_prots_after_pen_against_aa = max(
             0.0,
