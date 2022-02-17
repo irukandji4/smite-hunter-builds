@@ -2,23 +2,37 @@ import datetime
 import hashlib
 import itertools
 import json
+import operator
 import os
-from dataclasses import dataclass
 from typing import *
 
 import requests
 from tqdm import tqdm
 
-from item import Item
+import item as ITEM
+from item import God, Item, Scenario
 
+squishy = Scenario(
+    fight_length=2,
+    enemy_prots=100,
+    spectral_armor=0,
+    enemy_health=2000,
+    approx_aa_cnt=4,
+    approx_ability_cnt=1,
+    true_squishy_false_tank=True,
+)
 
-@dataclass
-class Scenario:
-    fight_length: float
-    enemy_prots: int
+tank = Scenario(
+    fight_length=4,
+    enemy_prots=300,
+    spectral_armor=0.30,
+    enemy_health=3000,
+    approx_aa_cnt=8,
+    approx_ability_cnt=2,
+    true_squishy_false_tank=False,
+)
 
-
-squishy = Scenario(fight_length=2, enemy_prots=100)
+chiron = God(aa_stim=0, aa_stim_length=0, is_failnot_good=False)
 
 
 class Smite:
@@ -39,7 +53,7 @@ class Smite:
         self.items_raw: dict | None = None
         self.items: dict[str, Item] | None = None
 
-    def get_credentials(self):
+    def read_credentials(self):
         self.dev_id = os.getenv("SMITE_DEV_ID")
         if self.dev_id is None:
             raise RuntimeError("SMITE_DEV_ID unset")
@@ -91,7 +105,7 @@ class Smite:
         with open(filename, "r") as f:
             self.all_gods = json.load(f)
 
-    def get_items_raw(self):
+    def prepare_items_raw(self):
         self.starter_items = []
         self.normal_items = []
         for item in self.all_items:
@@ -174,7 +188,7 @@ class Smite:
         for stat_desc in sorted(all_stat_descs):
             print(stat_desc)
 
-    def get_avg_hunter_stats(self):
+    def prepare_avg_hunter_stats(self):
         hunters = [x for x in self.all_gods if x["Roles"] == "Hunter"]
         basic_attack_sum = sum(
             x["PhysicalPower"] + 20 * x["PhysicalPowerPerLevel"] for x in hunters
@@ -185,10 +199,19 @@ class Smite:
         self.avg_hunter_basic_attack = basic_attack_sum / len(hunters)
         self.avg_hunter_attack_speed = attack_speed_sum / len(hunters)
 
-    def get_items(self):
+    def prepare_items(self):
         self.items = {}
+        passives_check = set(ITEM.passives.keys())
         for item_name, item_raw in self.items_raw.items():
             self.items[item_name] = Item.from_item_raw(item_raw)
+            if (
+                item_name not in passives_check
+                and item_raw["ItemDescription"]["SecondaryDescription"]
+            ):
+                print(f"[WARNING] Unrecognized passive: {item_name}")
+            passives_check.discard(item_name)
+        for item_name in passives_check:
+            print(f"[WARNING] Unused passive: {item_name}")
 
     def generate_combinations(
         self, must_include_item_names: List[str], build_size: int
@@ -215,6 +238,7 @@ class Smite:
     def get_builds(
         self,
         scenario: Scenario,
+        god: God,
         must_include_item_names: List[str],
         build_size: int = 6,
     ):
@@ -224,12 +248,24 @@ class Smite:
         ):
             build_item = Item(
                 basic_attack=self.avg_hunter_basic_attack,
-                attack_speed=self.avg_hunter_attack_speed,
+                attack_speed=self.avg_hunter_attack_speed
+                + god.aa_stim / (1 if god.aa_stim_length == 0 else 2),
+                critical_strike_multiplier=-scenario.spectral_armor,
             )
+            passives = []
             for item_name in build:
-                build_item += self.items[item_name]
+                item = self.items[item_name]
+                build_item += item
+                if item.passive is not None:
+                    passives.append(item.passive)
+            for passive in sorted(passives, key=lambda x: x.phase):
+                passive.compute(scenario, god, build_item)
             dps = build_item.compute_dps(
                 fight_length=scenario.fight_length, enemy_prots=scenario.enemy_prots
             )
             builds[dps] = build
-        return builds
+
+        builds_sorted_by_dps = sorted(
+            builds.items(), key=operator.itemgetter(0), reverse=True
+        )
+        return list(builds_sorted_by_dps)
