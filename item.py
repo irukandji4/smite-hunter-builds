@@ -47,11 +47,12 @@ class Item:
     def compute_dps(self, fight_length: float, enemy_prots: int) -> float:
         # Auto attacks.
         one_auto_before_crit = self.basic_attack + self.physical_power
+        capped_critical_strike_chance = min(self.critical_strike_chance, 1)
         one_auto_after_crit = (
-            one_auto_before_crit * (1 - self.critical_strike_chance)
+            one_auto_before_crit * (1 - capped_critical_strike_chance)
         ) + (
             one_auto_before_crit
-            * self.critical_strike_chance
+            * capped_critical_strike_chance
             * (1 + BASE_CRIT_MULTI + self.critical_strike_multiplier)
         )
         one_auto = (
