@@ -44,6 +44,7 @@ class Item:
     yellow_ability_damage: int = 0
     basic_attack_multiplier: float = 0
     passive: "Passive | None" = None
+    price: int = 0
 
     def compute_dps(self, fight_length: float, enemy_prots: int) -> float:
         # Auto attacks.
@@ -90,8 +91,14 @@ class Item:
         return dps
 
     @classmethod
-    def from_item_raw(cls, item_raw: dict) -> "Item":
-        item = cls(passive=passives.get(item_raw["DeviceName"]))
+    def from_item_raw(cls, item_raw: dict, all_items_by_id: dict) -> "Item":
+        price = item_raw["Price"]
+        child_item_id = item_raw["ChildItemId"]
+        while child_item_id != 0:
+            child_item = all_items_by_id[child_item_id]
+            price += child_item["Price"]
+            child_item_id = child_item["ChildItemId"]
+        item = cls(passive=passives.get(item_raw["DeviceName"]), price=price)
         for stat in item_raw["ItemDescription"]["Menuitems"]:
             stat_name: str = stat["Description"]
             stat_value: str = stat["Value"]
@@ -126,6 +133,7 @@ class Item:
         self.yellow_aa_damage += other.yellow_aa_damage
         self.yellow_ability_damage += other.yellow_ability_damage
         self.basic_attack_multiplier += other.basic_attack_multiplier
+        self.price += other.price
         return self
 
 

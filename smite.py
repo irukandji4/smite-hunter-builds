@@ -48,6 +48,7 @@ class Smite:
         self.avg_hunter_basic_attack: int | None = None
         self.avg_hunter_attack_speed: float | None = None
         self.all_items: list | None = None
+        self.all_items_by_id: dict | None = None
         self.starter_items: dict | None = None
         self.normal_items: dict | None = None
         self.items_raw: dict | None = None
@@ -106,6 +107,7 @@ class Smite:
             self.all_gods = json.load(f)
 
     def prepare_items_raw(self):
+        self.all_items_by_id = {x["ItemId"]: x for x in self.all_items}
         self.starter_items = []
         self.normal_items = []
         for item in self.all_items:
@@ -203,7 +205,7 @@ class Smite:
         self.items = {}
         passives_check = set(ITEM.passives.keys())
         for item_name, item_raw in self.items_raw.items():
-            self.items[item_name] = Item.from_item_raw(item_raw)
+            self.items[item_name] = Item.from_item_raw(item_raw, self.all_items_by_id)
             if (
                 item_name not in passives_check
                 and item_raw["ItemDescription"]["SecondaryDescription"]
