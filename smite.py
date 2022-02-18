@@ -233,7 +233,7 @@ class Smite:
             nested_item_names, build_size - len(must_include_item_names)
         ):
             for p in itertools.product(*c):
-                yield must_include_item_names + list(p)
+                yield tuple(must_include_item_names + list(p))
 
     def get_builds(
         self,
@@ -263,9 +263,96 @@ class Smite:
             dps = build_item.compute_dps(
                 fight_length=scenario.fight_length, enemy_prots=scenario.enemy_prots
             )
-            builds[dps] = build
+            builds[build] = dps
 
         builds_sorted_by_dps = sorted(
-            builds.items(), key=operator.itemgetter(0), reverse=True
+            builds.items(), key=operator.itemgetter(1), reverse=True
         )
-        return list(builds_sorted_by_dps)
+        builds_sorted_by_dps = {build: dps for build, dps in builds_sorted_by_dps}
+        max_dps = next(iter(builds_sorted_by_dps.values()))
+        builds_sorted_by_dps = {
+            build: (round(dps), f"{dps / max_dps:.1%}")
+            for build, dps in builds_sorted_by_dps.items()
+        }
+        return builds_sorted_by_dps
+
+    def get_builds_against_squishies(
+        self,
+        god: God,
+        must_include_item_names: List[str],
+        build_size: int = 6,
+    ):
+        return self.get_builds(
+            scenario=squishy,
+            god=god,
+            must_include_item_names=must_include_item_names,
+            build_size=build_size,
+        )
+
+    def get_builds_against_tanks(
+        self,
+        god: God,
+        must_include_item_names: List[str],
+        build_size: int = 6,
+    ):
+        return self.get_builds(
+            scenario=tank,
+            god=god,
+            must_include_item_names=must_include_item_names,
+            build_size=build_size,
+        )
+
+    def get_builds_against_two_scenarios(
+        self,
+        scenario1: Scenario,
+        scenario2: Scenario,
+        god: God,
+        must_include_item_names: List[str],
+        build_size: int = 6,
+    ):
+        builds1 = self.get_builds(
+            scenario=scenario1,
+            god=god,
+            must_include_item_names=must_include_item_names,
+            build_size=build_size,
+        )
+        builds2 = self.get_builds(
+            scenario=scenario2,
+            god=god,
+            must_include_item_names=must_include_item_names,
+            build_size=build_size,
+        )
+
+        builds = {}
+        for build, (dps2, percentile2) in builds2.items():
+            dps1, percentile1 = builds1[build]
+            avg_percentile = (
+                float(percentile1[:-1]) / 100 + float(percentile2[:-1]) / 100
+            ) / 2
+            builds[build] = (avg_percentile, percentile1, dps1, percentile2, dps2)
+
+        builds_sorted_by_percentile = sorted(
+            builds.items(), key=lambda x: x[1][0], reverse=True
+        )
+        builds_sorted_by_percentile = {
+            build: (f"{avg_percentile:.1%}", percentile1, dps1, percentile2, dps2)
+            for build, (
+                avg_percentile,
+                percentile1,
+                dps1,
+                percentile2,
+                dps2,
+            ) in builds_sorted_by_percentile
+        }
+        return builds_sorted_by_percentile
+
+    def get_builds_against_squishies_and_tanks(
+        self, god: God, must_include_item_names: List[str], build_size: int = 6
+    ):
+        return self.get_builds_against_two_scenarios(
+            scenario1=squishy,
+            scenario2=tank,
+            god=god,
+            must_include_item_names=must_include_item_names,
+            build_size=build_size,
+        )
