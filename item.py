@@ -61,9 +61,11 @@ class Item:
         )
         capped_attack_speed = min(self.attack_speed, ATTACK_SPEED_CAP)
         aa_damage_before_mitigations = one_auto * capped_attack_speed * fight_length
+        capped_percent_pen = min(0.4, self.percent_pen)
         enemy_prots_after_pen_against_aa = max(
             0.0,
-            enemy_prots * (1 - self.percent_pen - self.aa_percent_pen) - self.flat_pen,
+            enemy_prots * (1 - capped_percent_pen - self.aa_percent_pen)
+            - self.flat_pen,
         )
         aa_damage_after_mitigations = aa_damage_before_mitigations * (
             100 / (100 + enemy_prots_after_pen_against_aa)
@@ -73,7 +75,7 @@ class Item:
         ability_damage_before_mitigations = self.yellow_ability_damage
         enemy_prots_after_pen_against_abilities = max(
             0.0,
-            enemy_prots * (1 - self.percent_pen - self.ability_percent_pen)
+            enemy_prots * (1 - capped_percent_pen - self.ability_percent_pen)
             - self.flat_pen,
         )
         ability_damage_after_mitigations = ability_damage_before_mitigations * (
