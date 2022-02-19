@@ -229,6 +229,7 @@ class Smite:
                 normal_item_names.remove(item_name)
             else:
                 raise ValueError(f"Could not find item by name {item_name}")
+        # https://stackoverflow.com/a/48619647
         nested_item_names = [[x] for x in normal_item_names]
         nested_item_names = [starter_item_names] + nested_item_names
         for c in itertools.combinations(

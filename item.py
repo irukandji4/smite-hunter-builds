@@ -306,9 +306,9 @@ passives = {
     "Death's Temper": Passive(deaths_temper, 1),
     "Diamond Arrow": Passive(diamond_arrow, 1),
     "Hunter's Cowl": Passive(hunters_cowl, 1),
-    "Leader's Cowl": Passive(leaders_cowl, 40),
+    "Leader's Cowl": Passive(leaders_cowl, 40),  # POWER > POWER
     "Manikin Hidden Blade": Passive(manikin_hidden_blade, 1),
-    "Manikin Mace": Passive(manikin_mace, 30),
+    "Manikin Mace": Passive(manikin_mace, 50),  # AS > DMG
     "Ornate Arrow": Passive(ornate_arrow, 1),
     "Asi": None,
     "Atalanta's Bow": Passive(atalantas_bow, 1),
@@ -320,15 +320,15 @@ passives = {
     "Evolved Soul Eater": None,
     "Evolved Transcendence": Passive(evolved_transcendence, 1),
     "Fail-not": Passive(failnot, 1),
-    "Heartseeker": Passive(heartseeker, 50),
+    "Heartseeker": Passive(heartseeker, 50),  # POWER > DMG
     "Hydra's Lament": Passive(hydras_lament, 1),
     "Ichaival": Passive(ichaival, 1),
-    "Odysseus' Bow": Passive(odysseus_bow, 50),
+    "Odysseus' Bow": Passive(odysseus_bow, 50),  # POWER > DMG
     "Qin's Sais": Passive(qins_sais, 1),
     "Shadowsteel Shuriken": None,
-    "Silverbranch Bow": Passive(silverbranch_bow, 30),
-    "The Crusher": Passive(the_crusher, 50),
+    "Silverbranch Bow": Passive(silverbranch_bow, 30),  # AS > POWER
+    "The Crusher": Passive(the_crusher, 50),  # POWER > DMG
     "The Executioner": Passive(the_executioner, 1),
     "Titan's Bane": Passive(titans_bane, 1),
-    "Wind Demon": Passive(wind_demon, 20),
+    "Wind Demon": Passive(wind_demon, 20),  # CRIT > AS, PEN
 }
