@@ -32,7 +32,27 @@ tank = Scenario(
     true_squishy_false_tank=False,
 )
 
-chiron = God(aa_stim=0, aa_stim_length=0, is_failnot_good=False)
+amc = God(aa_stim=0, aa_stim_length=0, is_failnot_good=True)
+anhur = God(aa_stim=0, aa_stim_length=0, is_failnot_good=False)
+apollo = God(aa_stim=1, aa_stim_length=-5, is_failnot_good=True)
+artemis = God(aa_stim=0.8, aa_stim_length=5, is_failnot_good=True)
+cern = amc
+charybdis = God(aa_stim=0.25, aa_stim_length=0, is_failnot_good=True)
+chernobog = God(aa_stim=0.6, aa_stim_length=5, is_failnot_good=True)
+chiron = anhur
+cupid = God(aa_stim=0.2, aa_stim_length=0, is_failnot_good=True)
+danza = amc
+hachiman = God(aa_stim=0.4, aa_stim_length=6, is_failnot_good=True)
+heimdallr = amc
+hou_yi = amc
+izanami = God(aa_stim=0.75, aa_stim_length=6, is_failnot_good=True)
+jing_wei = anhur
+medusa = God(aa_stim=0.8, aa_stim_length=-4, is_failnot_good=True)
+neith = amc
+rama = God(aa_stim=0.5, aa_stim_length=5, is_failnot_good=False)
+skadi = amc
+ullr = God(aa_stim=0.3, aa_stim_length=0, is_failnot_good=False)
+xbalanque = amc
 
 
 @dataclass
