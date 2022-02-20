@@ -2,8 +2,8 @@ import datetime
 import hashlib
 import itertools
 import json
-import operator
 import os
+from dataclasses import dataclass
 from typing import *
 
 import requests
@@ -33,6 +33,50 @@ tank = Scenario(
 )
 
 chiron = God(aa_stim=0, aa_stim_length=0, is_failnot_good=False)
+
+
+@dataclass
+class BuildResult:
+    build: list[str]
+    build_item: Item
+    dps: float | None = None
+    dps_percent: float | None = None
+    dpspg: float | None = None
+    dpspg_percent: float | None = None
+    parent_results: list["BuildResult"] | None = None
+
+    def __repr__(self):
+        item_rows = []
+        item_row_length = 2
+        item_i = 0
+        while item_i < len(self.build):
+            item_rows.append(self.build[item_i : item_i + item_row_length])
+            item_i += item_row_length
+        build = "\n".join("  " + ", ".join(item_row) for item_row in item_rows)
+        dps = f"{self.dps_percent:.2%}" + (
+            f" ({self.dps:.2f})" if self.dps is not None else ""
+        )
+        dpspg = f"{self.dpspg_percent:.2%}" + (
+            f" ({self.dpspg:.4f})" if self.dpspg is not None else ""
+        )
+        parent_results = ""
+        for i, parent_result in enumerate(self.parent_results, 1):
+            parent_results += (
+                f"\nScenario #{i}\n"
+                f"  DPS: {parent_result.dps_percent:.2%} ({parent_result.dps:.2f})\n"
+                f"  DPSPG: {parent_result.dpspg_percent:.2%} ({parent_result.dpspg:.4f})"
+            )
+        return (
+            f"Items:\n"
+            f"{build}\n"
+            f"Price: {self.build_item.price}\n"
+            f"PWR: {self.build_item.physical_power} AS: {self.build_item.attack_speed:.2f}\n"
+            f"CRIT: {self.build_item.critical_strike_chance:.0%} PEN: {self.build_item.percent_pen:.0%}\n"
+            f"DPS: {dps}\n"
+            f"DPSPG: {dpspg}"
+            f"{parent_results}\n"
+            "-----------------------------"
+        )
 
 
 class Smite:
@@ -215,9 +259,7 @@ class Smite:
         for item_name in passives_check:
             print(f"[WARNING] Unused passive: {item_name}")
 
-    def generate_combinations(
-        self, must_include_item_names: List[str], build_size: int
-    ):
+    def generate_builds(self, must_include_item_names: list[str], build_size: int):
         if len(must_include_item_names) > build_size:
             raise ValueError("Too many must include items")
         starter_item_names = list(self.starter_items.keys())
@@ -236,18 +278,20 @@ class Smite:
             nested_item_names, build_size - len(must_include_item_names)
         ):
             for p in itertools.product(*c):
-                yield tuple(must_include_item_names + list(p))
+                yield must_include_item_names + list(p)
 
-    def get_builds(
+    def get_build_results(
         self,
         scenario: Scenario,
         god: God,
-        must_include_item_names: List[str],
+        must_include_item_names: list[str],
         build_size: int = 6,
-    ):
-        builds = {}
+    ) -> list[BuildResult]:
+        build_results = []
+        max_dps = 0.0
+        max_dpspg = 0.0
         for build in tqdm(
-            list(self.generate_combinations(must_include_item_names, build_size))
+            list(self.generate_builds(must_include_item_names, build_size))
         ):
             build_item = Item(
                 basic_attack=self.avg_hunter_basic_attack,
@@ -255,6 +299,7 @@ class Smite:
                 + god.aa_stim / (1 if god.aa_stim_length == 0 else 2),
                 critical_strike_multiplier=-scenario.spectral_armor,
             )
+
             passives = []
             for item_name in build:
                 item = self.items[item_name]
@@ -263,99 +308,88 @@ class Smite:
                     passives.append(item.passive)
             for passive in sorted(passives, key=lambda x: x.phase):
                 passive.compute(scenario, god, build_item)
+
             dps = build_item.compute_dps(
                 fight_length=scenario.fight_length, enemy_prots=scenario.enemy_prots
             )
-            builds[build] = dps
+            max_dps = max(max_dps, dps)
+            dpspg = dps / build_item.price
+            max_dpspg = max(max_dpspg, dpspg)
+            build_results.append(
+                BuildResult(
+                    build=build,
+                    build_item=build_item,
+                    dps=dps,
+                    dpspg=dpspg,
+                    parent_results=[],
+                )
+            )
 
-        builds_sorted_by_dps = sorted(
-            builds.items(), key=operator.itemgetter(1), reverse=True
-        )
-        builds_sorted_by_dps = {build: dps for build, dps in builds_sorted_by_dps}
-        max_dps = next(iter(builds_sorted_by_dps.values()))
-        builds_sorted_by_dps = {
-            build: (round(dps), f"{dps / max_dps:.1%}")
-            for build, dps in builds_sorted_by_dps.items()
-        }
-        return builds_sorted_by_dps
+        for build_result in build_results:
+            build_result.dps_percent = build_result.dps / max_dps
+            build_result.dpspg_percent = build_result.dpspg / max_dpspg
+        return build_results
 
-    def get_builds_against_squishies(
+    @staticmethod
+    def average_build_results(
+        list_of_build_results: Sequence[list[BuildResult]],
+        weights: Sequence[float] = None,
+    ) -> list[BuildResult]:
+        if weights is None:
+            weights = [1] * len(list_of_build_results)
+        assert len(list_of_build_results) == len(weights)
+        total_weight = sum(weights)
+        avg_build_results = [
+            BuildResult(
+                build=build_result.build,
+                build_item=build_result.build_item,
+                dps_percent=0,
+                dpspg_percent=0,
+                parent_results=[],
+            )
+            for build_result in list_of_build_results[0]
+        ]
+        for build_results, weight in zip(list_of_build_results, weights):
+            for avg_build_result, build_result in zip(avg_build_results, build_results):
+                avg_build_result.dps_percent += weight * build_result.dps_percent
+                avg_build_result.dpspg_percent += weight * build_result.dpspg_percent
+                avg_build_result.parent_results.append(build_result)
+
+        for avg_build_result in avg_build_results:
+            avg_build_result.dps_percent /= total_weight
+            avg_build_result.dpspg_percent /= total_weight
+        return avg_build_results
+
+    def get_default_build_results(
         self,
         god: God,
-        must_include_item_names: List[str],
+        must_include_item_names: list[str],
         build_size: int = 6,
     ):
-        return self.get_builds(
+        build_results_against_squishies = self.get_build_results(
             scenario=squishy,
             god=god,
             must_include_item_names=must_include_item_names,
             build_size=build_size,
         )
-
-    def get_builds_against_tanks(
-        self,
-        god: God,
-        must_include_item_names: List[str],
-        build_size: int = 6,
-    ):
-        return self.get_builds(
+        build_results_against_tanks = self.get_build_results(
             scenario=tank,
             god=god,
             must_include_item_names=must_include_item_names,
             build_size=build_size,
         )
+        averaged_build_results = Smite.average_build_results(
+            [build_results_against_squishies, build_results_against_tanks]
+        )
+        return Smite.sort_build_results(averaged_build_results)
 
-    def get_builds_against_two_scenarios(
-        self,
-        scenario1: Scenario,
-        scenario2: Scenario,
-        god: God,
-        must_include_item_names: List[str],
-        build_size: int = 6,
+    @staticmethod
+    def sort_build_results(
+        build_results: Iterable[BuildResult], true_dps_false_dpspg: bool = False
     ):
-        builds1 = self.get_builds(
-            scenario=scenario1,
-            god=god,
-            must_include_item_names=must_include_item_names,
-            build_size=build_size,
+        comparator = (
+            (lambda x: x.dps_percent)
+            if true_dps_false_dpspg
+            else (lambda x: x.dpspg_percent)
         )
-        builds2 = self.get_builds(
-            scenario=scenario2,
-            god=god,
-            must_include_item_names=must_include_item_names,
-            build_size=build_size,
-        )
-
-        builds = {}
-        for build, (dps2, percentile2) in builds2.items():
-            dps1, percentile1 = builds1[build]
-            avg_percentile = (
-                float(percentile1[:-1]) / 100 + float(percentile2[:-1]) / 100
-            ) / 2
-            builds[build] = (avg_percentile, percentile1, dps1, percentile2, dps2)
-
-        builds_sorted_by_percentile = sorted(
-            builds.items(), key=lambda x: x[1][0], reverse=True
-        )
-        builds_sorted_by_percentile = {
-            build: (f"{avg_percentile:.1%}", percentile1, dps1, percentile2, dps2)
-            for build, (
-                avg_percentile,
-                percentile1,
-                dps1,
-                percentile2,
-                dps2,
-            ) in builds_sorted_by_percentile
-        }
-        return builds_sorted_by_percentile
-
-    def get_builds_against_squishies_and_tanks(
-        self, god: God, must_include_item_names: List[str], build_size: int = 6
-    ):
-        return self.get_builds_against_two_scenarios(
-            scenario1=squishy,
-            scenario2=tank,
-            god=god,
-            must_include_item_names=must_include_item_names,
-            build_size=build_size,
-        )
+        return list(sorted(build_results, key=comparator, reverse=True))
