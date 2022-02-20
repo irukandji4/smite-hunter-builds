@@ -91,6 +91,7 @@ class Smite:
         self.all_gods: list | None = None
         self.avg_hunter_basic_attack: int | None = None
         self.avg_hunter_attack_speed: float | None = None
+        self.avg_hunter_mana: int | None = None
         self.all_items: list | None = None
         self.all_items_by_id: dict | None = None
         self.starter_items: dict | None = None
@@ -242,8 +243,10 @@ class Smite:
         attack_speed_sum = sum(
             x["AttackSpeed"] + 20 * x["AttackSpeedPerLevel"] for x in hunters
         )
+        mana_sum = sum(x["Mana"] + 20 * x["ManaPerLevel"] for x in hunters)
         self.avg_hunter_basic_attack = basic_attack_sum / len(hunters)
         self.avg_hunter_attack_speed = attack_speed_sum / len(hunters)
+        self.avg_hunter_mana = mana_sum / len(hunters)
 
     def prepare_items(self):
         self.items = {}

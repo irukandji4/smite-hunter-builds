@@ -43,6 +43,7 @@ class Item:
     yellow_aa_damage: int = 0
     yellow_ability_damage: int = 0
     basic_attack_multiplier: float = 0
+    mana: int = 0
     passive: "Passive | None" = None
     price: int = 0
 
@@ -118,6 +119,8 @@ class Item:
                         item.flat_pen += int(stat_value)
                 case "Physical Power":
                     item.physical_power += int(stat_value)
+                case "Mana":
+                    item.mana += int(stat_value)
         return item
 
     def __iadd__(self, other: "Item"):
@@ -133,6 +136,7 @@ class Item:
         self.yellow_aa_damage += other.yellow_aa_damage
         self.yellow_ability_damage += other.yellow_ability_damage
         self.basic_attack_multiplier += other.basic_attack_multiplier
+        self.mana += other.mana
         self.price += other.price
         return self
 
@@ -201,7 +205,7 @@ def evolved_rage(scenario: Scenario, god: God, build: Item):
 
 
 def evolved_transcendence(scenario: Scenario, god: God, build: Item):
-    build.physical_power += 0.03 * 2000
+    build.physical_power += 0.03 * build.mana
 
 
 def failnot(scenario: Scenario, god: God, build: Item):
