@@ -1,12 +1,9 @@
-import datetime
-import hashlib
 import itertools
 import json
-import os
 from dataclasses import dataclass
 from typing import *
 
-import requests
+import charybdis as charybdis_
 from tqdm import tqdm
 
 from item import God, Item, Scenario, passives_map
@@ -103,14 +100,8 @@ class BuildResult:
 
 
 class Smite:
-    base_url = "https://api.smitegame.com/smiteapi.svc"
-
     def __init__(self):
-        # Smite API stuff.
-        self.dev_id: str | None = None
-        self.auth_key: str | None = None
-        self.session: str | None = None
-        # Builds stuff.
+        self.api = charybdis_.Api()
         self.all_gods: list | None = None
         self.avg_hunter_basic_attack: int | None = None
         self.avg_hunter_attack_speed: float | None = None
@@ -122,42 +113,8 @@ class Smite:
         self.items_raw: dict | None = None
         self.items: dict[str, Item] | None = None
 
-    def read_credentials(self):
-        self.dev_id = os.getenv("SMITE_DEV_ID")
-        if self.dev_id is None:
-            raise RuntimeError("SMITE_DEV_ID unset")
-        self.auth_key = os.getenv("SMITE_AUTH_KEY")
-        if self.auth_key is None:
-            raise RuntimeError("SMITE_AUTH_KEY unset")
-
-    @staticmethod
-    def ping():
-        return requests.get(Smite.base_url + "/pingjson")
-
-    def create_session(self):
-        self.session = None
-        self.session = self.call_method("createsession").json()["session_id"]
-
-    def create_signature(self, method_name: str, timestamp: str):
-        return hashlib.md5(
-            f"{self.dev_id}{method_name}{self.auth_key}{timestamp}".encode("utf8")
-        ).hexdigest()
-
-    def call_method(self, method_name: str, *args):
-        timestamp = datetime.datetime.now(datetime.timezone.utc).strftime(
-            "%Y%m%d%H%M%S"
-        )
-        signature = self.create_signature(method_name, timestamp)
-        if self.session is None:
-            url = f"{Smite.base_url}/{method_name}json/{self.dev_id}/{signature}/{timestamp}"
-        else:
-            url = f"{Smite.base_url}/{method_name}json/{self.dev_id}/{signature}/{self.session}/{timestamp}"
-        for arg in args:
-            url += f"/{arg}"
-        return requests.get(url)
-
     def save_items_to_file(self, filename: str = "items.json"):
-        self.all_items = self.call_method("getitems", "1").json()
+        self.all_items = self.api.call_method("getitems", "1")
         with open(filename, "w") as f:
             f.write(json.dumps(self.all_items, indent=2))
 
@@ -166,7 +123,7 @@ class Smite:
             self.all_items = json.load(f)
 
     def save_gods_to_file(self, filename: str = "gods.json"):
-        self.all_gods = self.call_method("getgods", "1").json()
+        self.all_gods = self.api.call_method("getgods", "1")
         with open(filename, "w") as f:
             f.write(json.dumps(self.all_gods, indent=2))
 

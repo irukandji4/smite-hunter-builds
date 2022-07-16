@@ -4,6 +4,8 @@
 #
 #    pip-compile
 #
+anyio==3.6.1
+    # via httpcore
 argon2-cffi==21.3.0
     # via notebook
 argon2-cffi-bindings==21.2.0
@@ -19,11 +21,13 @@ black==22.1.0
 bleach==4.1.0
     # via nbconvert
 certifi==2021.10.8
-    # via requests
+    # via
+    #   httpcore
+    #   httpx
 cffi==1.15.0
     # via argon2-cffi-bindings
-charset-normalizer==2.0.12
-    # via requests
+charybdis==1.0.0
+    # via -r requirements.in
 click==8.0.3
     # via black
 debugpy==1.5.1
@@ -38,8 +42,16 @@ entrypoints==0.4
     #   nbconvert
 executing==0.8.2
     # via stack-data
+h11==0.12.0
+    # via httpcore
+httpcore==0.15.0
+    # via httpx
+httpx==0.23.0
+    # via charybdis
 idna==3.3
-    # via requests
+    # via
+    #   anyio
+    #   rfc3986
 ipykernel==6.9.0
     # via notebook
 ipython==8.0.1
@@ -137,14 +149,19 @@ pyzmq==22.3.0
     # via
     #   jupyter-client
     #   notebook
-requests==2.27.1
-    # via -r requirements.in
+rfc3986[idna2008]==1.5.0
+    # via httpx
 send2trash==1.8.0
     # via notebook
 six==1.16.0
     # via
     #   bleach
     #   python-dateutil
+sniffio==1.2.0
+    # via
+    #   anyio
+    #   httpcore
+    #   httpx
 stack-data==0.2.0
     # via ipython
 terminado==0.13.1
@@ -172,8 +189,6 @@ traitlets==5.1.1
     #   nbconvert
     #   nbformat
     #   notebook
-urllib3==1.26.8
-    # via requests
 wcwidth==0.2.5
     # via prompt-toolkit
 webencodings==0.5.1
