@@ -9,8 +9,7 @@ from typing import *
 import requests
 from tqdm import tqdm
 
-import item as ITEM
-from item import God, Item, Scenario
+from item import God, Item, Scenario, passives_map
 
 squishy = Scenario(
     fight_length=2,
@@ -83,15 +82,19 @@ class BuildResult:
         for i, parent_result in enumerate(self.parent_results, 1):
             parent_results += (
                 f"\nScenario #{i}\n"
-                f"  DPS: {parent_result.dps_percent:.2%} ({parent_result.dps:.2f})\n"
-                f"  DPSPG: {parent_result.dpspg_percent:.2%} ({parent_result.dpspg:.4f})"
+                f"  DPS:"
+                f" {parent_result.dps_percent:.2%} ({parent_result.dps:.2f})\n"
+                f"  DPSPG:"
+                f" {parent_result.dpspg_percent:.2%} ({parent_result.dpspg:.4f})"
             )
         return (
             f"Items:\n"
             f"{build}\n"
             f"Price: {self.build_item.price}\n"
-            f"PWR: {self.build_item.physical_power} AS: {self.build_item.attack_speed:.2f}\n"
-            f"CRIT: {self.build_item.critical_strike_chance:.0%} PEN: {self.build_item.percent_pen:.0%}\n"
+            f"PWR: {self.build_item.physical_power}"
+            f" AS: {self.build_item.attack_speed:.2f}\n"
+            f"CRIT: {self.build_item.critical_strike_chance:.0%}"
+            f" PEN: {self.build_item.percent_pen:.0%}\n"
             f"DPS: {dps}\n"
             f"DPSPG: {dpspg}"
             f"{parent_results}\n"
@@ -270,7 +273,7 @@ class Smite:
 
     def prepare_items(self):
         self.items = {}
-        passives_check = set(ITEM.passives.keys())
+        passives_check = set(passives_map.keys())
         for item_name, item_raw in self.items_raw.items():
             self.items[item_name] = Item.from_item_raw(item_raw, self.all_items_by_id)
             if (

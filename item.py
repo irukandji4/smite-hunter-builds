@@ -99,7 +99,7 @@ class Item:
             child_item = all_items_by_id[child_item_id]
             price += child_item["Price"]
             child_item_id = child_item["ChildItemId"]
-        item = cls(passive=passives.get(item_raw["DeviceName"]), price=price)
+        item = cls(passive=passives_map.get(item_raw["DeviceName"]), price=price)
         for stat in item_raw["ItemDescription"]["Menuitems"]:
             stat_name: str = stat["Description"]
             stat_value: str = stat["Value"]
@@ -141,79 +141,79 @@ class Item:
         return self
 
 
-def bluestone_brooch(scenario: Scenario, god: God, build: Item):
+def bluestone_brooch(scenario: Scenario, _: God, build: Item):
     if scenario.approx_ability_cnt > 0:
         build.yellow_ability_damage += 50 + 0.075 * scenario.enemy_health
         if scenario.approx_ability_cnt > 1:
             build.yellow_ability_damage += 50 + 0.0375 * scenario.enemy_health
 
 
-def corrupted_bluestone(scenario: Scenario, god: God, build: Item):
+def corrupted_bluestone(scenario: Scenario, _: God, build: Item):
     build.yellow_ability_damage += 75 * scenario.approx_ability_cnt
     build.attack_speed += 0.1 * scenario.approx_ability_cnt
 
 
-def deaths_temper(scenario: Scenario, god: God, build: Item):
+def deaths_temper(scenario: Scenario, _: God, build: Item):
     if scenario.true_squishy_false_tank:
         build.basic_attack_multiplier += 0.175
 
 
-def diamond_arrow(scenario: Scenario, god: God, build: Item):
+def diamond_arrow(scenario: Scenario, _: God, build: Item):
     if scenario.true_squishy_false_tank:
         build.attack_speed += 0.6
 
 
-def hunters_cowl(scenario: Scenario, god: God, build: Item):
+def hunters_cowl(__: Scenario, _: God, build: Item):
     build.attack_speed += 0.2
 
 
-def leaders_cowl(scenario: Scenario, god: God, build: Item):
+def leaders_cowl(__: Scenario, _: God, build: Item):
     build.physical_power = round(build.physical_power * 1.05)
 
 
-def manikin_hidden_blade(scenario: Scenario, god: God, build: Item):
+def manikin_hidden_blade(scenario: Scenario, _: God, build: Item):
     if scenario.approx_ability_cnt > 0:
         build.yellow_ability_damage += 0.2 * scenario.enemy_health
 
 
-def manikin_mace(scenario: Scenario, god: God, build: Item):
+def manikin_mace(__: Scenario, _: God, build: Item):
     capped_attack_speed = min(build.attack_speed, 2)
     build.yellow_ability_damage += capped_attack_speed * 60
 
 
-def ornate_arrow(scenario: Scenario, god: God, build: Item):
+def ornate_arrow(scenario: Scenario, _: God, build: Item):
     stacks = 10 if scenario.true_squishy_false_tank else 5
     build.attack_speed += stacks * 0.0125
     build.critical_strike_chance += stacks * 0.01
 
 
-def atalantas_bow(scenario: Scenario, god: God, build: Item):
+def atalantas_bow(scenario: Scenario, _: God, build: Item):
     if scenario.true_squishy_false_tank:
         build.attack_speed += 0.2
 
 
-def deathbringer(scenario: Scenario, god: God, build: Item):
+def deathbringer(__: Scenario, _: God, build: Item):
     build.critical_strike_multiplier += 0.3
 
 
-def dominance(scenario: Scenario, god: God, build: Item):
+def dominance(__: Scenario, _: God, build: Item):
     build.aa_percent_pen += 0.15
 
 
-def evolved_rage(scenario: Scenario, god: God, build: Item):
+def evolved_rage(scenario: Scenario, _: God, build: Item):
     build.critical_strike_chance -= 0.06 if scenario.true_squishy_false_tank else 0.09
 
 
-def evolved_transcendence(scenario: Scenario, god: God, build: Item):
+def evolved_transcendence(__: Scenario, _: God, build: Item):
     build.physical_power += 0.03 * build.mana
 
 
-def failnot(scenario: Scenario, god: God, build: Item):
+def failnot(_: Scenario, god: God, build: Item):
     if god.is_failnot_good:
         build.critical_strike_chance += 0.2
 
 
-def heartseeker(scenario: Scenario, god: God, build: Item):
+def heartseeker(scenario: Scenario, _: God, build: Item):
     if scenario.approx_ability_cnt == 0:
         return
     capped_power = min(400, build.physical_power)
@@ -224,13 +224,13 @@ def heartseeker(scenario: Scenario, god: God, build: Item):
         build.yellow_ability_damage += 0.75 * scaled_percent * scenario.enemy_health
 
 
-def hydras_lament(scenario: Scenario, god: God, build: Item):
+def hydras_lament(scenario: Scenario, _: God, build: Item):
     if scenario.approx_aa_cnt > 0:
         uptime = min(scenario.approx_ability_cnt / scenario.approx_aa_cnt, 1)
         build.basic_attack_multiplier += 0.4 * uptime
 
 
-def ichaival(scenario: Scenario, god: God, build: Item):
+def ichaival(scenario: Scenario, _: God, build: Item):
     build.physical_power += ichaival_inner(scenario.approx_aa_cnt)
 
 
@@ -244,32 +244,32 @@ def ichaival_inner(approx_aa_cnt: int):
     return sum(power_on_each_auto) / len(power_on_each_auto)
 
 
-def odysseus_bow(scenario: Scenario, god: God, build: Item):
+def odysseus_bow(scenario: Scenario, _: God, build: Item):
     stacks = 1 if scenario.true_squishy_false_tank else 2
     build.yellow_ability_damage += (
         stacks * 2 * (15 + 0.6 * build.basic_attack + build.physical_power)
     )
 
 
-def qins_sais(scenario: Scenario, god: God, build: Item):
+def qins_sais(scenario: Scenario, _: God, build: Item):
     capped_health = min(2750, scenario.enemy_health)
     scaling_health = max(0, capped_health - 2000)
     scaled_percent = 0.03 + 0.02 * (scaling_health / 750)
     build.yellow_aa_damage += scaled_percent * scenario.enemy_health
 
 
-def silverbranch_bow(scenario: Scenario, god: God, build: Item):
+def silverbranch_bow(__: Scenario, _: God, build: Item):
     overcapped_attack_speed = max(0.0, build.attack_speed - ATTACK_SPEED_CAP)
     build.physical_power += 2 * int(overcapped_attack_speed / 0.02)
 
 
-def the_crusher(scenario: Scenario, god: God, build: Item):
+def the_crusher(scenario: Scenario, _: God, build: Item):
     build.yellow_ability_damage += scenario.approx_ability_cnt * (
         20 + 0.15 * build.physical_power
     )
 
 
-def the_executioner(scenario: Scenario, god: God, build: Item):
+def the_executioner(scenario: Scenario, _: God, build: Item):
     build.aa_percent_pen += the_executioner_inner(scenario.approx_aa_cnt)
 
 
@@ -283,11 +283,11 @@ def the_executioner_inner(approx_aa_cnt: int):
     return sum(pen_on_each_auto) / len(pen_on_each_auto)
 
 
-def titans_bane(scenario: Scenario, god: God, build: Item):
+def titans_bane(__: Scenario, _: God, build: Item):
     build.ability_percent_pen += 0.2
 
 
-def wind_demon(scenario: Scenario, god: God, build: Item):
+def wind_demon(scenario: Scenario, _: God, build: Item):
     if build.critical_strike_chance == 0 or scenario.approx_aa_cnt == 0:
         return
     aa_cnt_before_crit = round(1 / build.critical_strike_chance)
@@ -303,7 +303,7 @@ class Passive:
     phase: int
 
 
-passives = {
+passives_map = {
     "Bluestone Brooch": Passive(bluestone_brooch, 1),
     "Corrupted Bluestone": Passive(corrupted_bluestone, 1),
     "Death's Embrace": None,
