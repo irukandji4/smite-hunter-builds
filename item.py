@@ -172,8 +172,8 @@ def leaders_cowl(__: Scenario, _: God, build: Item):
 
 
 def manikin_hidden_blade(scenario: Scenario, _: God, build: Item):
-    if scenario.approx_ability_cnt > 0:
-        build.yellow_ability_damage += 0.2 * scenario.enemy_health
+    nerf_multiplier = 0.5
+    build.yellow_ability_damage += 0.2 * scenario.enemy_health * nerf_multiplier
 
 
 def manikin_mace(__: Scenario, _: God, build: Item):
@@ -210,7 +210,8 @@ def evolved_transcendence(__: Scenario, _: God, build: Item):
 
 def failnot(_: Scenario, god: God, build: Item):
     if god.is_failnot_good:
-        build.critical_strike_chance += 0.2
+        nerf_multiplier = 0.5
+        build.critical_strike_chance += 0.2 * nerf_multiplier
 
 
 def heartseeker(scenario: Scenario, _: God, build: Item):

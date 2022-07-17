@@ -14,7 +14,7 @@ squishy = Scenario(
     spectral_armor=0,
     enemy_health=2000,
     approx_aa_cnt=4,
-    approx_ability_cnt=1,
+    approx_ability_cnt=0,
     true_squishy_false_tank=True,
 )
 
@@ -24,7 +24,7 @@ tank = Scenario(
     spectral_armor=0.40,
     enemy_health=3000,
     approx_aa_cnt=8,
-    approx_ability_cnt=2,
+    approx_ability_cnt=0,
     true_squishy_false_tank=False,
 )
 
@@ -372,7 +372,7 @@ class Smite:
             build_size=build_size,
         )
         build_results_both = self.average_build_results(
-            [build_results_squishy, build_results_tank],
+            [build_results_squishy, build_results_tank], weights=[3, 2]
         )
         return Experiment(
             dps_squishy=self.sort_build_results(build_results_squishy, True),
