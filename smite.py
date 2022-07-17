@@ -99,6 +99,16 @@ class BuildResult:
         )
 
 
+@dataclass
+class Experiment:
+    dps_squishy: List[BuildResult]
+    dpspg_squishy: List[BuildResult]
+    dps_tank: List[BuildResult]
+    dpspg_tank: List[BuildResult]
+    dps_both: List[BuildResult]
+    dpspg_both: List[BuildResult]
+
+
 class Smite:
     def __init__(self):
         self.api = charybdis_.Api()
@@ -343,36 +353,43 @@ class Smite:
             avg_build_result.dpspg_percent /= total_weight
         return avg_build_results
 
-    def get_default_build_results(
+    def run_experiment(
         self,
         god: God,
         must_include_item_names: list[str],
         build_size: int = 6,
     ):
-        build_results_against_squishies = self.get_build_results(
+        build_results_squishy = self.get_build_results(
             scenario=squishy,
             god=god,
             must_include_item_names=must_include_item_names,
             build_size=build_size,
         )
-        build_results_against_tanks = self.get_build_results(
+        build_results_tank = self.get_build_results(
             scenario=tank,
             god=god,
             must_include_item_names=must_include_item_names,
             build_size=build_size,
         )
-        averaged_build_results = Smite.average_build_results(
-            [build_results_against_squishies, build_results_against_tanks]
+        build_results_both = self.average_build_results(
+            [build_results_squishy, build_results_tank],
         )
-        return Smite.sort_build_results(averaged_build_results)
+        return Experiment(
+            dps_squishy=self.sort_build_results(build_results_squishy, True),
+            dpspg_squishy=self.sort_build_results(build_results_squishy, False),
+            dps_tank=self.sort_build_results(build_results_tank, True),
+            dpspg_tank=self.sort_build_results(build_results_tank, False),
+            dps_both=self.sort_build_results(build_results_both, True),
+            dpspg_both=self.sort_build_results(build_results_both, False),
+        )
 
     @staticmethod
     def sort_build_results(
-        build_results: Iterable[BuildResult], true_dps_false_dpspg: bool = False
+        build_results: Iterable[BuildResult], true_dps_false_dpspg: bool
     ):
         comparator = (
             (lambda x: x.dps_percent)
             if true_dps_false_dpspg
             else (lambda x: x.dpspg_percent)
         )
-        return list(sorted(build_results, key=comparator, reverse=True))
+        return sorted(build_results, key=comparator, reverse=True)
