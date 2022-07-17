@@ -3,6 +3,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Iron Mail",
+    "Glyph": "n",
     "IconId": 2866,
     "ItemDescription": {
       "Description": "Physical Protection and Health.",
@@ -33,6 +34,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 7526,
     "DeviceName": "Steel Mail",
+    "Glyph": "n",
     "IconId": 2865,
     "ItemDescription": {
       "Description": "",
@@ -63,6 +65,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 7527,
     "DeviceName": "Sovereignty",
+    "Glyph": "n",
     "IconId": 2864,
     "ItemDescription": {
       "Description": "This item gives the owner an aura of physical protections.",
@@ -73,7 +76,7 @@
         },
         {
           "Description": "Physical Protection",
-          "Value": "+45"
+          "Value": "+40"
         }
       ],
       "SecondaryDescription": "AURA - Allied gods within 70 units have their Physical Protections increased by 15 and their HP5 increased by 35."
@@ -93,6 +96,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 7527,
     "DeviceName": "Mystical Mail",
+    "Glyph": "n",
     "IconId": 2917,
     "ItemDescription": {
       "Description": "This item deals damage to nearby enemies.",
@@ -110,7 +114,7 @@
           "Value": "+20%"
         }
       ],
-      "SecondaryDescription": "AURA - ALL enemies within 25 units are dealt 25 (+1 Per Level) Magical Damage per second."
+      "SecondaryDescription": "AURA - ALL enemies within 25 units are dealt 20 (+1 Per Level) Magical Damage per second."
     },
     "ItemId": 7537,
     "ItemTier": 3,
@@ -127,6 +131,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 7527,
     "DeviceName": "Midgardian Mail",
+    "Glyph": "n",
     "IconId": 2863,
     "ItemDescription": {
       "Description": "This item causes attackers to have a chance to be slowed.",
@@ -157,6 +162,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 7527,
     "DeviceName": "Emperor's Armor",
+    "Glyph": "n",
     "IconId": 4670,
     "ItemDescription": {
       "Description": "When in range of an enemy structure, that structure's Attack Speed is reduced by 30%. When in range of an ally structure, that structures has its Attack Speed increased by 50%.",
@@ -187,6 +193,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Light Blade",
+    "Glyph": "n",
     "IconId": 2738,
     "ItemDescription": {
       "Description": "Increased Attack Speed and Power.",
@@ -217,6 +224,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 7573,
     "DeviceName": "Balanced Blade",
+    "Glyph": "n",
     "IconId": 2736,
     "ItemDescription": {
       "Description": "",
@@ -247,6 +255,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 7573,
     "DeviceName": "*Asi",
+    "Glyph": "n",
     "IconId": 2526,
     "ItemDescription": {
       "Description": "This item gives increased Physical Lifesteal when at low Health.",
@@ -281,7 +290,8 @@
     "ActiveFlag": "y",
     "ChildItemId": 7574,
     "DeviceName": "The Executioner",
-    "IconId": 2803,
+    "Glyph": "n",
+    "IconId": 11046,
     "ItemDescription": {
       "Description": "This item causes your Basic Attacks to reduce the target's Physical Protections.",
       "Menuitems": [
@@ -311,6 +321,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 7574,
     "DeviceName": "Qin's Sais",
+    "Glyph": "n",
     "IconId": 2802,
     "ItemDescription": {
       "Description": "This item causes the owner's Basic Attacks to deal a percentage of the target's Health as additional damage.",
@@ -328,7 +339,7 @@
     },
     "ItemId": 7593,
     "ItemTier": 3,
-    "Price": 1450,
+    "Price": 1350,
     "RestrictedRoles": "no restrictions",
     "RootItemId": 7573,
     "ShortDesc": "Bonus damage based on target's maximum Health",
@@ -341,6 +352,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 7574,
     "DeviceName": "Asi",
+    "Glyph": "n",
     "IconId": 2526,
     "ItemDescription": {
       "Description": "This item gives increased Physical Lifesteal when at low Health.",
@@ -351,7 +363,7 @@
         },
         {
           "Description": "Physical Lifesteal",
-          "Value": "+20%"
+          "Value": "+15%"
         },
         {
           "Description": "Attack Speed",
@@ -362,7 +374,7 @@
           "Value": "+15"
         }
       ],
-      "SecondaryDescription": "PASSIVE - If you drop below 35% Health, you gain an additional 30% Physical Lifesteal for 5 seconds.  Can only occur once every 15 seconds."
+      "SecondaryDescription": "PASSIVE - While below 35% Health, you gain an additional 30% Physical Lifesteal for 5 seconds.  Can only occur once every 15 seconds."
     },
     "ItemId": 17090,
     "ItemTier": 3,
@@ -377,8 +389,40 @@
   },
   {
     "ActiveFlag": "y",
+    "ChildItemId": 7575,
+    "DeviceName": "The Heavy Executioner",
+    "Glyph": "n",
+    "IconId": 11031,
+    "ItemDescription": {
+      "Description": "Shred protections faster, but slow your Attack Speed.",
+      "Menuitems": [
+        {
+          "Description": "Physical Power",
+          "Value": "+40"
+        },
+        {
+          "Description": "Attack Speed",
+          "Value": "+20%"
+        }
+      ],
+      "SecondaryDescription": "<n>GLYPH - Basic Attacks against an enemy reduce your target's Physical Protection by 17.5%  for 3 seconds (max. 2 Stacks). Your Attack Speed cannot exceed 1.75. "
+    },
+    "ItemId": 22960,
+    "ItemTier": 4,
+    "Price": 600,
+    "RestrictedRoles": "no restrictions",
+    "RootItemId": 7574,
+    "ShortDesc": "Shred more protections faster, but slow your Attack Speed",
+    "StartingItem": false,
+    "Type": "Item",
+    "itemIcon_URL": "https://webcdn.hirezstudios.com/smite/item-icons/the-heavy-executioner.jpg",
+    "ret_msg": null
+  },
+  {
+    "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Tiny Trinket",
+    "Glyph": "n",
     "IconId": 2829,
     "ItemDescription": {
       "Description": "Magical Power and Magical Lifesteal.",
@@ -409,6 +453,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 7610,
     "DeviceName": "Enchanted Trinket",
+    "Glyph": "n",
     "IconId": 2827,
     "ItemDescription": {
       "Description": null,
@@ -443,6 +488,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 7610,
     "DeviceName": "Talon Trinket",
+    "Glyph": "n",
     "IconId": 2828,
     "ItemDescription": {
       "Description": null,
@@ -477,6 +523,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 7609,
     "DeviceName": "Pythagorem's Piece",
+    "Glyph": "n",
     "IconId": 2825,
     "ItemDescription": {
       "Description": "This item gives the owner an aura of Lifesteal and Power.",
@@ -487,14 +534,14 @@
         },
         {
           "Description": "Health",
-          "Value": "+200"
+          "Value": "+250"
         },
         {
           "Description": "Magical Lifesteal",
           "Value": "+12%"
         },
         {
-          "Description": "Magical Penetration",
+          "Description": "Cooldown Reduction",
           "Value": "+10%"
         }
       ],
@@ -515,7 +562,8 @@
     "ActiveFlag": "y",
     "ChildItemId": 8574,
     "DeviceName": "Bancroft's Talon",
-    "IconId": 2826,
+    "Glyph": "n",
+    "IconId": 11045,
     "ItemDescription": {
       "Description": "This item gives the owner additional Magical Power and Lifesteal based on the percentage of the owner's missing Health.",
       "Menuitems": [
@@ -549,6 +597,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 8574,
     "DeviceName": "Typhon's Fang",
+    "Glyph": "n",
     "IconId": 6639,
     "ItemDescription": {
       "Description": null,
@@ -587,6 +636,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 7609,
     "DeviceName": "Soul Gem",
+    "Glyph": "n",
     "IconId": 6633,
     "ItemDescription": {
       "Description": "Consume stacks to deal bonus damage.",
@@ -625,6 +675,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Healing Potion",
+    "Glyph": "n",
     "IconId": 2929,
     "ItemDescription": {
       "Description": "This consumable heals you over time.",
@@ -646,6 +697,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Mana Potion",
+    "Glyph": "n",
     "IconId": 2930,
     "ItemDescription": {
       "Description": "This consumable heals Mana over time.",
@@ -667,6 +719,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Ward",
+    "Glyph": "n",
     "IconId": 1992,
     "ItemDescription": {
       "Description": "This is a ward that allows you to see normal enemy movements.",
@@ -688,6 +741,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Elixir of Power",
+    "Glyph": "n",
     "IconId": 2064,
     "ItemDescription": {
       "Description": "This consumable increases your Magical and Physical Power.",
@@ -709,6 +763,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Elixir of Defense",
+    "Glyph": "n",
     "IconId": 2065,
     "ItemDescription": {
       "Description": "This consumable increases your Magical and Physical Protections.",
@@ -730,13 +785,14 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Mace",
+    "Glyph": "n",
     "IconId": 2890,
     "ItemDescription": {
       "Description": "Physical Power and Penetration.",
       "Menuitems": [
         {
           "Description": "Physical Power",
-          "Value": "+15"
+          "Value": "+10"
         }
       ],
       "SecondaryDescription": null
@@ -756,17 +812,18 @@
     "ActiveFlag": "y",
     "ChildItemId": 7827,
     "DeviceName": "Warrior's Bane",
+    "Glyph": "n",
     "IconId": 2888,
     "ItemDescription": {
       "Description": "This item grants the owner physical penetration.",
       "Menuitems": [
         {
           "Description": "Physical Power",
-          "Value": "+20"
+          "Value": "+25"
         },
         {
           "Description": "Physical Penetration",
-          "Value": "+10%"
+          "Value": "+5%"
         }
       ],
       "SecondaryDescription": null
@@ -776,7 +833,7 @@
     "Price": 850,
     "RestrictedRoles": "no restrictions",
     "RootItemId": 7827,
-    "ShortDesc": "Physical Power and Penetration",
+    "ShortDesc": "Physical Power",
     "StartingItem": false,
     "Type": "Item",
     "itemIcon_URL": "https://webcdn.hirezstudios.com/smite/item-icons/warriors-bane.jpg",
@@ -786,17 +843,14 @@
     "ActiveFlag": "y",
     "ChildItemId": 7827,
     "DeviceName": "Heavy Mace",
+    "Glyph": "n",
     "IconId": 2889,
     "ItemDescription": {
       "Description": "",
       "Menuitems": [
         {
           "Description": "Physical Power",
-          "Value": "+25"
-        },
-        {
-          "Description": "Physical Penetration",
-          "Value": "+5"
+          "Value": "+30"
         }
       ],
       "SecondaryDescription": ""
@@ -806,7 +860,7 @@
     "Price": 800,
     "RestrictedRoles": "no restrictions",
     "RootItemId": 7827,
-    "ShortDesc": "Physical Power and Penetration.",
+    "ShortDesc": "Physical Power.",
     "StartingItem": false,
     "Type": "Item",
     "itemIcon_URL": "https://webcdn.hirezstudios.com/smite/item-icons/heavy-mace.jpg",
@@ -816,20 +870,21 @@
     "ActiveFlag": "y",
     "ChildItemId": 7522,
     "DeviceName": "Titan's Bane",
+    "Glyph": "n",
     "IconId": 2885,
     "ItemDescription": {
       "Description": "",
       "Menuitems": [
         {
           "Description": "Physical Power",
-          "Value": "+40"
+          "Value": "+55"
         },
         {
           "Description": "Physical Penetration",
           "Value": "+20%"
         }
       ],
-      "SecondaryDescription": "PASSIVE - Your first ability cast gains 20% Physical Penetration. This can only occur once every 10 seconds."
+      "SecondaryDescription": "PASSIVE - Your first ability cast gains 20% Physical Penetration. This can only occur once every 8 seconds."
     },
     "ItemId": 7523,
     "ItemTier": 3,
@@ -846,6 +901,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 7828,
     "DeviceName": "Brawler's Beat Stick",
+    "Glyph": "n",
     "IconId": 2585,
     "ItemDescription": {
       "Description": "This item causes your Basic Attacks to reduce the healing of your target.",
@@ -859,7 +915,7 @@
           "Value": "+15"
         }
       ],
-      "SecondaryDescription": "PASSIVE - Enemies hit by your Abilities have 40% reduced healing for 6 seconds."
+      "SecondaryDescription": "PASSIVE - Enemies hit by your Abilities have 40% reduced healing for 5 seconds."
     },
     "ItemId": 7829,
     "ItemTier": 3,
@@ -876,13 +932,14 @@
     "ActiveFlag": "y",
     "ChildItemId": 7828,
     "DeviceName": "Jotunn's Wrath",
+    "Glyph": "n",
     "IconId": 10338,
     "ItemDescription": {
       "Description": "This item gives the owner reduced cooldown on their abilities.",
       "Menuitems": [
         {
           "Description": "Physical Power",
-          "Value": "+45"
+          "Value": "+40"
         },
         {
           "Description": "Mana",
@@ -914,6 +971,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 7828,
     "DeviceName": "The Crusher",
+    "Glyph": "n",
     "IconId": 3489,
     "ItemDescription": {
       "Description": "This item grants the owner Physical Penetration.",
@@ -924,14 +982,14 @@
         },
         {
           "Description": "Attack Speed",
-          "Value": "+20%"
+          "Value": "+10%"
         },
         {
           "Description": "Physical Penetration",
           "Value": "+15"
         }
       ],
-      "SecondaryDescription": "PASSIVE - Enemies hit by your damaging Abilities take an additional 20 Physical Damage + 15% of your Physical Power over 2s."
+      "SecondaryDescription": "PASSIVE - Enemies hit by your damaging Abilities take an additional 20 Physical Damage + 20% of your Physical Power over 2s."
     },
     "ItemId": 11111,
     "ItemTier": 3,
@@ -947,52 +1005,15 @@
   {
     "ActiveFlag": "y",
     "ChildItemId": 7904,
-    "DeviceName": "Jotunn's Ferocity",
-    "IconId": 10339,
-    "ItemDescription": {
-      "Description": "This item gives the owner reduced cooldown on their abilities.",
-      "Menuitems": [
-        {
-          "Description": "Physical Power",
-          "Value": "+45"
-        },
-        {
-          "Description": "Mana",
-          "Value": "+150"
-        },
-        {
-          "Description": "Physical Penetration",
-          "Value": "+10"
-        },
-        {
-          "Description": "Cooldown Reduction",
-          "Value": "+20%"
-        }
-      ],
-      "SecondaryDescription": "GLYPH - Your next basic attack marks an enemy god. If you hit the marked enemy or the marked enemy hits you with a basic attack or ability, gain 1 stack. Each stack provides 2% increased damage towards the marked enemy, stacking up to 10 times. This effect can only occur every 60s."
-    },
-    "ItemId": 21506,
-    "ItemTier": 4,
-    "Price": 600,
-    "RestrictedRoles": "no restrictions",
-    "RootItemId": 7828,
-    "ShortDesc": "Mark an enemy god to deal more damage",
-    "StartingItem": false,
-    "Type": "Item",
-    "itemIcon_URL": "https://webcdn.hirezstudios.com/smite/item-icons/jotunns-ferocity.jpg",
-    "ret_msg": null
-  },
-  {
-    "ActiveFlag": "y",
-    "ChildItemId": 7904,
     "DeviceName": "Jotunn's Vigor",
+    "Glyph": "n",
     "IconId": 10342,
     "ItemDescription": {
       "Description": "This item gives the owner reduced cooldown on their abilities.",
       "Menuitems": [
         {
           "Description": "Physical Power",
-          "Value": "+45"
+          "Value": "+40"
         },
         {
           "Description": "Mana",
@@ -1022,15 +1043,55 @@
   },
   {
     "ActiveFlag": "y",
+    "ChildItemId": 7904,
+    "DeviceName": "Jotunn's Cunning",
+    "Glyph": "n",
+    "IconId": 11027,
+    "ItemDescription": {
+      "Description": "This item gives the owner reduced cooldown on their abilities.",
+      "Menuitems": [
+        {
+          "Description": "Physical Power",
+          "Value": "+40"
+        },
+        {
+          "Description": "Mana",
+          "Value": "+150"
+        },
+        {
+          "Description": "Physical Penetration",
+          "Value": "+10"
+        },
+        {
+          "Description": "Cooldown Reduction",
+          "Value": "+20%"
+        }
+      ],
+      "SecondaryDescription": "<n>GLYPH - Every time you damage an enemy god with an ability you gain a stack of Wit. At 2 stacks, your next non-ultimate ability that damages an enemy god gets 25% of its cooldown instantly refunded."
+    },
+    "ItemId": 22940,
+    "ItemTier": 4,
+    "Price": 600,
+    "RestrictedRoles": "no restrictions",
+    "RootItemId": 7828,
+    "ShortDesc": "Heavily reduce an ability cooldown",
+    "StartingItem": false,
+    "Type": "Item",
+    "itemIcon_URL": "https://webcdn.hirezstudios.com/smite/item-icons/jotunns-cunning.jpg",
+    "ret_msg": null
+  },
+  {
+    "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Morningstar",
+    "Glyph": "n",
     "IconId": 2946,
     "ItemDescription": {
       "Description": "Physical Power and Mana.",
       "Menuitems": [
         {
           "Description": "Physical Power",
-          "Value": "+10"
+          "Value": "+7"
         },
         {
           "Description": "MP5",
@@ -1054,6 +1115,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 7922,
     "DeviceName": "Charged Morningstar",
+    "Glyph": "n",
     "IconId": 2948,
     "ItemDescription": {
       "Description": "",
@@ -1088,6 +1150,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 7922,
     "DeviceName": "Hydra's Star",
+    "Glyph": "n",
     "IconId": 2950,
     "ItemDescription": {
       "Description": "",
@@ -1122,6 +1185,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 8560,
     "DeviceName": "Transcendence",
+    "Glyph": "n",
     "IconId": 6651,
     "ItemDescription": {
       "Description": "This item gives the owner additional Mana on kills and converts your Mana to additional Physical Power.",
@@ -1156,6 +1220,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 8568,
     "DeviceName": "Hydra's Lament",
+    "Glyph": "n",
     "IconId": 2263,
     "ItemDescription": {
       "Description": "This item gives the owner bonus damage on the next Basic Attack after using an ability.",
@@ -1177,7 +1242,7 @@
           "Value": "+10"
         }
       ],
-      "SecondaryDescription": "PASSIVE - For 8s after using an ability, your next Basic Attack will deal an additional 40% damage. Abilities that function like basic attacks do not benefit from this.\nPASSIVE - This item grants 2.5 MP5 per 10% of your missing Mana."
+      "SecondaryDescription": "PASSIVE - For 8s after using an ability, your next Basic Attack will deal an additional 35% damage. Abilities that function like basic attacks do not benefit from this.\nPASSIVE - This item grants 2.5 MP5 per 10% of your missing Mana."
     },
     "ItemId": 8550,
     "ItemTier": 3,
@@ -1194,6 +1259,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 8560,
     "DeviceName": "Heartseeker",
+    "Glyph": "n",
     "IconId": 3487,
     "ItemDescription": {
       "Description": "Your abilities deal bonus damage based on targets health.",
@@ -1232,6 +1298,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 8560,
     "DeviceName": "Dominance",
+    "Glyph": "n",
     "IconId": 9238,
     "ItemDescription": {
       "Description": "Bonus Basic Attack Penetration",
@@ -1270,6 +1337,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 0,
     "DeviceName": "Vampiric Shroud",
+    "Glyph": "n",
     "IconId": 5087,
     "ItemDescription": {
       "Description": "This starting item is for Magical users and gives them a chance to gain Health and Mana.",
@@ -1304,6 +1372,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 0,
     "DeviceName": "Death's Toll",
+    "Glyph": "n",
     "IconId": 2202,
     "ItemDescription": {
       "Description": "This item gives the owner additional Health every time they hit with a Basic Attack.",
@@ -1334,6 +1403,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 0,
     "DeviceName": "Mark of the Vanguard",
+    "Glyph": "n",
     "IconId": 2260,
     "ItemDescription": {
       "Description": "This starter item increases durability.",
@@ -1364,6 +1434,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 8547,
     "DeviceName": "Evolved Transcendence",
+    "Glyph": "n",
     "IconId": 6638,
     "ItemDescription": {
       "Description": "This item gives the owner additional Mana on kills and converts your Mana to additional Physical Power.",
@@ -1400,8 +1471,79 @@
   },
   {
     "ActiveFlag": "y",
+    "ChildItemId": 8551,
+    "DeviceName": "Bancroft's Claw",
+    "Glyph": "n",
+    "IconId": 11029,
+    "ItemDescription": {
+      "Description": "This item gives the owner additional Magical Power and Lifesteal based on the percentage of the owner's missing Health.",
+      "Menuitems": [
+        {
+          "Description": "Magical Power",
+          "Value": "+100"
+        },
+        {
+          "Description": "Magical Lifesteal",
+          "Value": "+15%"
+        },
+        {
+          "Description": "Mana",
+          "Value": "+150"
+        }
+      ],
+      "SecondaryDescription": "PASSIVE - You gain additional Magical Power and Lifesteal scaled from missing Health. This caps at 100 power and 20% Lifesteal at 25% Health. <n>GLYPH - Every 15s gain a stack of Hunger(max 3). Abilities cast within 30 units of enemy gods consume a stack, dealing bonus damage equal to 0.5% of their max HP for each 75 Magical Power you have. Each god damaged by Hunger provides you with a shield of 1% of your Max HP for each 75 Magical Power you have. This cannot exceed 35% of your Max HP. "
+    },
+    "ItemId": 22901,
+    "ItemTier": 4,
+    "Price": 600,
+    "RestrictedRoles": "no restrictions",
+    "RootItemId": 8574,
+    "ShortDesc": "Cast abilities near enemy gods to gain a shield",
+    "StartingItem": false,
+    "Type": "Item",
+    "itemIcon_URL": "https://webcdn.hirezstudios.com/smite/item-icons/bancrofts-claw.jpg",
+    "ret_msg": null
+  },
+  {
+    "ActiveFlag": "y",
+    "ChildItemId": 8551,
+    "DeviceName": "Nimble Bancroft's Talon",
+    "Glyph": "n",
+    "IconId": 11028,
+    "ItemDescription": {
+      "Description": null,
+      "Menuitems": [
+        {
+          "Description": "Magical Power",
+          "Value": "+100"
+        },
+        {
+          "Description": "Magical Lifesteal",
+          "Value": "+15%"
+        },
+        {
+          "Description": "Mana",
+          "Value": "+150"
+        }
+      ],
+      "SecondaryDescription": "PASSIVE - You gain additional Magical Power and Lifesteal scaled from missing Health. This caps at 100 power and 20% Lifesteal at 25% Health. <n>GLYPH - For every 40 Magical Power you have, you gain 2% Attack Speed. "
+    },
+    "ItemId": 23136,
+    "ItemTier": 4,
+    "Price": 600,
+    "RestrictedRoles": "no restrictions",
+    "RootItemId": 8574,
+    "ShortDesc": "Convert Magical Power to Attack Speed",
+    "StartingItem": false,
+    "Type": "Item",
+    "itemIcon_URL": "https://webcdn.hirezstudios.com/smite/item-icons/nimble-bancrofts-talon.jpg",
+    "ret_msg": null
+  },
+  {
+    "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Sentry Ward",
+    "Glyph": "n",
     "IconId": 1993,
     "ItemDescription": {
       "Description": "This is a ward that allows you to see enemy movements.",
@@ -1423,6 +1565,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 0,
     "DeviceName": "Watcher's Gift",
+    "Glyph": "n",
     "IconId": 2422,
     "ItemDescription": {
       "Description": null,
@@ -1461,6 +1604,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 0,
     "DeviceName": "Boots",
+    "Glyph": "n",
     "IconId": 2686,
     "ItemDescription": {
       "Description": "Increase Speed.",
@@ -1487,6 +1631,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 9624,
     "DeviceName": "Combat Boots",
+    "Glyph": "n",
     "IconId": 2687,
     "ItemDescription": {
       "Description": "Increase speed, damage, and attack speed.",
@@ -1517,6 +1662,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 9625,
     "DeviceName": "Warrior Tabi",
+    "Glyph": "n",
     "IconId": 2692,
     "ItemDescription": {
       "Description": "These boots give the owner high Physical Power.",
@@ -1551,6 +1697,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 9625,
     "DeviceName": "Ninja Tabi",
+    "Glyph": "n",
     "IconId": 2690,
     "ItemDescription": {
       "Description": "These boots give the owner Attack Speed.",
@@ -1589,6 +1736,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 9625,
     "DeviceName": "Reinforced Greaves",
+    "Glyph": "n",
     "IconId": 2691,
     "ItemDescription": {
       "Description": "These boots grant the owner Crowd Control Reduction.",
@@ -1627,6 +1775,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 9625,
     "DeviceName": "Talaria Boots",
+    "Glyph": "n",
     "IconId": 3495,
     "ItemDescription": {
       "Description": "These boots grant bonus speed while out of combat.",
@@ -1661,6 +1810,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 0,
     "DeviceName": "Shoes",
+    "Glyph": "n",
     "IconId": 2682,
     "ItemDescription": {
       "Description": "Increases Movement Speed.",
@@ -1687,6 +1837,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 9631,
     "DeviceName": "Magic Shoes",
+    "Glyph": "n",
     "IconId": 2683,
     "ItemDescription": {
       "Description": "Increase Speed and Magic Power.",
@@ -1717,6 +1868,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 9632,
     "DeviceName": "Shoes of the Magi",
+    "Glyph": "n",
     "IconId": 2685,
     "ItemDescription": {
       "Description": "These shoes grant magical power.",
@@ -1755,6 +1907,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 9632,
     "DeviceName": "Shoes of Focus",
+    "Glyph": "n",
     "IconId": 2684,
     "ItemDescription": {
       "Description": "These shoes grant the owner reduced cooldowns on their abilities.",
@@ -1793,6 +1946,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 9632,
     "DeviceName": "Reinforced Shoes",
+    "Glyph": "n",
     "IconId": 2681,
     "ItemDescription": {
       "Description": "These boots grant the owner Crowd Control Reduction.",
@@ -1831,6 +1985,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 9632,
     "DeviceName": "Traveler's Shoes",
+    "Glyph": "n",
     "IconId": 3497,
     "ItemDescription": {
       "Description": "These boots grant the owner bonus speed out of combat.",
@@ -1865,6 +2020,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Multi Potion",
+    "Glyph": "n",
     "IconId": 2931,
     "ItemDescription": {
       "Description": "This consumable heals and restores Mana over time.",
@@ -1886,6 +2042,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Hidden Dagger",
+    "Glyph": "n",
     "IconId": 2856,
     "ItemDescription": {
       "Description": "Physical Power and Critical Chance.",
@@ -1912,6 +2069,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9812,
     "DeviceName": "Short Sword",
+    "Glyph": "n",
     "IconId": 2854,
     "ItemDescription": {
       "Description": "",
@@ -1938,20 +2096,21 @@
     "ActiveFlag": "y",
     "ChildItemId": 9813,
     "DeviceName": "Deathbringer",
+    "Glyph": "n",
     "IconId": 10326,
     "ItemDescription": {
       "Description": "This item gives the owner increased Critical Strike Chance and damage.",
       "Menuitems": [
         {
           "Description": "Physical Power",
-          "Value": "+55"
+          "Value": "+50"
         },
         {
           "Description": "Critical Strike Chance",
           "Value": "+30%"
         }
       ],
-      "SecondaryDescription": "PASSIVE - Critical Strike bonus damage dealt is increased by 30%."
+      "SecondaryDescription": "PASSIVE - Critical Strike bonus damage dealt is increased by 25%."
     },
     "ItemId": 7545,
     "ItemTier": 3,
@@ -1968,6 +2127,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9813,
     "DeviceName": "Rage",
+    "Glyph": "n",
     "IconId": 2256,
     "ItemDescription": {
       "Description": "This item increases Critical Strike Chance after a kill or assist.",
@@ -1998,6 +2158,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 9813,
     "DeviceName": "Malice",
+    "Glyph": "n",
     "IconId": 2852,
     "ItemDescription": {
       "Description": "This item increases your Critical Strike Chance. Critical Strikes empower your abilities.",
@@ -2032,6 +2193,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 8546,
     "DeviceName": "Evolved Rage",
+    "Glyph": "n",
     "IconId": 5455,
     "ItemDescription": {
       "Description": "This item increases Critical Strike Chance after a kill or assist.",
@@ -2062,20 +2224,21 @@
     "ActiveFlag": "y",
     "ChildItemId": 7545,
     "DeviceName": "Malicious Deathbringer",
+    "Glyph": "n",
     "IconId": 10327,
     "ItemDescription": {
       "Description": "This item gives the owner increased Critical Strike Chance and damage.",
       "Menuitems": [
         {
           "Description": "Physical Power",
-          "Value": "+55"
+          "Value": "+50"
         },
         {
           "Description": "Critical Strike Chance",
           "Value": "+30%"
         }
       ],
-      "SecondaryDescription": "PASSIVE - Critical Strike bonus damage dealt is increased by 30%. <n>GLYPH - Successfully hitting an Enemy God with a Critical Strike will subtract 1s from all of your abilities currently on cooldown, except your ultimate ability."
+      "SecondaryDescription": "PASSIVE - Critical Strike bonus damage dealt is increased by 25%. <n>GLYPH - Successfully hitting an Enemy God with a Critical Strike will subtract 1s from all of your abilities currently on cooldown, except your ultimate ability."
     },
     "ItemId": 21500,
     "ItemTier": 4,
@@ -2092,20 +2255,21 @@
     "ActiveFlag": "y",
     "ChildItemId": 7545,
     "DeviceName": "Envenomed Deathbringer",
+    "Glyph": "n",
     "IconId": 10328,
     "ItemDescription": {
       "Description": "This item gives the owner increased Critical Strike Chance and damage.",
       "Menuitems": [
         {
           "Description": "Physical Power",
-          "Value": "+55"
+          "Value": "+50"
         },
         {
           "Description": "Critical Strike Chance",
           "Value": "+30%"
         }
       ],
-      "SecondaryDescription": "PASSIVE - Critical Strike bonus damage dealt is increased by 30%. <n>GLYPH - Critical hits on enemy gods afflict them with poison for 2s. This poison slows them by 10% and reduces their damage output by 15%."
+      "SecondaryDescription": "PASSIVE - Critical Strike bonus damage dealt is increased by 25%. <n>GLYPH - Critical hits on enemy gods afflict them with poison for 2s. This poison slows them by 10% and reduces their damage output by 10%."
     },
     "ItemId": 21501,
     "ItemTier": 4,
@@ -2122,6 +2286,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Spiked Gauntlet",
+    "Glyph": "n",
     "IconId": 2850,
     "ItemDescription": {
       "Description": "Grants Physical Lifesteal.",
@@ -2132,7 +2297,7 @@
         },
         {
           "Description": "Physical Lifesteal",
-          "Value": "+7%"
+          "Value": "+5%"
         }
       ],
       "SecondaryDescription": null
@@ -2152,6 +2317,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9825,
     "DeviceName": "Cursed Gauntlet",
+    "Glyph": "n",
     "IconId": 2848,
     "ItemDescription": {
       "Description": "This item gives the owner additional physical power and lifesteal.",
@@ -2162,7 +2328,7 @@
         },
         {
           "Description": "Physical Lifesteal",
-          "Value": "+10%"
+          "Value": "+7%"
         }
       ],
       "SecondaryDescription": ""
@@ -2182,6 +2348,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9825,
     "DeviceName": "Bound Gauntlet",
+    "Glyph": "n",
     "IconId": 2849,
     "ItemDescription": {
       "Description": "",
@@ -2212,6 +2379,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9827,
     "DeviceName": "Soul Eater",
+    "Glyph": "n",
     "IconId": 2847,
     "ItemDescription": {
       "Description": "This item gives the owner's abilities lifesteal.",
@@ -2250,6 +2418,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9826,
     "DeviceName": "Devourer's Gauntlet",
+    "Glyph": "n",
     "IconId": 2845,
     "ItemDescription": {
       "Description": "This item gives the owner additional Physical Power and Lifesteal as they build Stacks.",
@@ -2263,7 +2432,7 @@
           "Value": "+15%"
         }
       ],
-      "SecondaryDescription": "PASSIVE - Killing an enemy god or minion gives you stacks of +.8 Physical Power and +.3% Physical Lifesteal. You receive 5 stacks for a god kill and 1 stack for a minion kill. Stacks up to 50 times."
+      "SecondaryDescription": "PASSIVE - Killing an enemy god or minion gives you stacks of +.8 Physical Power and +.2% Physical Lifesteal. You receive 5 stacks for a god kill and 1 stack for a minion kill. Stacks up to 50 times."
     },
     "ItemId": 7914,
     "ItemTier": 3,
@@ -2280,6 +2449,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9826,
     "DeviceName": "Bloodforge",
+    "Glyph": "n",
     "IconId": 2846,
     "ItemDescription": {
       "Description": "This item gives the owner additional Physical Power and Physical Lifesteal every time they hit with a Basic Attack.",
@@ -2314,6 +2484,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 7914,
     "DeviceName": "Evolved Devourer's Gauntlet",
+    "Glyph": "n",
     "IconId": 6630,
     "ItemDescription": {
       "Description": "This item gives the owner additional Physical Power and Lifesteal as they build Stacks.",
@@ -2324,7 +2495,7 @@
         },
         {
           "Description": "Physical Lifesteal",
-          "Value": "+30%"
+          "Value": "+25%"
         }
       ],
       "SecondaryDescription": null
@@ -2344,6 +2515,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 7539,
     "DeviceName": "Evolved Soul Eater",
+    "Glyph": "n",
     "IconId": 6440,
     "ItemDescription": {
       "Description": "This item gives the owner's abilities lifesteal.",
@@ -2382,6 +2554,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Ancient Blade",
+    "Glyph": "n",
     "IconId": 2895,
     "ItemDescription": {
       "Description": null,
@@ -2412,6 +2585,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9828,
     "DeviceName": "Adventurer's Blade",
+    "Glyph": "n",
     "IconId": 4104,
     "ItemDescription": {
       "Description": null,
@@ -2442,6 +2616,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9828,
     "DeviceName": "Cursed Blade",
+    "Glyph": "n",
     "IconId": 2894,
     "ItemDescription": {
       "Description": null,
@@ -2476,6 +2651,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 8239,
     "DeviceName": "Witchblade",
+    "Glyph": "n",
     "IconId": 2892,
     "ItemDescription": {
       "Description": "This item gives the owner an aura that reduces nearby Enemy Gods' Attack Speed.",
@@ -2514,6 +2690,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 8239,
     "DeviceName": "Winged Blade",
+    "Glyph": "n",
     "IconId": 2204,
     "ItemDescription": {
       "Description": "This item makes the owner immune to Slows when hit by one.",
@@ -2552,6 +2729,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 8239,
     "DeviceName": "Relic Dagger",
+    "Glyph": "n",
     "IconId": 4673,
     "ItemDescription": {
       "Description": "This item Reduces the cooldown of equipped Relics.",
@@ -2590,6 +2768,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 18190,
     "DeviceName": "Toxic Blade",
+    "Glyph": "n",
     "IconId": 5454,
     "ItemDescription": {
       "Description": "This item reduces nearby Enemy Gods' healing upon hitting them with basic attacks.",
@@ -2611,7 +2790,7 @@
           "Value": "+7%"
         }
       ],
-      "SecondaryDescription": "PASSIVE - Enemies hit by your basic attacks gain 20% reduced healing, stacking up to 3 times and lasting 6s."
+      "SecondaryDescription": "PASSIVE - Enemies hit by your basic attacks gain 20% reduced healing, stacking up to 3 times and lasting 5s."
     },
     "ItemId": 14846,
     "ItemTier": 3,
@@ -2628,6 +2807,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Cudgel",
+    "Glyph": "n",
     "IconId": 2900,
     "ItemDescription": {
       "Description": "Health and Physical Power.",
@@ -2658,6 +2838,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9830,
     "DeviceName": "Heavy Hammer",
+    "Glyph": "n",
     "IconId": 2898,
     "ItemDescription": {
       "Description": "",
@@ -2688,6 +2869,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9830,
     "DeviceName": "Shillelagh",
+    "Glyph": "n",
     "IconId": 5048,
     "ItemDescription": {
       "Description": "",
@@ -2722,13 +2904,14 @@
     "ActiveFlag": "y",
     "ChildItemId": 9831,
     "DeviceName": "Frostbound Hammer",
+    "Glyph": "n",
     "IconId": 2896,
     "ItemDescription": {
       "Description": "This item causes your Basic Attacks to slow your target's Movement Speed and Attack Speed.",
       "Menuitems": [
         {
           "Description": "Physical Power",
-          "Value": "+35"
+          "Value": "+25"
         },
         {
           "Description": "Health",
@@ -2752,13 +2935,14 @@
     "ActiveFlag": "y",
     "ChildItemId": 9831,
     "DeviceName": "Runeforged Hammer",
+    "Glyph": "n",
     "IconId": 2897,
     "ItemDescription": {
       "Description": "Crowd Controlled Enemies near you take more damage.",
       "Menuitems": [
         {
           "Description": "Physical Power",
-          "Value": "+45"
+          "Value": "+30"
         },
         {
           "Description": "Health",
@@ -2790,13 +2974,14 @@
     "ActiveFlag": "y",
     "ChildItemId": 14083,
     "DeviceName": "The Sledge",
+    "Glyph": "n",
     "IconId": 8678,
     "ItemDescription": {
       "Description": "Gain Protections when near enemy Gods.",
       "Menuitems": [
         {
           "Description": "Physical Power",
-          "Value": "+40"
+          "Value": "+35"
         },
         {
           "Description": "Health",
@@ -2808,7 +2993,7 @@
         },
         {
           "Description": "Crowd Control Reduction",
-          "Value": "+20%"
+          "Value": "+30%"
         }
       ],
       "SecondaryDescription": "PASSIVE - For each enemy god within 55 units of you, you gain a stacking buff that provides 8 Protections. Stacks up to 3 times."
@@ -2816,7 +3001,7 @@
     "ItemId": 12677,
     "ItemTier": 3,
     "Price": 1000,
-    "RestrictedRoles": "",
+    "RestrictedRoles": "no restrictions",
     "RootItemId": 9830,
     "ShortDesc": "Gain Protections when near enemy Gods",
     "StartingItem": false,
@@ -2828,6 +3013,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 14083,
     "DeviceName": "Blackthorn Hammer",
+    "Glyph": "n",
     "IconId": 5039,
     "ItemDescription": {
       "Description": "This item gives the owner additional Cooldown Reduction or MP5 based on missing Mana.",
@@ -2862,13 +3048,14 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Round Shield",
+    "Glyph": "n",
     "IconId": 2907,
     "ItemDescription": {
       "Description": "Physical Power and Physical Protection.",
       "Menuitems": [
         {
           "Description": "Physical Power",
-          "Value": "+10"
+          "Value": "+7"
         },
         {
           "Description": "Physical Protection",
@@ -2892,13 +3079,14 @@
     "ActiveFlag": "y",
     "ChildItemId": 9833,
     "DeviceName": "Tower Shield",
+    "Glyph": "n",
     "IconId": 2938,
     "ItemDescription": {
       "Description": "",
       "Menuitems": [
         {
           "Description": "Physical Power",
-          "Value": "+20"
+          "Value": "+15"
         },
         {
           "Description": "Physical Protection",
@@ -2922,9 +3110,10 @@
     "ActiveFlag": "y",
     "ChildItemId": 9833,
     "DeviceName": "Spiked Shield",
+    "Glyph": "n",
     "IconId": 2905,
     "ItemDescription": {
-      "Description": "",
+      "Description": null,
       "Menuitems": [
         {
           "Description": "Physical Power",
@@ -2933,13 +3122,17 @@
         {
           "Description": "Physical Protection",
           "Value": "+30"
+        },
+        {
+          "Description": "Health",
+          "Value": "+50"
         }
       ],
       "SecondaryDescription": "AURA - Reduces the Physical Protection of enemies within 55 units by 5%."
     },
     "ItemId": 9834,
     "ItemTier": 2,
-    "Price": 950,
+    "Price": 750,
     "RestrictedRoles": "no restrictions",
     "RootItemId": 9833,
     "ShortDesc": "Physical Power and Physical Protection.",
@@ -2952,20 +3145,21 @@
     "ActiveFlag": "y",
     "ChildItemId": 8566,
     "DeviceName": "Shifter's Shield",
+    "Glyph": "n",
     "IconId": 2254,
     "ItemDescription": {
       "Description": "This item gives the owner additional Physical Power or Protections based on missing Health.",
       "Menuitems": [
         {
           "Description": "Physical Power",
-          "Value": "+30"
+          "Value": "+25"
         },
         {
           "Description": "Physical Protection",
           "Value": "+25"
         }
       ],
-      "SecondaryDescription": "PASSIVE - While over 75% Health, you gain +30 Physical Power. While under 75% Health, you gain +40 Protections."
+      "SecondaryDescription": "PASSIVE - While over 75% Health, you gain +25 Physical Power. While under 75% Health, you gain +40 Protections."
     },
     "ItemId": 8549,
     "ItemTier": 3,
@@ -2982,6 +3176,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9834,
     "DeviceName": "Void Shield",
+    "Glyph": "n",
     "IconId": 2901,
     "ItemDescription": {
       "Description": "This item gives the owner an aura that reduces physical protections.",
@@ -2992,7 +3187,7 @@
         },
         {
           "Description": "Physical Protection",
-          "Value": "+45"
+          "Value": "+35"
         },
         {
           "Description": "Health",
@@ -3003,7 +3198,7 @@
     },
     "ItemId": 9836,
     "ItemTier": 3,
-    "Price": 1000,
+    "Price": 1200,
     "RestrictedRoles": "no restrictions",
     "RootItemId": 9833,
     "ShortDesc": "Physical Protection debuff Aura",
@@ -3016,13 +3211,14 @@
     "ActiveFlag": "y",
     "ChildItemId": 8566,
     "DeviceName": "Gladiator's Shield",
+    "Glyph": "n",
     "IconId": 5044,
     "ItemDescription": {
       "Description": "Deal bonus damage to low health enemies.",
       "Menuitems": [
         {
           "Description": "Physical Power",
-          "Value": "+25"
+          "Value": "+20"
         },
         {
           "Description": "Physical Protection",
@@ -3030,14 +3226,14 @@
         },
         {
           "Description": "Health",
-          "Value": "+200"
+          "Value": "+250"
         },
         {
           "Description": "Cooldown Reduction",
           "Value": "+10%"
         }
       ],
-      "SecondaryDescription": "PASSIVE - When damaging an enemy god below 60% health with an ability you deal an additional 15 + 25% of your Protections from items and abilities. Can only trigger once per enemy per ability."
+      "SecondaryDescription": "PASSIVE - When damaging an enemy god with an ability you deal an additional 15 + 35% of your Protections from items and abilities. Can only trigger once per enemy per ability."
     },
     "ItemId": 14085,
     "ItemTier": 3,
@@ -3054,32 +3250,33 @@
     "ActiveFlag": "y",
     "ChildItemId": 8566,
     "DeviceName": "Berserker's Shield",
+    "Glyph": "n",
     "IconId": 7140,
     "ItemDescription": {
       "Description": "When dropping low, go Berserk.",
       "Menuitems": [
         {
           "Description": "Physical Power",
-          "Value": "+40"
+          "Value": "+20"
         },
         {
           "Description": "Physical Protection",
-          "Value": "+45"
+          "Value": "+40"
         },
         {
           "Description": "Attack Speed",
           "Value": "+25%"
         },
         {
-          "Description": "Physical Penetration",
-          "Value": "+10%"
+          "Description": "HP5",
+          "Value": "+15"
         }
       ],
-      "SecondaryDescription": "PASSIVE - Can only be built by Assassins or Warriors. If you drop below 40% HP you become Berserk for 5s. Berserk provides 30 Physical Power and 20% Attack Speed."
+      "SecondaryDescription": "PASSIVE - Can only be built by Assassins or Warriors. While below 40% Health you become Berserk for 5s. Berserk provides 7% Damage Mitigation. Can only occur once every 15 seconds."
     },
     "ItemId": 16544,
     "ItemTier": 3,
-    "Price": 1450,
+    "Price": 1250,
     "RestrictedRoles": "hunter",
     "RootItemId": 9833,
     "ShortDesc": "When dropping low, go Berserk.",
@@ -3092,6 +3289,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Breastplate",
+    "Glyph": "n",
     "IconId": 2876,
     "ItemDescription": {
       "Description": "Physical Protection.",
@@ -3118,6 +3316,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9837,
     "DeviceName": "Silver Breastplate",
+    "Glyph": "n",
     "IconId": 2875,
     "ItemDescription": {
       "Description": "",
@@ -3152,13 +3351,14 @@
     "ActiveFlag": "y",
     "ChildItemId": 9838,
     "DeviceName": "Hide of the Nemean Lion",
+    "Glyph": "n",
     "IconId": 2862,
     "ItemDescription": {
       "Description": "This item provides block stacks.",
       "Menuitems": [
         {
           "Description": "Physical Protection",
-          "Value": "+90"
+          "Value": "+70"
         },
         {
           "Description": "Mana",
@@ -3169,7 +3369,7 @@
           "Value": "+20"
         }
       ],
-      "SecondaryDescription": "PASSIVE - Every 10 seconds you gain a block stack if you have at least 100 total Protections from items, preventing the next Basic Attack from damaging you. For each additional 100 total Protections from your items and abilities the max. stacks increases, up to a cap of 3."
+      "SecondaryDescription": "PASSIVE - Every 10 seconds you gain a block stack if you have at least 80 total Protections from items and abilities, preventing 65% of the next Basic Attack's damage. For each additional 80 total Protections from items and abilities the max. stacks increases, up to a cap of 3."
     },
     "ItemId": 7578,
     "ItemTier": 3,
@@ -3186,6 +3386,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9838,
     "DeviceName": "Breastplate of Valor",
+    "Glyph": "n",
     "IconId": 10332,
     "ItemDescription": {
       "Description": "This item gives the owner reduced ability cooldowns.",
@@ -3224,6 +3425,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9838,
     "DeviceName": "Spectral Armor",
+    "Glyph": "n",
     "IconId": 4324,
     "ItemDescription": {
       "Description": null,
@@ -3245,7 +3447,7 @@
           "Value": "+10"
         }
       ],
-      "SecondaryDescription": "PASSIVE - Physical Critical Strikes bonus damage taken is decreased by 30%."
+      "SecondaryDescription": "PASSIVE - Physical Critical Strikes bonus damage taken is decreased by 40%."
     },
     "ItemId": 12664,
     "ItemTier": 3,
@@ -3262,6 +3464,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9838,
     "DeviceName": "Contagion",
+    "Glyph": "n",
     "IconId": 7779,
     "ItemDescription": {
       "Description": "This item grants the owner an aura that reduces the healing of nearby enemies.",
@@ -3300,6 +3503,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 7641,
     "DeviceName": "Breastplate of Determination",
+    "Glyph": "n",
     "IconId": 10333,
     "ItemDescription": {
       "Description": "This item gives the owner reduced ability cooldowns.",
@@ -3338,6 +3542,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 7641,
     "DeviceName": "Breastplate of Vigilance",
+    "Glyph": "n",
     "IconId": 10334,
     "ItemDescription": {
       "Description": "This item gives the owner reduced ability cooldowns.",
@@ -3376,13 +3581,14 @@
     "ActiveFlag": "y",
     "ChildItemId": 12665,
     "DeviceName": "Evolved Gauntlet of Thebes",
+    "Glyph": "n",
     "IconId": 6631,
     "ItemDescription": {
       "Description": "This item increases allied protections.",
       "Menuitems": [
         {
           "Description": "Health",
-          "Value": "+300"
+          "Value": "+250"
         },
         {
           "Description": "Physical Protection",
@@ -3414,6 +3620,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Cloak",
+    "Glyph": "n",
     "IconId": 2881,
     "ItemDescription": {
       "Description": "Health and Protections.",
@@ -3444,6 +3651,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9840,
     "DeviceName": "Cloak of Concentration",
+    "Glyph": "n",
     "IconId": 2554,
     "ItemDescription": {
       "Description": "This item grants the owner damage mitigation when hit by a hard crowd control.",
@@ -3478,6 +3686,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9840,
     "DeviceName": "Cleric's Cloak",
+    "Glyph": "n",
     "IconId": 2879,
     "ItemDescription": {
       "Description": "This item allows the owner to absorb a single hard crowd control effect.",
@@ -3512,6 +3721,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9840,
     "DeviceName": "Armored Cloak",
+    "Glyph": "n",
     "IconId": 2880,
     "ItemDescription": {
       "Description": "",
@@ -3550,7 +3760,8 @@
     "ActiveFlag": "y",
     "ChildItemId": 9842,
     "DeviceName": "Magi's Cloak",
-    "IconId": 2877,
+    "Glyph": "n",
+    "IconId": 11044,
     "ItemDescription": {
       "Description": "This item allows the owner to absorb a single hard Crowd Control effect.",
       "Menuitems": [
@@ -3567,7 +3778,7 @@
           "Value": "+300"
         }
       ],
-      "SecondaryDescription": "PASSIVE - Protects you from a single hard Crowd Control effect or Root once every 70 seconds. When this occurs, you gain 1s of Crowd Control immunity."
+      "SecondaryDescription": "PASSIVE - Protects you from a single hard Crowd Control effect once every 70 seconds. When this occurs, you gain 1s of Crowd Control immunity."
     },
     "ItemId": 7935,
     "ItemTier": 3,
@@ -3584,6 +3795,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9843,
     "DeviceName": "Hide of the Urchin",
+    "Glyph": "n",
     "IconId": 2536,
     "ItemDescription": {
       "Description": "This item gives the owner stacking Protections.",
@@ -3622,6 +3834,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9360,
     "DeviceName": "Spirit Robe",
+    "Glyph": "n",
     "IconId": 2555,
     "ItemDescription": {
       "Description": "This item grants the owner Damage Mitigation when hit by a hard Crowd Control Effect.",
@@ -3660,24 +3873,25 @@
     "ActiveFlag": "y",
     "ChildItemId": 9360,
     "DeviceName": "Mantle of Discord",
+    "Glyph": "n",
     "IconId": 4328,
     "ItemDescription": {
       "Description": "This item grants the owner Damage Mitigation when hit by a hard Crowd Control Effect.",
       "Menuitems": [
         {
           "Description": "Physical Protection",
-          "Value": "+60"
+          "Value": "+55"
         },
         {
           "Description": "Magical Protection",
-          "Value": "+60"
+          "Value": "+55"
         },
         {
           "Description": "Cooldown Reduction",
           "Value": "+10%"
         }
       ],
-      "SecondaryDescription": "PASSIVE - If you take damage below 30% health you unleash a shockwave that stuns all enemies within a range of 20 units for 1s and become immune to Crowd Control for 1s. This effect cannot trigger more than once every 90s."
+      "SecondaryDescription": "PASSIVE - If you take damage below 30% health you unleash a shockwave that stuns all enemies within a range of 20 units for 1s and become immune to Crowd Control for 1s. This effect cannot trigger more than once every 110s."
     },
     "ItemId": 12666,
     "ItemTier": 3,
@@ -3692,8 +3906,79 @@
   },
   {
     "ActiveFlag": "y",
+    "ChildItemId": 7935,
+    "DeviceName": "Magi's Shelter",
+    "Glyph": "n",
+    "IconId": 11032,
+    "ItemDescription": {
+      "Description": "Protects your allies when you are hard Crowd Controlled.",
+      "Menuitems": [
+        {
+          "Description": "Physical Protection",
+          "Value": "+15"
+        },
+        {
+          "Description": "Magical Protection",
+          "Value": "+15"
+        },
+        {
+          "Description": "Health",
+          "Value": "+300"
+        }
+      ],
+      "SecondaryDescription": "PASSIVE - Protects you from a single hard Crowd Control effect once every 70 seconds. When this occurs, you gain 1s of Crowd Control immunity. <n>GLYPH - Whenever your passive is consumed, the nearest allied god within 25 units gains protection from a single hard Crowd Control effect for 5s. If this passive is consumed before time runs out, they gain 1s of Crowd Control immunity."
+    },
+    "ItemId": 22945,
+    "ItemTier": 4,
+    "Price": 600,
+    "RestrictedRoles": "no restrictions",
+    "RootItemId": 9842,
+    "ShortDesc": "Protects your allies when you are hard Crowd Controlled",
+    "StartingItem": false,
+    "Type": "Item",
+    "itemIcon_URL": "https://webcdn.hirezstudios.com/smite/item-icons/magis-shelter.jpg",
+    "ret_msg": null
+  },
+  {
+    "ActiveFlag": "y",
+    "ChildItemId": 7935,
+    "DeviceName": "Magi's Revenge",
+    "Glyph": "n",
+    "IconId": 11033,
+    "ItemDescription": {
+      "Description": "Enemies that hard Crowd Control you make themselves vulnerable.",
+      "Menuitems": [
+        {
+          "Description": "Physical Protection",
+          "Value": "+15"
+        },
+        {
+          "Description": "Magical Protection",
+          "Value": "+15"
+        },
+        {
+          "Description": "Health",
+          "Value": "+300"
+        }
+      ],
+      "SecondaryDescription": "PASSIVE - Protects you from a single hard Crowd Control effect once every 70 seconds. When this occurs, you gain 1s of Crowd Control immunity. <n>GLYPH - If an enemy god hits you with a hard Crowd Control or Root while you are protected, they become Marked for Revenge for 5s. Gods that are Marked for Revenge have enemy gods within 40 units move 20% faster towards them and receive 10% more damage from enemy gods."
+    },
+    "ItemId": 22991,
+    "ItemTier": 4,
+    "Price": 600,
+    "RestrictedRoles": "no restrictions",
+    "RootItemId": 9842,
+    "ShortDesc": "Enemies that hard Crowd Control you make themselves vulnerable",
+    "StartingItem": false,
+    "Type": "Item",
+    "itemIcon_URL": "https://webcdn.hirezstudios.com/smite/item-icons/magis-revenge.jpg",
+    "ret_msg": null
+  },
+  {
+    "ActiveFlag": "y",
     "ChildItemId": 9338,
     "DeviceName": "Evolved Hide of the Urchin",
+    "Glyph": "n",
     "IconId": 6632,
     "ItemDescription": {
       "Description": "This item gives the owner stacking Protections.",
@@ -3732,6 +4017,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Talisman",
+    "Glyph": "n",
     "IconId": 2884,
     "ItemDescription": {
       "Description": "Health and Magical Protection.",
@@ -3762,6 +4048,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9844,
     "DeviceName": "Silver Talisman",
+    "Glyph": "n",
     "IconId": 2883,
     "ItemDescription": {
       "Description": "",
@@ -3792,13 +4079,14 @@
     "ActiveFlag": "y",
     "ChildItemId": 9846,
     "DeviceName": "Bulwark of Hope",
+    "Glyph": "n",
     "IconId": 2882,
     "ItemDescription": {
       "Description": "This item gives the owner a shield to damage when at low Health.",
       "Menuitems": [
         {
           "Description": "Magical Protection",
-          "Value": "+80"
+          "Value": "+70"
         },
         {
           "Description": "Health",
@@ -3826,6 +4114,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9846,
     "DeviceName": "Pestilence",
+    "Glyph": "n",
     "IconId": 2558,
     "ItemDescription": {
       "Description": "This item grants the owner an aura that reduces the healing of nearby enemies.",
@@ -3856,6 +4145,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9846,
     "DeviceName": "Heartward Amulet",
+    "Glyph": "n",
     "IconId": 10335,
     "ItemDescription": {
       "Description": "This item gives the owner an aura of magical protections.",
@@ -3869,7 +4159,7 @@
           "Value": "+250"
         }
       ],
-      "SecondaryDescription": "AURA - Allied gods within 70 units have their Magical Protections increased by 20 and their MP5 increased by 30."
+      "SecondaryDescription": "AURA - Allied gods within 70 units have their Magical Protections increased by 15 and their MP5 increased by 30."
     },
     "ItemId": 11116,
     "ItemTier": 3,
@@ -3886,6 +4176,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9846,
     "DeviceName": "Talisman of Energy",
+    "Glyph": "n",
     "IconId": 5053,
     "ItemDescription": {
       "Description": "Kills or Assists increase nearby allies' stats.",
@@ -3916,6 +4207,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 11116,
     "DeviceName": "Amulet of Silence",
+    "Glyph": "n",
     "IconId": 10336,
     "ItemDescription": {
       "Description": "This item gives the owner an aura of magical protections.",
@@ -3929,7 +4221,7 @@
           "Value": "+250"
         }
       ],
-      "SecondaryDescription": "AURA - Allied gods within 70 units have their Magical Protections increased by 20 and their MP5 increased by 30. <n>GLYPH - Gain a stack each time an enemy within 40 units casts an ability. At 5 stacks, your next basic attack against an enemy god will silence them for 1.5s. This effect can only occur every 45s."
+      "SecondaryDescription": "AURA - Allied gods within 70 units have their Magical Protections increased by 15 and their MP5 increased by 30. <n>GLYPH - Gain a stack each time an enemy within 40 units casts an ability. At 5 stacks, your next basic attack against an enemy god will silence them for 1.5s. This effect can only occur every 30s."
     },
     "ItemId": 21504,
     "ItemTier": 4,
@@ -3946,6 +4238,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 11116,
     "DeviceName": "Amulet of the Stronghold",
+    "Glyph": "n",
     "IconId": 10337,
     "ItemDescription": {
       "Description": "This item gives the owner an aura of magical protections.",
@@ -3959,7 +4252,7 @@
           "Value": "+250"
         }
       ],
-      "SecondaryDescription": "AURA - Allied gods within 70 units have their Magical Protections increased by 20 and their MP5 increased by 30. <n>GLYPH - 10% of your Physical Protections are converted to Magical Protections."
+      "SecondaryDescription": "AURA - Allied gods within 70 units have their Magical Protections increased by 15 and their MP5 increased by 30. <n>GLYPH - 15% of your Physical Protections are converted to Magical Protections."
     },
     "ItemId": 21505,
     "ItemTier": 4,
@@ -3976,13 +4269,14 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Emerald Ring",
+    "Glyph": "n",
     "IconId": 2833,
     "ItemDescription": {
       "Description": "Magical Power and Attack Speed.",
       "Menuitems": [
         {
           "Description": "Magical Power",
-          "Value": "+25"
+          "Value": "+20"
         },
         {
           "Description": "Attack Speed",
@@ -4006,6 +4300,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9847,
     "DeviceName": "Enchanted Ring",
+    "Glyph": "n",
     "IconId": 2832,
     "ItemDescription": {
       "Description": null,
@@ -4036,6 +4331,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9848,
     "DeviceName": "Demonic Grip",
+    "Glyph": "n",
     "IconId": 2831,
     "ItemDescription": {
       "Description": "This item makes your Basic Attacks reduce the Magical Protection of your target.",
@@ -4066,6 +4362,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9848,
     "DeviceName": "Telkhines Ring",
+    "Glyph": "n",
     "IconId": 2830,
     "ItemDescription": {
       "Description": "Successful Basic Attacks deal bonus Magical Damage.",
@@ -4076,10 +4373,10 @@
         },
         {
           "Description": "Attack Speed",
-          "Value": "+25%"
+          "Value": "+20%"
         }
       ],
-      "SecondaryDescription": "PASSIVE - Your Basic Attacks deal bonus damage of 10 + 15% of your Magical Power. This effect does not hit structures."
+      "SecondaryDescription": "PASSIVE - Your Basic Attacks deal bonus damage of 10 + 10% of your Magical Power. This effect does not hit structures."
     },
     "ItemId": 9351,
     "ItemTier": 3,
@@ -4096,6 +4393,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9848,
     "DeviceName": "Hastened Ring",
+    "Glyph": "n",
     "IconId": 5450,
     "ItemDescription": {
       "Description": "This item gives the owner increased movement speed and attack speed.",
@@ -4130,17 +4428,18 @@
     "ActiveFlag": "y",
     "ChildItemId": 9848,
     "DeviceName": "Ring of Hecate",
+    "Glyph": "n",
     "IconId": 8138,
     "ItemDescription": {
       "Description": "",
       "Menuitems": [
         {
           "Description": "Magical Power",
-          "Value": "+90"
+          "Value": "+80"
         },
         {
           "Description": "Attack Speed",
-          "Value": "+25%"
+          "Value": "+20%"
         },
         {
           "Description": "Magical Lifesteal",
@@ -4164,13 +4463,14 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Magic Focus",
+    "Glyph": "n",
     "IconId": 2838,
     "ItemDescription": {
       "Description": "Magical Power and Magical Penetration.",
       "Menuitems": [
         {
           "Description": "Magical Power",
-          "Value": "+25"
+          "Value": "+20"
         }
       ],
       "SecondaryDescription": null
@@ -4190,6 +4490,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9849,
     "DeviceName": "Spell Focus",
+    "Glyph": "n",
     "IconId": 2836,
     "ItemDescription": {
       "Description": "This item grants the owner magical penetration.",
@@ -4200,7 +4501,7 @@
         },
         {
           "Description": "Magical Penetration",
-          "Value": "+10%"
+          "Value": "+5%"
         }
       ],
       "SecondaryDescription": null
@@ -4210,7 +4511,7 @@
     "Price": 850,
     "RestrictedRoles": "no restrictions",
     "RootItemId": 9849,
-    "ShortDesc": "Magical Power and Penetration",
+    "ShortDesc": "Magical Power",
     "StartingItem": false,
     "Type": "Item",
     "itemIcon_URL": "https://webcdn.hirezstudios.com/smite/item-icons/spell-focus.jpg",
@@ -4220,6 +4521,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9849,
     "DeviceName": "Enchanted Spear",
+    "Glyph": "n",
     "IconId": 2837,
     "ItemDescription": {
       "Description": "",
@@ -4227,10 +4529,6 @@
         {
           "Description": "Magical Power",
           "Value": "+60"
-        },
-        {
-          "Description": "Magical Penetration",
-          "Value": "+5"
         }
       ],
       "SecondaryDescription": ""
@@ -4240,7 +4538,7 @@
     "Price": 750,
     "RestrictedRoles": "no restrictions",
     "RootItemId": 9849,
-    "ShortDesc": "Magical Power and Penetration.",
+    "ShortDesc": "Magical Power",
     "StartingItem": false,
     "Type": "Item",
     "itemIcon_URL": "https://webcdn.hirezstudios.com/smite/item-icons/enchanted-spear.jpg",
@@ -4250,20 +4548,21 @@
     "ActiveFlag": "y",
     "ChildItemId": 9851,
     "DeviceName": "Divine Ruin",
+    "Glyph": "n",
     "IconId": 2823,
     "ItemDescription": {
       "Description": "This item causes the owner's abilities to reduce the healing of their targets.",
       "Menuitems": [
         {
           "Description": "Magical Power",
-          "Value": "+110"
+          "Value": "+100"
         },
         {
           "Description": "Magical Penetration",
-          "Value": "+10"
+          "Value": "+12"
         }
       ],
-      "SecondaryDescription": "PASSIVE - Enemies hit by your abilities have 40% reduced healing for 6 seconds."
+      "SecondaryDescription": "PASSIVE - Enemies hit by your abilities have 40% reduced healing for 5 seconds."
     },
     "ItemId": 7832,
     "ItemTier": 3,
@@ -4280,17 +4579,18 @@
     "ActiveFlag": "y",
     "ChildItemId": 9851,
     "DeviceName": "Spear of Desolation",
+    "Glyph": "n",
     "IconId": 4327,
     "ItemDescription": {
       "Description": "This item reduces ability cooldowns after a kill or assist",
       "Menuitems": [
         {
           "Description": "Magical Power",
-          "Value": "+120"
+          "Value": "+110"
         },
         {
           "Description": "Magical Penetration",
-          "Value": "+10"
+          "Value": "+12"
         },
         {
           "Description": "Cooldown Reduction",
@@ -4314,6 +4614,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9850,
     "DeviceName": "Obsidian Shard",
+    "Glyph": "n",
     "IconId": 2834,
     "ItemDescription": {
       "Description": null,
@@ -4344,6 +4645,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9851,
     "DeviceName": "Spear of the Magus",
+    "Glyph": "n",
     "IconId": 2835,
     "ItemDescription": {
       "Description": "Mark a target for increased damage from all sources.",
@@ -4358,7 +4660,7 @@
         },
         {
           "Description": "Magical Penetration",
-          "Value": "+10"
+          "Value": "+12"
         }
       ],
       "SecondaryDescription": "PASSIVE - Whenever you damage an enemy god with an ability you mark them to take 7.5% increased damage from all sources. This effect lasts for 7s and can only occur once every 15s."
@@ -4378,6 +4680,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 0,
     "DeviceName": "Traveler's Cloak",
+    "Glyph": "n",
     "IconId": 2859,
     "ItemDescription": {
       "Description": "",
@@ -4412,6 +4715,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Uncommon Staff",
+    "Glyph": "n",
     "IconId": 6634,
     "ItemDescription": {
       "Description": "Magical Power and Health.",
@@ -4442,6 +4746,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9855,
     "DeviceName": "Sorcerer's Staff",
+    "Glyph": "n",
     "IconId": 6635,
     "ItemDescription": {
       "Description": "",
@@ -4476,6 +4781,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9855,
     "DeviceName": "Rod of Healing",
+    "Glyph": "n",
     "IconId": 2872,
     "ItemDescription": {
       "Description": "This item gives the owner an aura that increases healing.",
@@ -4510,6 +4816,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9855,
     "DeviceName": "Fortified Scepter",
+    "Glyph": "n",
     "IconId": 5043,
     "ItemDescription": {
       "Description": "",
@@ -4544,6 +4851,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 14081,
     "DeviceName": "Gem of Isolation",
+    "Glyph": "n",
     "IconId": 2869,
     "ItemDescription": {
       "Description": "This item causes your damaging abilities to slow your targets.",
@@ -4578,6 +4886,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9856,
     "DeviceName": "Warlock's Staff",
+    "Glyph": "n",
     "IconId": 6637,
     "ItemDescription": {
       "Description": "This item grants the owner permanent Stacks of Health and Magical Power on minion kills.",
@@ -4616,6 +4925,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 14081,
     "DeviceName": "Ethereal Staff",
+    "Glyph": "n",
     "IconId": 2868,
     "ItemDescription": {
       "Description": null,
@@ -4650,6 +4960,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9857,
     "DeviceName": "Rod of Asclepius",
+    "Glyph": "n",
     "IconId": 2542,
     "ItemDescription": {
       "Description": "This item gives the owner an aura that increases healing.",
@@ -4684,6 +4995,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 7917,
     "DeviceName": "Evolved Warlock's Staff",
+    "Glyph": "n",
     "IconId": 6636,
     "ItemDescription": {
       "Description": "This item grants the owner permanent Stacks of Health and Magical Power on minion kills.",
@@ -4722,6 +5034,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Spellbook",
+    "Glyph": "n",
     "IconId": 6628,
     "ItemDescription": {
       "Description": "Magical Power and Mana.",
@@ -4752,6 +5065,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9858,
     "DeviceName": "Book of Souls",
+    "Glyph": "n",
     "IconId": 6629,
     "ItemDescription": {
       "Description": "",
@@ -4782,6 +5096,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9859,
     "DeviceName": "Book of Thoth",
+    "Glyph": "n",
     "IconId": 2909,
     "ItemDescription": {
       "Description": "This item gives the owner additional Mana on kills and converts all Mana to Magical Power.",
@@ -4816,6 +5131,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9859,
     "DeviceName": "Polynomicon",
+    "Glyph": "n",
     "IconId": 2824,
     "ItemDescription": {
       "Description": "This item causes the owner's next Basic Attack to deal additional damage after using an ability.",
@@ -4850,6 +5166,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9859,
     "DeviceName": "Soul Reaver",
+    "Glyph": "n",
     "IconId": 2908,
     "ItemDescription": {
       "Description": "",
@@ -4880,6 +5197,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9859,
     "DeviceName": "Book of the Dead",
+    "Glyph": "n",
     "IconId": 5040,
     "ItemDescription": {
       "Description": "",
@@ -4914,6 +5232,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 7334,
     "DeviceName": "Evolved Book of Thoth",
+    "Glyph": "n",
     "IconId": 6652,
     "ItemDescription": {
       "Description": "This item gives the owner additional Mana on kills and converts all Mana to Magical Power.",
@@ -4948,6 +5267,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Lost Artifact",
+    "Glyph": "n",
     "IconId": 2844,
     "ItemDescription": {
       "Description": "Magical Power and MP5.",
@@ -4978,6 +5298,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9860,
     "DeviceName": "Cursed Orb",
+    "Glyph": "n",
     "IconId": 2842,
     "ItemDescription": {
       "Description": null,
@@ -5016,6 +5337,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9860,
     "DeviceName": "Restored Artifact",
+    "Glyph": "n",
     "IconId": 2843,
     "ItemDescription": {
       "Description": "",
@@ -5046,13 +5368,14 @@
     "ActiveFlag": "y",
     "ChildItemId": 9861,
     "DeviceName": "Rod of Tahuti",
+    "Glyph": "n",
     "IconId": 10329,
     "ItemDescription": {
       "Description": "",
       "Menuitems": [
         {
           "Description": "Magical Power",
-          "Value": "+140"
+          "Value": "+120"
         },
         {
           "Description": "MP5",
@@ -5080,13 +5403,14 @@
     "ActiveFlag": "y",
     "ChildItemId": 9861,
     "DeviceName": "Chronos' Pendant",
+    "Glyph": "n",
     "IconId": 8139,
     "ItemDescription": {
       "Description": null,
       "Menuitems": [
         {
           "Description": "Magical Power",
-          "Value": "+100"
+          "Value": "+90"
         },
         {
           "Description": "MP5",
@@ -5114,6 +5438,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 7924,
     "DeviceName": "Doom Orb",
+    "Glyph": "n",
     "IconId": 2839,
     "ItemDescription": {
       "Description": null,
@@ -5152,6 +5477,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9861,
     "DeviceName": "Charon's Coin",
+    "Glyph": "n",
     "IconId": 8135,
     "ItemDescription": {
       "Description": null,
@@ -5190,6 +5516,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 18183,
     "DeviceName": "Evolved Charon's Coin",
+    "Glyph": "n",
     "IconId": 8221,
     "ItemDescription": {
       "Description": null,
@@ -5228,13 +5555,14 @@
     "ActiveFlag": "y",
     "ChildItemId": 7600,
     "DeviceName": "Calamitous Rod of Tahuti",
+    "Glyph": "n",
     "IconId": 10331,
     "ItemDescription": {
       "Description": "",
       "Menuitems": [
         {
           "Description": "Magical Power",
-          "Value": "+140"
+          "Value": "+120"
         },
         {
           "Description": "MP5",
@@ -5245,7 +5573,7 @@
           "Value": "+10%"
         }
       ],
-      "SecondaryDescription": "PASSIVE - Basic Attacks and Abilities gain 25% additional Magical Power against targets below 50% Health. <n>GLYPH - Successfully hitting an enemy god with an ability calls down a meteor that lands after 1.5s, dealing 100 (+40% of your Magical Power) damage in a 15 unit radius. This effect can only occur once every 30s."
+      "SecondaryDescription": "PASSIVE - Basic Attacks and Abilities gain 25% additional Magical Power against targets below 50% Health. <n>GLYPH - Successfully hitting an enemy god with an ability calls down a meteor that lands after 1s, dealing 100 (+35% of your Magical Power) damage in a 15 unit radius. This effect can only occur once every 30s."
     },
     "ItemId": 21484,
     "ItemTier": 4,
@@ -5261,14 +5589,15 @@
   {
     "ActiveFlag": "y",
     "ChildItemId": 7600,
-    "DeviceName": "Nimble Rod of Tahuti",
-    "IconId": 10330,
+    "DeviceName": "Perfected Rod of Tahuti",
+    "Glyph": "n",
+    "IconId": 11026,
     "ItemDescription": {
-      "Description": "",
+      "Description": "Hitting an enemy god with two abilities buffs you.",
       "Menuitems": [
         {
           "Description": "Magical Power",
-          "Value": "+140"
+          "Value": "+120"
         },
         {
           "Description": "MP5",
@@ -5279,30 +5608,31 @@
           "Value": "+10%"
         }
       ],
-      "SecondaryDescription": "PASSIVE - Basic Attacks and Abilities gain 25% additional Magical Power against targets below 50% Health. <n>GLYPH - For every 40 Magical Power you have, you gain 2% Attack Speed."
+      "SecondaryDescription": "PASSIVE - Basic Attacks and Abilities gain 25% additional Magical Power against targets below 50% Health. <n>GLYPH - Successfully damaging an enemy god with an ability applies a mark for 3s. Damaging them a second time with an ability consumes the mark and provides you 10% movement speed for 2s and reduces your non-ultimate abilities by 1.5s. Only one mark can be active at a time and cannot be applied for 10s after consuming a mark. "
     },
-    "ItemId": 21502,
+    "ItemId": 22941,
     "ItemTier": 4,
     "Price": 600,
     "RestrictedRoles": "no restrictions",
     "RootItemId": 9861,
-    "ShortDesc": "Convert Magical Power to Attack Speed",
+    "ShortDesc": "Combo enemies to refresh your cooldowns.",
     "StartingItem": false,
     "Type": "Item",
-    "itemIcon_URL": "https://webcdn.hirezstudios.com/smite/item-icons/nimble-rod-of-tahuti.jpg",
+    "itemIcon_URL": "https://webcdn.hirezstudios.com/smite/item-icons/perfected-rod-of-tahuti.jpg",
     "ret_msg": null
   },
   {
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Enchanted Buckler",
+    "Glyph": "n",
     "IconId": 3146,
     "ItemDescription": {
       "Description": "Physical Power and Magical Protection.",
       "Menuitems": [
         {
           "Description": "Physical Power",
-          "Value": "+10"
+          "Value": "+7"
         },
         {
           "Description": "Magical Protection",
@@ -5326,6 +5656,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 10190,
     "DeviceName": "Warded Shield",
+    "Glyph": "n",
     "IconId": 2906,
     "ItemDescription": {
       "Description": "",
@@ -5356,13 +5687,14 @@
     "ActiveFlag": "y",
     "ChildItemId": 9835,
     "DeviceName": "Runic Shield",
+    "Glyph": "n",
     "IconId": 2903,
     "ItemDescription": {
       "Description": "Magical Power debuff aura.",
       "Menuitems": [
         {
           "Description": "Physical Power",
-          "Value": "+35"
+          "Value": "+30"
         },
         {
           "Description": "Magical Protection",
@@ -5390,13 +5722,14 @@
     "ActiveFlag": "y",
     "ChildItemId": 9835,
     "DeviceName": "Ancile",
+    "Glyph": "n",
     "IconId": 3145,
     "ItemDescription": {
       "Description": "The owner gains power as they lose health.",
       "Menuitems": [
         {
           "Description": "Physical Power",
-          "Value": "+50"
+          "Value": "+35"
         },
         {
           "Description": "Magical Protection",
@@ -5424,21 +5757,22 @@
     "ActiveFlag": "y",
     "ChildItemId": 9835,
     "DeviceName": "Caduceus Shield",
+    "Glyph": "n",
     "IconId": 8134,
     "ItemDescription": {
       "Description": "This item gives the owner an aura that increases healing.",
       "Menuitems": [
         {
           "Description": "Physical Power",
-          "Value": "+30"
+          "Value": "+20"
         },
         {
           "Description": "Physical Protection",
-          "Value": "+35"
+          "Value": "+30"
         },
         {
           "Description": "Magical Protection",
-          "Value": "+35"
+          "Value": "+30"
         },
         {
           "Description": "Health",
@@ -5462,6 +5796,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Imperial Helmet",
+    "Glyph": "n",
     "IconId": 3260,
     "ItemDescription": {
       "Description": null,
@@ -5492,6 +5827,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 10603,
     "DeviceName": "Jade Mountain Helm",
+    "Glyph": "n",
     "IconId": 3261,
     "ItemDescription": {
       "Description": "",
@@ -5522,6 +5858,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 10603,
     "DeviceName": "Dynasty Plate Helm",
+    "Glyph": "n",
     "IconId": 3263,
     "ItemDescription": {
       "Description": null,
@@ -5556,13 +5893,14 @@
     "ActiveFlag": "y",
     "ChildItemId": 10602,
     "DeviceName": "Celestial Legion Helm",
+    "Glyph": "n",
     "IconId": 3262,
     "ItemDescription": {
       "Description": "Provides stacking Physical Protections",
       "Menuitems": [
         {
           "Description": "Magical Power",
-          "Value": "+90"
+          "Value": "+55"
         },
         {
           "Description": "Physical Protection",
@@ -5573,7 +5911,7 @@
           "Value": "+20"
         }
       ],
-      "SecondaryDescription": "PASSIVE - Every 2s you receive a stack of 7 Physical Protection, up to a max of 5 stacks. Stacks are removed upon taking Physical Damage from gods. Stacks can only be gained after not taking Physical Damage from gods for 2s."
+      "SecondaryDescription": "PASSIVE - Every 3s you receive a stack of 7 Physical Protection and 4% Reduced Damage from Physical Critical Strikes, up to a max of 5 stacks. Stacks are removed upon taking Physical Damage from gods. Stacks can only be gained after not taking Physical Damage from gods for 3s."
     },
     "ItemId": 10600,
     "ItemTier": 3,
@@ -5590,6 +5928,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 10602,
     "DeviceName": "Lotus Crown",
+    "Glyph": "n",
     "IconId": 3491,
     "ItemDescription": {
       "Description": "Gives protection to gods you heal.",
@@ -5600,7 +5939,7 @@
         },
         {
           "Description": "Physical Protection",
-          "Value": "+60"
+          "Value": "+50"
         },
         {
           "Description": "MP5",
@@ -5624,13 +5963,14 @@
     "ActiveFlag": "y",
     "ChildItemId": 10602,
     "DeviceName": "Jade Emperor's Crown",
+    "Glyph": "n",
     "IconId": 5046,
     "ItemDescription": {
       "Description": "Aura reducing enemy Physical Power.",
       "Menuitems": [
         {
           "Description": "Magical Power",
-          "Value": "+20"
+          "Value": "+30"
         },
         {
           "Description": "Physical Protection",
@@ -5638,14 +5978,18 @@
         },
         {
           "Description": "Health",
-          "Value": "+250"
+          "Value": "+300"
+        },
+        {
+          "Description": "Crowd Control Reduction",
+          "Value": "+10%"
         }
       ],
-      "SecondaryDescription": "AURA - Enemy gods within 55 units have their Physical Power reduced by 30."
+      "SecondaryDescription": "AURA - Enemy gods within 40 units have their Physical Power reduced by 15%."
     },
     "ItemId": 14179,
     "ItemTier": 3,
-    "Price": 950,
+    "Price": 1400,
     "RestrictedRoles": "no restrictions",
     "RootItemId": 10603,
     "ShortDesc": "Aura reducing enemy Physical Power",
@@ -5658,13 +6002,14 @@
     "ActiveFlag": "y",
     "ChildItemId": 10605,
     "DeviceName": "Tyrannical Plate Helm",
+    "Glyph": "n",
     "IconId": 7601,
     "ItemDescription": {
       "Description": "",
       "Menuitems": [
         {
           "Description": "Magical Power",
-          "Value": "+85"
+          "Value": "+70"
         },
         {
           "Description": "Physical Protection",
@@ -5679,7 +6024,7 @@
           "Value": "+20%"
         }
       ],
-      "SecondaryDescription": "AURA - Ally lane minions within 70 units gain 20% Health and Attack Speed. Whenever an ally lane minion dies within 70 units of you, gain 5 power per stack, max 6 stacks for 15 seconds."
+      "SecondaryDescription": "AURA - Ally lane minions within 70 units gain 25% Health and Attack Speed. Whenever an ally lane minion dies within 70 units of you, gain 5 power per stack, max 6 stacks for 15 seconds."
     },
     "ItemId": 18199,
     "ItemTier": 3,
@@ -5696,6 +6041,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Short Bow",
+    "Glyph": "n",
     "IconId": 3283,
     "ItemDescription": {
       "Description": null,
@@ -5722,6 +6068,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 10662,
     "DeviceName": "Charged Bow",
+    "Glyph": "n",
     "IconId": 3307,
     "ItemDescription": {
       "Description": "This item has a chance to cause chain lightning, damaging nearby enemies.",
@@ -5748,6 +6095,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 10662,
     "DeviceName": "Hunter's Bow",
+    "Glyph": "n",
     "IconId": 4994,
     "ItemDescription": {
       "Description": null,
@@ -5778,6 +6126,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 10687,
     "DeviceName": "Odysseus' Bow",
+    "Glyph": "n",
     "IconId": 3105,
     "ItemDescription": {
       "Description": "This item has a chance to cause chain lightning, damaging nearby enemies.",
@@ -5804,6 +6153,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 14848,
     "DeviceName": "Ichaival",
+    "Glyph": "n",
     "IconId": 3285,
     "ItemDescription": {
       "Description": "",
@@ -5834,6 +6184,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 14848,
     "DeviceName": "Silverbranch Bow",
+    "Glyph": "n",
     "IconId": 5045,
     "ItemDescription": {
       "Description": "",
@@ -5851,7 +6202,7 @@
           "Value": "+20%"
         }
       ],
-      "SecondaryDescription": "PASSIVE - For each 0.02 Attack Speed you go over cap you gain 2 Physical Power."
+      "SecondaryDescription": "PASSIVE - For each 0.02 Attack Speed you go over 2.5 Attack Speed, you gain 2 Physical Power."
     },
     "ItemId": 14084,
     "ItemTier": 3,
@@ -5868,17 +6219,18 @@
     "ActiveFlag": "y",
     "ChildItemId": 14848,
     "DeviceName": "Atalanta's Bow",
+    "Glyph": "n",
     "IconId": 5451,
     "ItemDescription": {
       "Description": null,
       "Menuitems": [
         {
           "Description": "Physical Power",
-          "Value": "+40"
+          "Value": "+30"
         },
         {
           "Description": "Attack Speed",
-          "Value": "+25%"
+          "Value": "+20%"
         },
         {
           "Description": "Physical Lifesteal",
@@ -5906,6 +6258,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 0,
     "DeviceName": "Bluestone Pendant",
+    "Glyph": "n",
     "IconId": 3488,
     "ItemDescription": {
       "Description": null,
@@ -5940,6 +6293,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 0,
     "DeviceName": "Soul Stone",
+    "Glyph": "n",
     "IconId": 3494,
     "ItemDescription": {
       "Description": "This starting item for Magical users restores Mana and gives the owner bonus Damage on damaging Abilities.",
@@ -5970,6 +6324,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Relic",
+    "Glyph": "n",
     "IconId": 4312,
     "ItemDescription": {
       "Description": "Relics provide special powers available to all gods.",
@@ -5991,6 +6346,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 12333,
     "DeviceName": "*Hand of the Gods",
+    "Glyph": "n",
     "IconId": 4311,
     "ItemDescription": {
       "Description": "Deals damage to minions and jungle monsters. Stuns enemy gods.",
@@ -6012,6 +6368,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 7892,
     "DeviceName": "Hand of the Gods Upgrade",
+    "Glyph": "n",
     "IconId": 5104,
     "ItemDescription": {
       "Description": "Deals damage to minions and jungle monsters. Stuns enemy gods.",
@@ -6033,6 +6390,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Glowing Emerald",
+    "Glyph": "n",
     "IconId": 4325,
     "ItemDescription": {
       "Description": "Physical Protection and Health.",
@@ -6063,6 +6421,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 12663,
     "DeviceName": "Emerald Talisman",
+    "Glyph": "n",
     "IconId": 2953,
     "ItemDescription": {
       "Description": "",
@@ -6097,6 +6456,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 12663,
     "DeviceName": "Emerald Mail",
+    "Glyph": "n",
     "IconId": 2912,
     "ItemDescription": {
       "Description": "",
@@ -6127,6 +6487,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 7571,
     "DeviceName": "Stone of Gaia",
+    "Glyph": "n",
     "IconId": 2579,
     "ItemDescription": {
       "Description": "This item grants CC immunity after Knockups.",
@@ -6161,9 +6522,10 @@
     "ActiveFlag": "y",
     "ChildItemId": 9839,
     "DeviceName": "Shield of Regrowth",
+    "Glyph": "n",
     "IconId": 2904,
     "ItemDescription": {
-      "Description": "This item provides a movement speed boost after healing.",
+      "Description": "This item provides a boost after healing.",
       "Menuitems": [
         {
           "Description": "Health",
@@ -6182,14 +6544,14 @@
           "Value": "+10%"
         }
       ],
-      "SecondaryDescription": "PASSIVE - After healing yourself from an ability, you gain +30% movement speed for 4 seconds. This cannot occur more than once every 10 seconds."
+      "SecondaryDescription": "PASSIVE - After healing yourself from an ability, you gain 30% movement speed, 15 Physical Power, and 30 Magical Power for 4 seconds. This cannot occur more than once every 10 seconds."
     },
     "ItemId": 9112,
     "ItemTier": 3,
     "Price": 750,
     "RestrictedRoles": "no restrictions",
     "RootItemId": 12663,
-    "ShortDesc": "Provides a movement speed boost after healing.",
+    "ShortDesc": "Provides a boost after healing.",
     "StartingItem": false,
     "Type": "Item",
     "itemIcon_URL": "https://webcdn.hirezstudios.com/smite/item-icons/shield-of-regrowth.jpg",
@@ -6199,6 +6561,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 9839,
     "DeviceName": "Mail of Renewal (old)",
+    "Glyph": "n",
     "IconId": 2539,
     "ItemDescription": {
       "Description": "This item regenerates Health and Mana on a kill or assist.",
@@ -6233,13 +6596,14 @@
     "ActiveFlag": "y",
     "ChildItemId": 9839,
     "DeviceName": "Gauntlet of Thebes",
+    "Glyph": "n",
     "IconId": 4326,
     "ItemDescription": {
       "Description": "This item increases allied protections.",
       "Menuitems": [
         {
           "Description": "Health",
-          "Value": "+300"
+          "Value": "+250"
         },
         {
           "Description": "HP5",
@@ -6263,6 +6627,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 9839,
     "DeviceName": "Mail of Renewal",
+    "Glyph": "n",
     "IconId": 2539,
     "ItemDescription": {
       "Description": "This item regenerates Health and Mana on a kill or assist.",
@@ -6277,11 +6642,11 @@
         },
         {
           "Description": "Physical Protection",
-          "Value": "+20"
+          "Value": "+30"
         },
         {
           "Description": "Magical Protection",
-          "Value": "+20"
+          "Value": "+30"
         }
       ],
       "SecondaryDescription": "PASSIVE - When you are hit by an enemy god you gain a stack, up to once a second, increasing your protections by 4. Max of 5 stacks, lasts for 5s each. At max stacks, upon being hit you are immediately healed for 15% of your maximum health. Allies within 35 units heal for 15% of their maximum health over 10s. This effect can only occur once every 60 seconds."
@@ -6301,13 +6666,14 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Shuriken",
+    "Glyph": "n",
     "IconId": 4321,
     "ItemDescription": {
       "Description": null,
       "Menuitems": [
         {
           "Description": "Physical Power",
-          "Value": "+10"
+          "Value": "+7"
         },
         {
           "Description": "Attack Speed",
@@ -6331,6 +6697,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 12667,
     "DeviceName": "8-Pointed Shuriken",
+    "Glyph": "n",
     "IconId": 4322,
     "ItemDescription": {
       "Description": "",
@@ -6361,6 +6728,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 12668,
     "DeviceName": "Wind Demon",
+    "Glyph": "n",
     "IconId": 4323,
     "ItemDescription": {
       "Description": "",
@@ -6378,7 +6746,7 @@
           "Value": "+20%"
         }
       ],
-      "SecondaryDescription": "PASSIVE - Your Critical Hits provide you with 10% Physical Penetration and increase your Attack Speed by 10% and Movement Speed by 10% for 5s."
+      "SecondaryDescription": "PASSIVE - Your Critical Hits provide you with 10% Physical Penetration and increase your Attack Speed by 10% and Movement Speed by 10% for 4s."
     },
     "ItemId": 12674,
     "ItemTier": 3,
@@ -6395,6 +6763,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 12668,
     "DeviceName": "Poisoned Star ",
+    "Glyph": "n",
     "IconId": 4764,
     "ItemDescription": {
       "Description": "This item causes the owner's Critical Hits to weaken Enemies.",
@@ -6429,6 +6798,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 12668,
     "DeviceName": "Shadowsteel Shuriken",
+    "Glyph": "n",
     "IconId": 8680,
     "ItemDescription": {
       "Description": "This item causes the owner's Critical Hits to reduce healing.",
@@ -6463,13 +6833,14 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Katana",
+    "Glyph": "n",
     "IconId": 4317,
     "ItemDescription": {
       "Description": null,
       "Menuitems": [
         {
           "Description": "Physical Power",
-          "Value": "+10"
+          "Value": "+7"
         },
         {
           "Description": "Movement Speed",
@@ -6480,7 +6851,7 @@
     },
     "ItemId": 12671,
     "ItemTier": 1,
-    "Price": 650,
+    "Price": 600,
     "RestrictedRoles": "guardian,hunter,mage",
     "RootItemId": 12671,
     "ShortDesc": "Physical Power and Movement Speed",
@@ -6493,6 +6864,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 12671,
     "DeviceName": "Thousand Fold Blade",
+    "Glyph": "n",
     "IconId": 4318,
     "ItemDescription": {
       "Description": "Physical Power and Penetration.",
@@ -6523,6 +6895,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 12672,
     "DeviceName": "Stone Cutting Sword",
+    "Glyph": "n",
     "IconId": 4320,
     "ItemDescription": {
       "Description": "This item causes your Basic Attacks to reduce the target's Physical Protections.",
@@ -6553,6 +6926,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 12672,
     "DeviceName": "Hastened Katana",
+    "Glyph": "n",
     "IconId": 5453,
     "ItemDescription": {
       "Description": "This item gives the owner increased movement speed and attack speed.",
@@ -6587,6 +6961,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 12672,
     "DeviceName": "Golden Blade",
+    "Glyph": "n",
     "IconId": 7141,
     "ItemDescription": {
       "Description": "This item causes the owner's Basic Attacks to hit nearby enemies.",
@@ -6604,11 +6979,11 @@
           "Value": "+10%"
         }
       ],
-      "SecondaryDescription": "PASSIVE - All Basic Attacks will also hit enemies within a 15 unit radius of the target for 50% of the damage to Gods, and 50% damage to Minions and Jungle Camps."
+      "SecondaryDescription": "PASSIVE - All Basic Attacks will also hit enemies within a 15 unit radius of the target for 50% of the damage to Gods, Minions and Jungle Camps."
     },
     "ItemId": 16592,
     "ItemTier": 3,
-    "Price": 700,
+    "Price": 900,
     "RestrictedRoles": "guardian,hunter,mage",
     "RootItemId": 12671,
     "ShortDesc": "Basic Attack hits damage additional enemies",
@@ -6621,13 +6996,14 @@
     "ActiveFlag": "y",
     "ChildItemId": 12672,
     "DeviceName": "Serrated Edge",
+    "Glyph": "n",
     "IconId": 8679,
     "ItemDescription": {
       "Description": "Bonus Power and Lifesteal when abilities are on cooldown.",
       "Menuitems": [
         {
           "Description": "Physical Power",
-          "Value": "+35"
+          "Value": "+30"
         },
         {
           "Description": "Physical Lifesteal",
@@ -6642,11 +7018,11 @@
           "Value": "+7%"
         }
       ],
-      "SecondaryDescription": "PASSIVE - For every non-ultimate ability on cooldown you gain a stack of Cruelty. Each stack provides 10 Physical Power and 3% Physical Lifesteal."
+      "SecondaryDescription": "PASSIVE - For every non-ultimate ability on cooldown you gain a stack of Cruelty. Each stack provides 8 Physical Power and 3% Physical Lifesteal."
     },
     "ItemId": 19003,
     "ItemTier": 3,
-    "Price": 1350,
+    "Price": 1400,
     "RestrictedRoles": "guardian,hunter,mage",
     "RootItemId": 12671,
     "ShortDesc": "Bonus Power and Lifesteal when abilities are on cooldown",
@@ -6659,6 +7035,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Enchanted Kusari",
+    "Glyph": "n",
     "IconId": 4313,
     "ItemDescription": {
       "Description": "Magical Protection.",
@@ -6689,6 +7066,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 12675,
     "DeviceName": "Spellbound Kusari",
+    "Glyph": "n",
     "IconId": 4314,
     "ItemDescription": {
       "Description": "Magical Protection.",
@@ -6719,6 +7097,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 12676,
     "DeviceName": "Genji's Guard",
+    "Glyph": "n",
     "IconId": 4315,
     "ItemDescription": {
       "Description": "Magical Protection and Cooldown Reduction.",
@@ -6757,13 +7136,14 @@
     "ActiveFlag": "y",
     "ChildItemId": 12676,
     "DeviceName": "Oni Hunter's Garb",
+    "Glyph": "n",
     "IconId": 4316,
     "ItemDescription": {
       "Description": "Magical Protection and Crowd Control Reduction.",
       "Menuitems": [
         {
           "Description": "Health",
-          "Value": "+100"
+          "Value": "+200"
         },
         {
           "Description": "Magical Protection",
@@ -6774,7 +7154,7 @@
           "Value": "+30"
         },
         {
-          "Description": "Crowd Control Reduction:",
+          "Description": "Crowd Control Reduction",
           "Value": "+20%"
         }
       ],
@@ -6795,13 +7175,14 @@
     "ActiveFlag": "y",
     "ChildItemId": 12676,
     "DeviceName": "Shogun's Kusari",
+    "Glyph": "n",
     "IconId": 5049,
     "ItemDescription": {
       "Description": "Attack Speed Aura.",
       "Menuitems": [
         {
           "Description": "Magical Protection",
-          "Value": "+60"
+          "Value": "+50"
         },
         {
           "Description": "Health",
@@ -6833,6 +7214,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Scare Tactics",
+    "Glyph": "n",
     "IconId": 4048,
     "ItemDescription": {
       "Description": "Hit an enemy with this!",
@@ -6854,6 +7236,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Chalice of Healing",
+    "Glyph": "n",
     "IconId": 5055,
     "ItemDescription": {
       "Description": "This consumable heals you over time.",
@@ -6875,6 +7258,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Chalice of Mana",
+    "Glyph": "n",
     "IconId": 5057,
     "ItemDescription": {
       "Description": "This consumable heals Mana over time.",
@@ -6896,6 +7280,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Chalice of the Oracle",
+    "Glyph": "n",
     "IconId": 5059,
     "ItemDescription": {
       "Description": "This is a ward that allows you to see normal enemy movements.",
@@ -6917,6 +7302,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Druid Stone",
+    "Glyph": "n",
     "IconId": 5042,
     "ItemDescription": {
       "Description": "Magical Power and Magical Protection.",
@@ -6947,6 +7333,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 14071,
     "DeviceName": "Ward Stone",
+    "Glyph": "n",
     "IconId": 2860,
     "ItemDescription": {
       "Description": "",
@@ -6981,6 +7368,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 14071,
     "DeviceName": "Sage's Stone",
+    "Glyph": "n",
     "IconId": 5047,
     "ItemDescription": {
       "Description": "",
@@ -7019,13 +7407,14 @@
     "ActiveFlag": "y",
     "ChildItemId": 14071,
     "DeviceName": "Stone of Binding",
+    "Glyph": "n",
     "IconId": 5051,
     "ItemDescription": {
       "Description": null,
       "Menuitems": [
         {
           "Description": "Magical Power",
-          "Value": "+30"
+          "Value": "+25"
         },
         {
           "Description": "Magical Protection",
@@ -7057,13 +7446,14 @@
     "ActiveFlag": "y",
     "ChildItemId": 9853,
     "DeviceName": "Void Stone",
+    "Glyph": "n",
     "IconId": 2439,
     "ItemDescription": {
       "Description": "This item gives the owner an aura that reduces magical protections.",
       "Menuitems": [
         {
           "Description": "Health",
-          "Value": "+250"
+          "Value": "+200"
         },
         {
           "Description": "Magical Power",
@@ -7071,10 +7461,10 @@
         },
         {
           "Description": "Magical Protection",
-          "Value": "+60"
+          "Value": "+50"
         }
       ],
-      "SecondaryDescription": "AURA - Enemy gods within 55 units have their Magical Protection reduced by 15%."
+      "SecondaryDescription": "AURA - Enemy gods within 55 units have their Magical Protection reduced by 10%."
     },
     "ItemId": 7791,
     "ItemTier": 3,
@@ -7091,6 +7481,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 14072,
     "DeviceName": "Stone of Fal (old)",
+    "Glyph": "n",
     "IconId": 5052,
     "ItemDescription": {
       "Description": null,
@@ -7125,13 +7516,14 @@
     "ActiveFlag": "y",
     "ChildItemId": 14072,
     "DeviceName": "Stone of Fal",
+    "Glyph": "n",
     "IconId": 5052,
     "ItemDescription": {
       "Description": "",
       "Menuitems": [
         {
           "Description": "Health",
-          "Value": "+200"
+          "Value": "+150"
         },
         {
           "Description": "Magical Power",
@@ -7163,6 +7555,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 0,
     "DeviceName": "*War Flag",
+    "Glyph": "n",
     "IconId": 5088,
     "ItemDescription": {
       "Description": "This starter item restores its user's Health and Mana when in assist range of a slain minion.",
@@ -7197,6 +7590,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 0,
     "DeviceName": "Sands of Time",
+    "Glyph": "n",
     "IconId": 5085,
     "ItemDescription": {
       "Description": "This starting item reduces your cooldowns when you are hit by a Physical God",
@@ -7231,6 +7625,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 0,
     "DeviceName": "Swift Wing",
+    "Glyph": "n",
     "IconId": 5086,
     "ItemDescription": {
       "Description": "Increased movement speed when leaving the fountain.",
@@ -7264,7 +7659,39 @@
   {
     "ActiveFlag": "n",
     "ChildItemId": 0,
+    "DeviceName": "Evolved Lono's Mask",
+    "Glyph": "n",
+    "IconId": 5462,
+    "ItemDescription": {
+      "Description": null,
+      "Menuitems": [
+        {
+          "Description": "Health",
+          "Value": "+150"
+        },
+        {
+          "Description": "HP5",
+          "Value": "+5"
+        }
+      ],
+      "SecondaryDescription": null
+    },
+    "ItemId": 14857,
+    "ItemTier": 1,
+    "Price": 0,
+    "RestrictedRoles": "no restrictions",
+    "RootItemId": 14857,
+    "ShortDesc": "Bonus max Health on assists. Gold Bonus on Completing Stacks.",
+    "StartingItem": false,
+    "Type": "Item",
+    "itemIcon_URL": "https://webcdn.hirezstudios.com/smite/item-icons/evolved-lonos-mask.jpg",
+    "ret_msg": null
+  },
+  {
+    "ActiveFlag": "n",
+    "ChildItemId": 0,
     "DeviceName": "Guardian's Blessing",
+    "Glyph": "n",
     "IconId": 6555,
     "ItemDescription": {
       "Description": "",
@@ -7286,6 +7713,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 15473,
     "DeviceName": "Evolved Guardian's Blessing",
+    "Glyph": "n",
     "IconId": 6556,
     "ItemDescription": {
       "Description": "",
@@ -7307,6 +7735,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 0,
     "DeviceName": "Warrior's Blessing",
+    "Glyph": "n",
     "IconId": 6559,
     "ItemDescription": {
       "Description": null,
@@ -7328,6 +7757,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 15479,
     "DeviceName": "Evolved Warrior's Blessing",
+    "Glyph": "n",
     "IconId": 6560,
     "ItemDescription": {
       "Description": null,
@@ -7349,6 +7779,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 0,
     "DeviceName": "Mage's Blessing",
+    "Glyph": "n",
     "IconId": 6561,
     "ItemDescription": {
       "Description": null,
@@ -7370,6 +7801,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 15482,
     "DeviceName": "Evolved Mage's Blessing",
+    "Glyph": "n",
     "IconId": 6562,
     "ItemDescription": {
       "Description": null,
@@ -7391,6 +7823,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 0,
     "DeviceName": "Assassin's Blessing",
+    "Glyph": "n",
     "IconId": 6553,
     "ItemDescription": {
       "Description": "",
@@ -7412,6 +7845,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 15486,
     "DeviceName": "Evolved Assassin's Blessing",
+    "Glyph": "n",
     "IconId": 6554,
     "ItemDescription": {
       "Description": "",
@@ -7433,6 +7867,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 0,
     "DeviceName": "Hunter's Blessing",
+    "Glyph": "n",
     "IconId": 6557,
     "ItemDescription": {
       "Description": null,
@@ -7454,6 +7889,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 15489,
     "DeviceName": "Evolved Hunter's Blessing",
+    "Glyph": "n",
     "IconId": 6558,
     "ItemDescription": {
       "Description": null,
@@ -7475,6 +7911,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 0,
     "DeviceName": "Specialist's Blessing",
+    "Glyph": "n",
     "IconId": 6627,
     "ItemDescription": {
       "Description": null,
@@ -7496,6 +7933,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 15571,
     "DeviceName": "Evolved Specialist's Blessing",
+    "Glyph": "n",
     "IconId": 6626,
     "ItemDescription": {
       "Description": null,
@@ -7517,6 +7955,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 0,
     "DeviceName": "Attacker's Blessing",
+    "Glyph": "n",
     "IconId": 6623,
     "ItemDescription": {
       "Description": null,
@@ -7538,6 +7977,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 15577,
     "DeviceName": "Evolved Attacker's Blessing",
+    "Glyph": "n",
     "IconId": 6622,
     "ItemDescription": {
       "Description": null,
@@ -7559,6 +7999,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 0,
     "DeviceName": "Defender's Blessing",
+    "Glyph": "n",
     "IconId": 6625,
     "ItemDescription": {
       "Description": null,
@@ -7580,6 +8021,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 15597,
     "DeviceName": "Evolved Defender's Blessing",
+    "Glyph": "n",
     "IconId": 6624,
     "ItemDescription": {
       "Description": null,
@@ -7601,6 +8043,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Baron's Brew",
+    "Glyph": "n",
     "IconId": 7022,
     "ItemDescription": {
       "Description": "This consumable heals and restores Mana over time.",
@@ -7619,107 +8062,10 @@
     "ret_msg": null
   },
   {
-    "ActiveFlag": "y",
-    "ChildItemId": 0,
-    "DeviceName": "Mask",
-    "IconId": 7068,
-    "ItemDescription": {
-      "Description": null,
-      "Menuitems": [
-        {
-          "Description": "Health",
-          "Value": "+100"
-        },
-        {
-          "Description": "Mana",
-          "Value": "+100"
-        }
-      ],
-      "SecondaryDescription": null
-    },
-    "ItemId": 16393,
-    "ItemTier": 1,
-    "Price": 700,
-    "RestrictedRoles": "no restrictions",
-    "RootItemId": 16393,
-    "ShortDesc": "Health and Mana",
-    "StartingItem": false,
-    "Type": "Item",
-    "itemIcon_URL": "https://webcdn.hirezstudios.com/smite/item-icons/mask.jpg",
-    "ret_msg": null
-  },
-  {
-    "ActiveFlag": "y",
-    "ChildItemId": 16393,
-    "DeviceName": "Protector's Mask",
-    "IconId": 5305,
-    "ItemDescription": {
-      "Description": null,
-      "Menuitems": [
-        {
-          "Description": "Health",
-          "Value": "+100"
-        },
-        {
-          "Description": "Physical Protection",
-          "Value": "+15"
-        },
-        {
-          "Description": "Magical Protection",
-          "Value": "+15"
-        },
-        {
-          "Description": "Crowd Control Reduction",
-          "Value": "+10%"
-        }
-      ],
-      "SecondaryDescription": "Passive - Only can be bought by Mages, Hunters, Assassins"
-    },
-    "ItemId": 16394,
-    "ItemTier": 2,
-    "Price": 500,
-    "RestrictedRoles": "guardian,warrior",
-    "RootItemId": 16393,
-    "ShortDesc": "Health and Protections",
-    "StartingItem": false,
-    "Type": "Item",
-    "itemIcon_URL": "https://webcdn.hirezstudios.com/smite/item-icons/protectors-mask.jpg",
-    "ret_msg": null
-  },
-  {
-    "ActiveFlag": "y",
-    "ChildItemId": 16393,
-    "DeviceName": "Fighter's Mask",
-    "IconId": 5084,
-    "ItemDescription": {
-      "Description": null,
-      "Menuitems": [
-        {
-          "Description": "Physical Power",
-          "Value": "+30"
-        },
-        {
-          "Description": "Magical Power",
-          "Value": "+60"
-        }
-      ],
-      "SecondaryDescription": "PASSIVE - Only can be bought by Warriors, Guardians"
-    },
-    "ItemId": 16397,
-    "ItemTier": 2,
-    "Price": 500,
-    "RestrictedRoles": "assassin,hunter,mage",
-    "RootItemId": 16393,
-    "ShortDesc": "Extra Power",
-    "StartingItem": false,
-    "Type": "Item",
-    "itemIcon_URL": "https://webcdn.hirezstudios.com/smite/item-icons/fighters-mask.jpg",
-    "ret_msg": null
-  },
-  {
     "ActiveFlag": "n",
     "ChildItemId": 16395,
     "DeviceName": "Bumba's Mask",
+    "Glyph": "n",
     "IconId": 7070,
     "ItemDescription": {
       "Description": null,
@@ -7751,39 +8097,10 @@
     "ret_msg": null
   },
   {
-    "ActiveFlag": "y",
-    "ChildItemId": 16397,
-    "DeviceName": "Rangda's Mask",
-    "IconId": 7069,
-    "ItemDescription": {
-      "Description": null,
-      "Menuitems": [
-        {
-          "Description": "Physical Power",
-          "Value": "+70"
-        },
-        {
-          "Description": "Magical Power",
-          "Value": "+120"
-        }
-      ],
-      "SecondaryDescription": "PASSIVE - GAIN DAMAGE, SACRIFICE DEFENSES\nOnly can be bought by Warriors, Guardians\n<font color='#42F46E'>+15% Damage Dealt\n<font color='#F44242'>+15% Damage Taken"
-    },
-    "ItemId": 14098,
-    "ItemTier": 3,
-    "Price": 1300,
-    "RestrictedRoles": "assassin,hunter,mage",
-    "RootItemId": 16393,
-    "ShortDesc": "Gain Damage, Sacrifice Defenses",
-    "StartingItem": false,
-    "Type": "Item",
-    "itemIcon_URL": "https://webcdn.hirezstudios.com/smite/item-icons/rangdas-mask.jpg",
-    "ret_msg": null
-  },
-  {
-    "ActiveFlag": "y",
+    "ActiveFlag": "n",
     "ChildItemId": 16394,
-    "DeviceName": "Lono's Mask",
+    "DeviceName": "Lono's Mask (deprecated)",
+    "Glyph": "n",
     "IconId": 7071,
     "ItemDescription": {
       "Description": null,
@@ -7815,43 +8132,92 @@
     "ShortDesc": "Gain Defense, Sacrifice Damage",
     "StartingItem": false,
     "Type": "Item",
-    "itemIcon_URL": "https://webcdn.hirezstudios.com/smite/item-icons/lonos-mask.jpg",
+    "itemIcon_URL": "https://webcdn.hirezstudios.com/smite/item-icons/lonos-mask-deprecated.jpg",
     "ret_msg": null
   },
   {
-    "ActiveFlag": "n",
-    "ChildItemId": 14541,
-    "DeviceName": "Evolved Lono's Mask",
-    "IconId": 5462,
+    "ActiveFlag": "y",
+    "ChildItemId": 0,
+    "DeviceName": "Fighter's Mask",
+    "Glyph": "n",
+    "IconId": 5084,
     "ItemDescription": {
       "Description": null,
       "Menuitems": [
         {
-          "Description": "Health",
-          "Value": "+150"
+          "Description": "Physical Power",
+          "Value": "+10"
+        },
+        {
+          "Description": "Magical Power",
+          "Value": "+15"
         },
         {
           "Description": "HP5",
-          "Value": "+5"
+          "Value": "+10"
+        },
+        {
+          "Description": "MP5",
+          "Value": "+10"
         }
       ],
-      "SecondaryDescription": null
+      "SecondaryDescription": "PASSIVE - <font color='#42F46E'>Increase Damage Dealt by 10% + 0.4% per your god\u2019s level.\n<font color='#F44242'>Increase Damage Taken by 10% + 0.4% per your god\u2019s level.\nPASSIVE - This item grants 2 MP5 per 10% of your missing Mana. Your abilities deal +10 Bonus Ability True Damage to minions. <n>Can be upgraded at level 20."
     },
-    "ItemId": 14857,
-    "ItemTier": 4,
-    "Price": 0,
-    "RestrictedRoles": "no restrictions",
-    "RootItemId": 16394,
-    "ShortDesc": "Bonus max Health on assists. Gold Bonus on Completing Stacks.",
-    "StartingItem": false,
+    "ItemId": 16397,
+    "ItemTier": 1,
+    "Price": 650,
+    "RestrictedRoles": "assassin,hunter,mage",
+    "RootItemId": 16397,
+    "ShortDesc": "Extra Power",
+    "StartingItem": true,
     "Type": "Item",
-    "itemIcon_URL": "https://webcdn.hirezstudios.com/smite/item-icons/evolved-lonos-mask.jpg",
+    "itemIcon_URL": "https://webcdn.hirezstudios.com/smite/item-icons/fighters-mask.jpg",
+    "ret_msg": null
+  },
+  {
+    "ActiveFlag": "y",
+    "ChildItemId": 16397,
+    "DeviceName": "Rangda's Mask",
+    "Glyph": "n",
+    "IconId": 7069,
+    "ItemDescription": {
+      "Description": null,
+      "Menuitems": [
+        {
+          "Description": "Physical Power",
+          "Value": "+60"
+        },
+        {
+          "Description": "Magical Power",
+          "Value": "+80"
+        },
+        {
+          "Description": "HP5",
+          "Value": "+20"
+        },
+        {
+          "Description": "Cooldown Reduction",
+          "Value": "+10%"
+        }
+      ],
+      "SecondaryDescription": "Gain 5 stacks of <font color='#F44242'>Weakness. Each stack increases your damage taken by 10%. For each 65 Physical Power or 90 Magical Power from items, remove a stack of <font color='#F44242'>Weakness. When you remove a stack of <font color='#F44242'>Weakness  gain a stack of <font color='#42F46E'>Strength. For each stack of <font color='#42F46E'>Strength gain +3% damage dealt and 2% movement speed."
+    },
+    "ItemId": 14098,
+    "ItemTier": 2,
+    "Price": 1500,
+    "RestrictedRoles": "assassin,hunter,mage",
+    "RootItemId": 16397,
+    "ShortDesc": "Gain Damage, Sacrifice Defenses",
+    "StartingItem": true,
+    "Type": "Item",
+    "itemIcon_URL": "https://webcdn.hirezstudios.com/smite/item-icons/rangdas-mask.jpg",
     "ret_msg": null
   },
   {
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Gem Of Fate",
+    "Glyph": "n",
     "IconId": 7718,
     "ItemDescription": {
       "Description": "Cooldown Reduction and Ultimate Activation",
@@ -7878,6 +8244,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 17349,
     "DeviceName": "Honed Edge",
+    "Glyph": "n",
     "IconId": 7720,
     "ItemDescription": {
       "Description": "Cooldown Reduction and Physical Power",
@@ -7908,6 +8275,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 17349,
     "DeviceName": "Knight's Shield",
+    "Glyph": "n",
     "IconId": 7719,
     "ItemDescription": {
       "Description": "Cooldown Reduction and Protections",
@@ -7942,6 +8310,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 17349,
     "DeviceName": "Apprentice Staff",
+    "Glyph": "n",
     "IconId": 7721,
     "ItemDescription": {
       "Description": "Cooldown Reduction and Magical Power",
@@ -7972,6 +8341,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 17353,
     "DeviceName": "S7 Staff of Myrddin",
+    "Glyph": "n",
     "IconId": 7725,
     "ItemDescription": {
       "Description": "On ultimate use your next ability has no cooldown.",
@@ -8006,6 +8376,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 17352,
     "DeviceName": "Pridwen",
+    "Glyph": "n",
     "IconId": 7724,
     "ItemDescription": {
       "Description": "On ultimate use, gain a defensive shield to punish attacks.",
@@ -8023,7 +8394,7 @@
           "Value": "+20%"
         }
       ],
-      "SecondaryDescription": "PASSIVE - When your Ultimate ability has finished casting, you gain a Shield equal to 100% of your Protections from items and abilities for 5s. When destroyed, by timing out or being depleted, it explodes and deals Magical damage equal to 75% of the Shield\u2019s initial Health and slows targets by 25% for 3s. This can only occur once every 45 seconds."
+      "SecondaryDescription": "PASSIVE - When your Ultimate ability has finished casting, you gain a Shield equal to 90% of your Protections from items and abilities for 5s. When destroyed, by timing out or being depleted, it explodes and deals Magical damage equal to 75% of the Shield\u2019s initial Health and slows targets by 25% for 3s. This can only occur once every 45 seconds."
     },
     "ItemId": 17355,
     "ItemTier": 3,
@@ -8040,6 +8411,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 17351,
     "DeviceName": "Arondight",
+    "Glyph": "n",
     "IconId": 7723,
     "ItemDescription": {
       "Description": "On ultimate use seek out and banish evil.",
@@ -8070,6 +8442,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 17351,
     "DeviceName": "Fail-not",
+    "Glyph": "n",
     "IconId": 7722,
     "ItemDescription": {
       "Description": "On ultimate use your next damaging ability marks an enemies weak point.",
@@ -8108,9 +8481,10 @@
     "ActiveFlag": "y",
     "ChildItemId": 17353,
     "DeviceName": "Staff of Myrddin",
+    "Glyph": "n",
     "IconId": 7725,
     "ItemDescription": {
-      "Description": "On ultimate use your next ability has no cooldown.",
+      "Description": "On ultimate use your next abilies deal massive damage.",
       "Menuitems": [
         {
           "Description": "Magical Power",
@@ -8125,14 +8499,14 @@
           "Value": "+10%"
         }
       ],
-      "SecondaryDescription": "PASSIVE - When your ultimate ability has finished casting you gain Myrddin's Brilliance which provides 70% Uncapped Cooldown Reduction, decaying to 40% Uncapped Cooldown Reduction over 8s. Uncapped Cooldown Reduction overrides normal Cooldown Reduction. At the end of the 8s you lose Myrddin's Brilliance. This can only occur once every 45s."
+      "SecondaryDescription": "PASSIVE - When your ultimate ability has finished casting you gain Myrddin's Rage which provides 25% Increased Damage Dealt decaying over 8s. At the end of the 8s you lose Myrddin's Rage. This can only occur once every 45s."
     },
     "ItemId": 20694,
     "ItemTier": 3,
     "Price": 1000,
     "RestrictedRoles": "no restrictions",
     "RootItemId": 17349,
-    "ShortDesc": "On ultimate use you can sling spells rapidly.",
+    "ShortDesc": "On ultimate use you deal massive damage.",
     "StartingItem": false,
     "Type": "Item",
     "itemIcon_URL": "https://webcdn.hirezstudios.com/smite/item-icons/staff-of-myrddin.jpg",
@@ -8142,6 +8516,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Potion of Power",
+    "Glyph": "n",
     "IconId": 1980,
     "ItemDescription": {
       "Description": null,
@@ -8172,6 +8547,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Hand of the Gods",
+    "Glyph": "n",
     "IconId": 8137,
     "ItemDescription": {
       "Description": "",
@@ -8193,6 +8569,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Vision Shard",
+    "Glyph": "n",
     "IconId": 8136,
     "ItemDescription": {
       "Description": null,
@@ -8214,6 +8591,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 18307,
     "DeviceName": "S8 Meditation Cloak",
+    "Glyph": "n",
     "IconId": 4305,
     "ItemDescription": {
       "Description": "Mana and Health restoration.",
@@ -8235,6 +8613,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 18307,
     "DeviceName": "S8 Magic Shell",
+    "Glyph": "n",
     "IconId": 4308,
     "ItemDescription": {
       "Description": "Protections and Damage Mitigation Buff.",
@@ -8256,6 +8635,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 18307,
     "DeviceName": "z* S7 Sundering Spear",
+    "Glyph": "n",
     "IconId": 5074,
     "ItemDescription": {
       "Description": "Fires True Damage Projectile.",
@@ -8277,6 +8657,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 18307,
     "DeviceName": "S8 Phantom Veil",
+    "Glyph": "n",
     "IconId": 4671,
     "ItemDescription": {
       "Description": "Ghostwalk",
@@ -8298,6 +8679,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 18307,
     "DeviceName": "Bracer of Undoing",
+    "Glyph": "n",
     "IconId": 5062,
     "ItemDescription": {
       "Description": "Heals Mana and Health.",
@@ -8319,6 +8701,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 18307,
     "DeviceName": "Aegis Amulet",
+    "Glyph": "n",
     "IconId": 10309,
     "ItemDescription": {
       "Description": "Using this item grants the owner invulnerability for a short duration.",
@@ -8340,11 +8723,12 @@
     "ActiveFlag": "y",
     "ChildItemId": 18307,
     "DeviceName": "Belt of Frenzy",
+    "Glyph": "n",
     "IconId": 10347,
     "ItemDescription": {
       "Description": "Ally damage buff.",
       "Menuitems": [],
-      "SecondaryDescription": "Using this item grants all allied gods within 70 units 15% Increased Damage dealt to all targets, including objectives, and 25% Attack Speed increase for 6 seconds. Cooldown - 130s."
+      "SecondaryDescription": "Using this item grants all allied gods within 70 units 10% Increased Damage dealt to all targets, including objectives, and 25% Attack Speed increase for 6 seconds. Cooldown - 130s."
     },
     "ItemId": 21550,
     "ItemTier": 2,
@@ -8361,6 +8745,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 18307,
     "DeviceName": "Blink Rune",
+    "Glyph": "n",
     "IconId": 10351,
     "ItemDescription": {
       "Description": "Short range teleport.",
@@ -8382,11 +8767,12 @@
     "ActiveFlag": "y",
     "ChildItemId": 18307,
     "DeviceName": "Bracer of Radiance",
+    "Glyph": "n",
     "IconId": 10355,
     "ItemDescription": {
       "Description": "Provides vision and warmth to allies.",
       "Menuitems": [],
-      "SecondaryDescription": "Place a radiant glow at a target location for 90s. Allies who move through this glow gain 15% increased Power if above half health or 15% Movement Speed if below Half Health for 8s. This fragment acts as a ward. If destroyed the cooldown of the relic is reduced by 20s. Cooldown - 120s."
+      "SecondaryDescription": "Place a radiant glow at a target location for 90s. Allies who move through this glow gain 10% increased Power if above half health or 15% Movement Speed if below Half Health for 8s. This fragment acts as a ward. If destroyed the cooldown of the relic is reduced by 20s. Cooldown - 120s."
     },
     "ItemId": 21558,
     "ItemTier": 2,
@@ -8403,6 +8789,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 18307,
     "DeviceName": "Cursed Ankh",
+    "Glyph": "n",
     "IconId": 10361,
     "ItemDescription": {
       "Description": "Reduces enemy Healing.",
@@ -8424,6 +8811,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 18307,
     "DeviceName": "Heavenly Wings",
+    "Glyph": "n",
     "IconId": 10372,
     "ItemDescription": {
       "Description": "Increases ally Movement Speed",
@@ -8445,6 +8833,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 18307,
     "DeviceName": "Horrific Emblem",
+    "Glyph": "n",
     "IconId": 10375,
     "ItemDescription": {
       "Description": "Reduces enemy gods Attack Speed and Movement Speed.",
@@ -8466,11 +8855,12 @@
     "ActiveFlag": "y",
     "ChildItemId": 18307,
     "DeviceName": "Magic Shell",
+    "Glyph": "n",
     "IconId": 10364,
     "ItemDescription": {
       "Description": "Protections and Damage Mitigation Buff.",
       "Menuitems": [],
-      "SecondaryDescription": "Using this item applies a shield to himself and allies within 35 units for 100 Health + 12 Health per God Level for 3 seconds. Additionally, all allies take 20% reduced damage from Basic Attacks while the shield is active. Cooldown - 150s."
+      "SecondaryDescription": "Using this item applies a shield to yourself and allies within 35 units for 100 Health + 12 Health per God Level for 3 seconds. Additionally, all allies take 20% reduced damage from Basic Attacks while the shield is active. Cooldown - 150s."
     },
     "ItemId": 21568,
     "ItemTier": 2,
@@ -8487,11 +8877,12 @@
     "ActiveFlag": "y",
     "ChildItemId": 18307,
     "DeviceName": "Cloak of Meditation",
+    "Glyph": "n",
     "IconId": 10343,
     "ItemDescription": {
       "Description": "Mana and Health restoration.",
       "Menuitems": [],
-      "SecondaryDescription": "Using this item causes you to Enter a meditative state where nearby allies gods within 35 units restore 10 + 5% of their missing health and mana each tick. Heals occur once every second for 4s. Cooldown - 150s."
+      "SecondaryDescription": "Using this item causes you to Enter a meditative state where nearby allies gods within 35 units restore 10 + 3% of their missing health and mana each tick. Heals occur once every second for 4s. Cooldown - 150s."
     },
     "ItemId": 21570,
     "ItemTier": 2,
@@ -8508,6 +8899,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 18307,
     "DeviceName": "Purification Beads",
+    "Glyph": "n",
     "IconId": 10310,
     "ItemDescription": {
       "Description": "Removes Crowd Control Effects.",
@@ -8529,6 +8921,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 18307,
     "DeviceName": "Shield of Thorns",
+    "Glyph": "n",
     "IconId": 10314,
     "ItemDescription": {
       "Description": "Upon activation you reflect 25% of all damage you take for the next 5s back to its owner.",
@@ -8550,6 +8943,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 18307,
     "DeviceName": "Sundering Spear",
+    "Glyph": "n",
     "IconId": 10318,
     "ItemDescription": {
       "Description": "Fires True Damage Projectile.",
@@ -8571,6 +8965,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 18307,
     "DeviceName": "Teleport Fragment",
+    "Glyph": "n",
     "IconId": 10322,
     "ItemDescription": {
       "Description": "Teleport to an allied structure or ward. Not interrupted by damage. ",
@@ -8592,6 +8987,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 9041,
     "DeviceName": "S8 Meditation Cloak Upgrade",
+    "Glyph": "n",
     "IconId": 5107,
     "ItemDescription": {
       "Description": "Mana and Health restoration.",
@@ -8613,6 +9009,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 13193,
     "DeviceName": "S8 Phantom Veil Upgrade",
+    "Glyph": "n",
     "IconId": 5108,
     "ItemDescription": {
       "Description": "Ghostwalk and Damage Reduction Buff.",
@@ -8634,6 +9031,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 9120,
     "DeviceName": "S8 Magic Shell Upgrade",
+    "Glyph": "n",
     "IconId": 5106,
     "ItemDescription": {
       "Description": "Protections and Damage Mitigation Buff.",
@@ -8655,6 +9053,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 12580,
     "DeviceName": "z* Sundering Spear Upgrade",
+    "Glyph": "n",
     "IconId": 5075,
     "ItemDescription": {
       "Description": "Fires True Damage Projectile.",
@@ -8676,6 +9075,7 @@
     "ActiveFlag": "n",
     "ChildItemId": 14112,
     "DeviceName": "Bracer of Undoing Upgrade",
+    "Glyph": "n",
     "IconId": 5063,
     "ItemDescription": {
       "Description": "Reduces ability Cooldowns and heals Mana and Health.",
@@ -8697,6 +9097,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 21545,
     "DeviceName": "Greater Aegis Amulet",
+    "Glyph": "n",
     "IconId": 10344,
     "ItemDescription": {
       "Description": "Using this item grants the owner invulnerability for a short duration.",
@@ -8718,11 +9119,12 @@
     "ActiveFlag": "y",
     "ChildItemId": 21550,
     "DeviceName": "Greater Belt of Frenzy",
+    "Glyph": "n",
     "IconId": 10348,
     "ItemDescription": {
       "Description": "Ally damage buff.",
       "Menuitems": [],
-      "SecondaryDescription": "Using this item grants all allied gods within 70 units 15% Increased Damage dealt to all targets, including objectives, and 25% Attack Speed increase for 6 seconds. Cooldown - 110s."
+      "SecondaryDescription": "Using this item grants all allied gods within 70 units 10% Increased Damage dealt to all targets, including objectives, and 25% Attack Speed increase for 6 seconds. Cooldown - 110s."
     },
     "ItemId": 21554,
     "ItemTier": 3,
@@ -8739,6 +9141,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 21556,
     "DeviceName": "Greater Blink Rune",
+    "Glyph": "n",
     "IconId": 10359,
     "ItemDescription": {
       "Description": "Short range teleport.",
@@ -8760,11 +9163,12 @@
     "ActiveFlag": "y",
     "ChildItemId": 21558,
     "DeviceName": "Greater Bracer of Radiance",
+    "Glyph": "n",
     "IconId": 10356,
     "ItemDescription": {
       "Description": "Provides vision and warmth to allies.",
       "Menuitems": [],
-      "SecondaryDescription": "Place a radiant glow at a target location for 90s. Allies who move through this glow gain 15% increased Power if above half health or 15% Movement Speed if below Half Health for 8s. This fragment acts as a ward. If destroyed the cooldown of the relic is reduced by 20s. Cooldown - 100s."
+      "SecondaryDescription": "Place a radiant glow at a target location for 90s. Allies who move through this glow gain 10% increased Power if above half health or 15% Movement Speed if below Half Health for 8s. This fragment acts as a ward. If destroyed the cooldown of the relic is reduced by 20s. Cooldown - 100s."
     },
     "ItemId": 21559,
     "ItemTier": 3,
@@ -8781,6 +9185,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 21561,
     "DeviceName": "Greater Cursed Ankh",
+    "Glyph": "n",
     "IconId": 10360,
     "ItemDescription": {
       "Description": "Reduces enemy Healing.",
@@ -8802,6 +9207,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 21564,
     "DeviceName": "Greater Heavenly Wings",
+    "Glyph": "n",
     "IconId": 10371,
     "ItemDescription": {
       "Description": "Increases ally Movement Speed",
@@ -8823,6 +9229,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 21566,
     "DeviceName": "Greater Horrific Emblem",
+    "Glyph": "n",
     "IconId": 10367,
     "ItemDescription": {
       "Description": "Reduces enemy gods Attack Speed and Movement Speed.",
@@ -8844,11 +9251,12 @@
     "ActiveFlag": "y",
     "ChildItemId": 21568,
     "DeviceName": "Greater Magic Shell",
+    "Glyph": "n",
     "IconId": 10363,
     "ItemDescription": {
       "Description": "Protections and Damage Mitigation Buff.",
       "Menuitems": [],
-      "SecondaryDescription": "Using this item applies a shield to himself and allies within 35 units for 100 Health + 12 Health per God Level for 3 seconds. Additionally, all allies take 20% reduced damage from Basic Attacks while the shield is active. Cooldown - 130s."
+      "SecondaryDescription": "Using this item applies a shield to yourself and allies within 35 units for 100 Health + 12 Health per God Level for 3 seconds. Additionally, all allies take 20% reduced damage from Basic Attacks while the shield is active. Cooldown - 130s."
     },
     "ItemId": 21569,
     "ItemTier": 3,
@@ -8865,11 +9273,12 @@
     "ActiveFlag": "y",
     "ChildItemId": 21570,
     "DeviceName": "Greater Cloak of Meditation",
+    "Glyph": "n",
     "IconId": 10352,
     "ItemDescription": {
       "Description": "Mana and Health restoration.",
       "Menuitems": [],
-      "SecondaryDescription": "Using this item causes you to Enter a meditative state where nearby allies gods within 35 units restore 10 + 5% of their missing health and mana each tick. Heals occur once every second for 4s. Cooldown - 130s."
+      "SecondaryDescription": "Using this item causes you to Enter a meditative state where nearby allies gods within 35 units restore 10 + 3% of their missing health and mana each tick. Heals occur once every second for 4s. Cooldown - 130s."
     },
     "ItemId": 21571,
     "ItemTier": 3,
@@ -8886,6 +9295,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 21572,
     "DeviceName": "Greater Purification Beads",
+    "Glyph": "n",
     "IconId": 10311,
     "ItemDescription": {
       "Description": "Removes Crowd Control Effects.",
@@ -8907,6 +9317,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 21575,
     "DeviceName": "Greater Shield of Thorns",
+    "Glyph": "n",
     "IconId": 10315,
     "ItemDescription": {
       "Description": "Upon activation you reflect 25% of all damage you take for the next 5s back to its owner.",
@@ -8928,6 +9339,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 21577,
     "DeviceName": "Greater Sundering Spear",
+    "Glyph": "n",
     "IconId": 10319,
     "ItemDescription": {
       "Description": "Fires True Damage Projectile.",
@@ -8949,6 +9361,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 21579,
     "DeviceName": "Greater Teleport Fragment",
+    "Glyph": "n",
     "IconId": 10323,
     "ItemDescription": {
       "Description": "Teleport to an allied structure or ward. Not interrupted by damage. ",
@@ -8970,6 +9383,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Magic Acorn",
+    "Glyph": "n",
     "IconId": 8682,
     "ItemDescription": {
       "Description": "",
@@ -8996,6 +9410,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 18703,
     "DeviceName": "Lively Acorn",
+    "Glyph": "n",
     "IconId": 8683,
     "ItemDescription": {
       "Description": "",
@@ -9026,6 +9441,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 18703,
     "DeviceName": "Nettle Acorn",
+    "Glyph": "n",
     "IconId": 8684,
     "ItemDescription": {
       "Description": "",
@@ -9056,6 +9472,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 18705,
     "DeviceName": "Bristlebush Acorn",
+    "Glyph": "n",
     "IconId": 8687,
     "ItemDescription": {
       "Description": "",
@@ -9070,10 +9487,10 @@
         },
         {
           "Description": "Critical Strike Chance",
-          "Value": "+20%"
+          "Value": "+25%"
         }
       ],
-      "SecondaryDescription": "PASSIVE: Dart deals 35% increased damage and can Critically Strike. When Dart damages an enemy Ratatoskr gains 15% Physical Lifesteal and 15% Basic Attack damage for 6s."
+      "SecondaryDescription": "PASSIVE: Dart deals 35% increased damage and can Critically Strike. When Dart damages an enemy Ratatoskr gains 20% Physical Lifesteal and 20% Basic Attack damage for 6s."
     },
     "ItemId": 18706,
     "ItemTier": 3,
@@ -9090,6 +9507,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 18705,
     "DeviceName": "Thistlethorn Acorn",
+    "Glyph": "n",
     "IconId": 8688,
     "ItemDescription": {
       "Description": "",
@@ -9120,6 +9538,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 18704,
     "DeviceName": "Evergreen Acorn",
+    "Glyph": "n",
     "IconId": 8685,
     "ItemDescription": {
       "Description": "",
@@ -9154,6 +9573,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 18704,
     "DeviceName": "Thickbark Acorn",
+    "Glyph": "n",
     "IconId": 8686,
     "ItemDescription": {
       "Description": "",
@@ -9188,6 +9608,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Bluestone Pendant",
+    "Glyph": "n",
     "IconId": 9184,
     "ItemDescription": {
       "Description": "",
@@ -9198,14 +9619,14 @@
         },
         {
           "Description": "HP5",
-          "Value": "+10"
+          "Value": "+15"
         },
         {
           "Description": "MP5",
           "Value": "+10"
         }
       ],
-      "SecondaryDescription": "PASSIVE - Enemies hit by your damaging Abilities take an additional 25 Physical Damage over 2s. (Max 2 Stacks) Can be upgraded at level 20."
+      "SecondaryDescription": "PASSIVE - Enemies hit by your damaging Abilities take an additional 20 Physical Damage over 2s. (Max 2 Stacks) Can be upgraded at level 20."
     },
     "ItemId": 19490,
     "ItemTier": 1,
@@ -9222,6 +9643,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 19490,
     "DeviceName": "Bluestone Brooch",
+    "Glyph": "n",
     "IconId": 9185,
     "ItemDescription": {
       "Description": "",
@@ -9260,6 +9682,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 19490,
     "DeviceName": "Corrupted Bluestone",
+    "Glyph": "n",
     "IconId": 9186,
     "ItemDescription": {
       "Description": "Corrupt your opponents to gain power.",
@@ -9298,13 +9721,14 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Death's Toll",
+    "Glyph": "n",
     "IconId": 9172,
     "ItemDescription": {
       "Description": "Basic Attack restore the wielder. ",
       "Menuitems": [
         {
           "Description": "Physical Power",
-          "Value": "+20"
+          "Value": "+15"
         },
         {
           "Description": "Magical Power",
@@ -9332,6 +9756,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 19492,
     "DeviceName": "Death's Embrace",
+    "Glyph": "n",
     "IconId": 9173,
     "ItemDescription": {
       "Description": "This item gives the owner additional Health every time they hit with a Basic Attack.",
@@ -9366,6 +9791,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 19492,
     "DeviceName": "Death's Temper",
+    "Glyph": "n",
     "IconId": 9174,
     "ItemDescription": {
       "Description": "Bonus Attack Power on Kill",
@@ -9404,13 +9830,14 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Gilded Arrow",
+    "Glyph": "n",
     "IconId": 9175,
     "ItemDescription": {
       "Description": "Mark a minion as your bounty.",
       "Menuitems": [
         {
           "Description": "Basic Attack Damage",
-          "Value": "+25"
+          "Value": "+20"
         },
         {
           "Description": "Health",
@@ -9421,7 +9848,7 @@
           "Value": "+7"
         }
       ],
-      "SecondaryDescription": "PASSIVE - Every 10s the highest health enemy minion or jungle monster within 80 units of you is marked. If you secure the killing blow on that target you gain 7 bonus gold and 20% attack speed for 8s, and restore 20 Mana. Can be upgraded at level 20."
+      "SecondaryDescription": "PASSIVE - Every 10s the highest health enemy minion or jungle monster within 80 units of you is marked. If you secure the killing blow on that target you gain 3 bonus gold and 20% attack speed for 8s, and restore 20 Mana. Can be upgraded at level 20."
     },
     "ItemId": 19494,
     "ItemTier": 1,
@@ -9438,6 +9865,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 19494,
     "DeviceName": "Diamond Arrow",
+    "Glyph": "n",
     "IconId": 9176,
     "ItemDescription": {
       "Description": "Defeating enemies provides gold and attack speed.",
@@ -9468,6 +9896,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 19494,
     "DeviceName": "Ornate Arrow",
+    "Glyph": "n",
     "IconId": 9177,
     "ItemDescription": {
       "Description": "Accrue gold, allowing your horde of treasure to empower you.",
@@ -9506,13 +9935,14 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Warrior's Axe",
+    "Glyph": "n",
     "IconId": 9187,
     "ItemDescription": {
       "Description": "This starter item steals life while fighting.",
       "Menuitems": [
         {
           "Description": "Physical Power",
-          "Value": "+10"
+          "Value": "+15"
         },
         {
           "Description": "Magical Power",
@@ -9527,7 +9957,7 @@
           "Value": "+10"
         }
       ],
-      "SecondaryDescription": "PASSIVE - Damaging an enemy god steals 25 health (+1.5 per level) away from your target and restores 25 mana. This effect can only occur once every 8s. Can be upgraded at level 20."
+      "SecondaryDescription": "PASSIVE - Damaging an enemy god steals 20 health (+1.5 per level) away from your target and restores 20 mana. This effect can only occur once every 10s. Can be upgraded at level 20."
     },
     "ItemId": 19496,
     "ItemTier": 1,
@@ -9544,6 +9974,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 19496,
     "DeviceName": "Sundering Axe",
+    "Glyph": "n",
     "IconId": 9188,
     "ItemDescription": {
       "Description": "This starter item steals life while fighting.",
@@ -9565,7 +9996,7 @@
           "Value": "+30"
         }
       ],
-      "SecondaryDescription": "PASSIVE - Damaging an enemy god steals 2% (+2% of your Protection from items) of their Current Health away from your target and restores it to you. This effect can only occur once every 8s."
+      "SecondaryDescription": "PASSIVE - Damaging an enemy god steals 2% (+2% of your Protection from items) of their Current Health away from your target and restores it to you. This effect can only occur once every 10s."
     },
     "ItemId": 19512,
     "ItemTier": 2,
@@ -9582,6 +10013,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 19496,
     "DeviceName": "Hero's Axe",
+    "Glyph": "n",
     "IconId": 9189,
     "ItemDescription": {
       "Description": "Shield your CC'd allies.",
@@ -9620,6 +10052,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Manikin Scepter",
+    "Glyph": "n",
     "IconId": 9196,
     "ItemDescription": {
       "Description": "This item burns and slows enemies.",
@@ -9650,6 +10083,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 19500,
     "DeviceName": "Manikin Mace",
+    "Glyph": "n",
     "IconId": 9197,
     "ItemDescription": {
       "Description": "This item burns and slows enemies.",
@@ -9684,6 +10118,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 19500,
     "DeviceName": "Manikin Hidden Blade",
+    "Glyph": "n",
     "IconId": 9198,
     "ItemDescription": {
       "Description": "Attack first for massive damage.",
@@ -9722,6 +10157,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Bumba's Dagger",
+    "Glyph": "n",
     "IconId": 9199,
     "ItemDescription": {
       "Description": "Gives users Gold and Mana for killing Jungle monsters.",
@@ -9760,6 +10196,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 19502,
     "DeviceName": "Bumba's Spear",
+    "Glyph": "n",
     "IconId": 9200,
     "ItemDescription": {
       "Description": "Jungles and Objective fall before you.",
@@ -9798,29 +10235,34 @@
     "ActiveFlag": "y",
     "ChildItemId": 19502,
     "DeviceName": "Bumba's Hammer",
+    "Glyph": "n",
     "IconId": 9201,
     "ItemDescription": {
       "Description": "Weave between Basic Attacks and abilities.",
       "Menuitems": [
         {
-          "Description": "Health",
-          "Value": "+300"
+          "Description": "Physical Power",
+          "Value": "+50"
         },
         {
-          "Description": "Mana",
-          "Value": "+200"
+          "Description": "Magical Power",
+          "Value": "+70"
+        },
+        {
+          "Description": "Health",
+          "Value": "+150"
         },
         {
           "Description": "Cooldown Reduction",
-          "Value": "+20%"
+          "Value": "+10%"
         }
       ],
-      "SecondaryDescription": "PASSIVE - After casting an ability your next Basic Attack deals an additional 80 True Damage. After hitting a Basic Attack empowered by Bumba\u2019s Hammer, your active cooldowns are reduced by 1s and you are healed for 5% of your Maximum Health. "
+      "SecondaryDescription": "PASSIVE - After casting an ability your next Basic Attack deals an additional 80 True Damage. After hitting a Basic Attack empowered by Bumba\u2019s Hammer, your active Non-Ultimate cooldowns are reduced by 1s and you are healed for 120 Health."
     },
     "ItemId": 19831,
     "ItemTier": 2,
     "Price": 1500,
-    "RestrictedRoles": "",
+    "RestrictedRoles": "no restrictions",
     "RootItemId": 19502,
     "ShortDesc": "Weave in attacks and abilities.",
     "StartingItem": true,
@@ -9832,13 +10274,14 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Sands of Time",
+    "Glyph": "n",
     "IconId": 9214,
     "ItemDescription": {
       "Description": "Cooldown Reduction and MP5",
       "Menuitems": [
         {
           "Description": "Magical Power",
-          "Value": "+30"
+          "Value": "+25"
         },
         {
           "Description": "MP5",
@@ -9849,7 +10292,7 @@
           "Value": "+10%"
         }
       ],
-      "SecondaryDescription": "PASSIVE - This item grants 2 MP5 per 10% of your missing Mana. Can be upgraded at level 20."
+      "SecondaryDescription": "PASSIVE - This item grants 2 MP5 per 10% of your missing Mana. Your damaging abilities deal an extra 10 true damage to minions. Can be upgraded at level 20."
     },
     "ItemId": 19508,
     "ItemTier": 1,
@@ -9866,6 +10309,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 19508,
     "DeviceName": "Pendulum of Ages",
+    "Glyph": "n",
     "IconId": 9215,
     "ItemDescription": {
       "Description": "This starting item reduces your cooldowns when you are hit by a Physical God",
@@ -9900,6 +10344,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 19508,
     "DeviceName": "The Alternate Timeline",
+    "Glyph": "n",
     "IconId": 9216,
     "ItemDescription": {
       "Description": "Jump to an alternate timeline upon death.",
@@ -9938,13 +10383,14 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Vampiric Shroud",
+    "Glyph": "n",
     "IconId": 9217,
     "ItemDescription": {
       "Description": "This starting item is for Magical users and gives them a chance to gain Health and Mana.",
       "Menuitems": [
         {
           "Description": "Magical Power",
-          "Value": "+30"
+          "Value": "+20"
         },
         {
           "Description": "Physical Protection",
@@ -9952,7 +10398,7 @@
         },
         {
           "Description": "Health",
-          "Value": "+100"
+          "Value": "+75"
         },
         {
           "Description": "Magical Lifesteal",
@@ -9976,6 +10422,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 19510,
     "DeviceName": "Blood-soaked Shroud",
+    "Glyph": "n",
     "IconId": 9218,
     "ItemDescription": {
       "Description": "This starting item is for Magical users and gives them a chance to gain Health and Mana.",
@@ -10014,6 +10461,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 19510,
     "DeviceName": "Sacrificial Shroud",
+    "Glyph": "n",
     "IconId": 9219,
     "ItemDescription": {
       "Description": "Bonus damage, costs health.",
@@ -10052,6 +10500,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Sentinel's Gift",
+    "Glyph": "n",
     "IconId": 9202,
     "ItemDescription": {
       "Description": "Assist provide health, mana, and gold.",
@@ -10073,12 +10522,12 @@
           "Value": "+7"
         }
       ],
-      "SecondaryDescription": "PASSIVE - Getting the assist for an enemy minion or jungle monster dying will provide 7 Bonus gold and restore 12 Health and 8 Mana. If you are not within 30 units of an allied god for 20 seconds this passive is disabled until you are near an allied god again. Can be upgraded at level 17."
+      "SecondaryDescription": "PASSIVE - Getting the assist for an enemy minion or jungle monster dying will provide 8 Bonus gold and restore 12 Health and 8 Mana. If you are not within 30 units of an allied god for 20 seconds this passive is disabled until you are near an allied god again. Can be upgraded at level 15."
     },
     "ItemId": 19609,
     "ItemTier": 1,
     "Price": 550,
-    "RestrictedRoles": "",
+    "RestrictedRoles": "no restrictions",
     "RootItemId": 19609,
     "ShortDesc": "Assists provide health, mana, and gold.",
     "StartingItem": true,
@@ -10090,6 +10539,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 19609,
     "DeviceName": "Sentinel's Boon",
+    "Glyph": "n",
     "IconId": 9203,
     "ItemDescription": {
       "Description": "Gain more health, mana, and gold!",
@@ -10116,7 +10566,7 @@
     "ItemId": 19625,
     "ItemTier": 2,
     "Price": 1250,
-    "RestrictedRoles": "",
+    "RestrictedRoles": "no restrictions",
     "RootItemId": 19609,
     "ShortDesc": "Gain more health, mana, and gold!",
     "StartingItem": true,
@@ -10128,6 +10578,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 19609,
     "DeviceName": "Sentinel's Embrace",
+    "Glyph": "n",
     "IconId": 9204,
     "ItemDescription": {
       "Description": "Share protections with nearby allies.",
@@ -10149,12 +10600,12 @@
           "Value": "+20"
         }
       ],
-      "SecondaryDescription": "AURA - Evenly split 80 Physical and Magical Protection among all allied gods within 55 units and yourself. If you are alone you only gain 40 Physical and Magical Protections."
+      "SecondaryDescription": "AURA - You gain 6 GP5. Evenly split 80 Physical and Magical Protection among all allied gods within 55 units and yourself. If you are alone you only gain 40 Physical and Magical Protections."
     },
     "ItemId": 19627,
     "ItemTier": 2,
     "Price": 1250,
-    "RestrictedRoles": "",
+    "RestrictedRoles": "no restrictions",
     "RootItemId": 19609,
     "ShortDesc": "Share protections with nearby allies.",
     "StartingItem": true,
@@ -10166,6 +10617,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Benevolence",
+    "Glyph": "n",
     "IconId": 9208,
     "ItemDescription": {
       "Description": "Be benevolent and restore your allies!",
@@ -10183,7 +10635,7 @@
           "Value": "+7"
         }
       ],
-      "SecondaryDescription": "PASSIVE - While not near an ally god you gain 1 stack of Benevolence every second, up to a maximum of 50. Assists provide 4 stacks. While within 70 units of a hurt ally god you use up to 5 stacks a second to heal them and yourself for 0.75% of your Maximum Health. Each stack consumed provide you with 1 gold. If you overcap stacks they will still provide gold as long as you are near an ally god. Can be upgraded at level 17."
+      "SecondaryDescription": "PASSIVE - While not near an ally god you gain 1 stack of Benevolence every second, up to a maximum of 50. Assists provide 4 stacks. While within 70 units of a hurt ally god you use up to 5 stacks a second to heal them and yourself for 0.75% of your Maximum Health. Each stack consumed provide you with 1 gold. If you overcap stacks they will still provide gold as long as you are near an ally god. Can be upgraded at level 15."
     },
     "ItemId": 19634,
     "ItemTier": 1,
@@ -10200,6 +10652,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 19634,
     "DeviceName": "Compassion",
+    "Glyph": "n",
     "IconId": 9209,
     "ItemDescription": {
       "Description": "Protect your allies from harm at a cost.",
@@ -10238,6 +10691,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 19634,
     "DeviceName": "Animosity",
+    "Glyph": "n",
     "IconId": 9210,
     "ItemDescription": {
       "Description": "Turn your defense into offense.",
@@ -10272,6 +10726,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Tainted Steel",
+    "Glyph": "n",
     "IconId": 9181,
     "ItemDescription": {
       "Description": "Hit an enemy to reduce their healing taken.",
@@ -10310,6 +10765,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 19640,
     "DeviceName": "Tainted Amulet",
+    "Glyph": "n",
     "IconId": 9183,
     "ItemDescription": {
       "Description": "Siphon healing from enemies your have hit.",
@@ -10348,6 +10804,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 19640,
     "DeviceName": "Tainted Breastplate",
+    "Glyph": "n",
     "IconId": 9182,
     "ItemDescription": {
       "Description": "Hit an enemy to reduce their healing taken.",
@@ -10386,6 +10843,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Leather Cowl",
+    "Glyph": "n",
     "IconId": 9178,
     "ItemDescription": {
       "Description": "Stalk alone, fight together.",
@@ -10404,7 +10862,7 @@
         },
         {
           "Description": "Attack Speed",
-          "Value": "+5%"
+          "Value": "+7%"
         }
       ],
       "SecondaryDescription": "PASSIVE - While you are within 55 units of an allied god you gain 10% Attack Speed. If you are alone you instead gain 5% Movement Speed. Can be upgraded at level 20."
@@ -10424,6 +10882,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 19672,
     "DeviceName": "Hunter's Cowl",
+    "Glyph": "n",
     "IconId": 9179,
     "ItemDescription": {
       "Description": "Stalk alone, fight with allies to empower them.",
@@ -10462,13 +10921,14 @@
     "ActiveFlag": "y",
     "ChildItemId": 19672,
     "DeviceName": "Leader's Cowl",
+    "Glyph": "n",
     "IconId": 9180,
     "ItemDescription": {
       "Description": "Move together. Fight together. Isolate your enemies.",
       "Menuitems": [
         {
           "Description": "Physical Power",
-          "Value": "+40"
+          "Value": "+50"
         },
         {
           "Description": "Health",
@@ -10500,13 +10960,14 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Conduit Gem",
+    "Glyph": "n",
     "IconId": 9211,
     "ItemDescription": {
       "Description": "Focus your power and release it.",
       "Menuitems": [
         {
           "Description": "Magical Power",
-          "Value": "+30"
+          "Value": "+25"
         },
         {
           "Description": "Mana",
@@ -10517,7 +10978,7 @@
           "Value": "+10"
         }
       ],
-      "SecondaryDescription": "PASSIVE - Every second you gain a stack of Arcane Energy, causing your next damaging ability to deal an additional 2 True Damage and remove all stacks. This effect stacks up to 20 times. Can be upgraded at level 20."
+      "SecondaryDescription": "PASSIVE - Every second you gain a stack of Arcane Energy, causing your next damaging ability to deal an additional 2 True Damage and remove all stacks. Also deals an additional 2 true damage per stack to minions. This effect stacks up to 20 times. Can be upgraded at level 20."
     },
     "ItemId": 19677,
     "ItemTier": 1,
@@ -10534,6 +10995,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 19677,
     "DeviceName": "Archmage's Gem",
+    "Glyph": "n",
     "IconId": 9212,
     "ItemDescription": {
       "Description": "Charge up power to release a devastating attack.",
@@ -10551,7 +11013,7 @@
           "Value": "+25"
         }
       ],
-      "SecondaryDescription": "PASSIVE - Every 1s you gain a stack of Demise, causing your next damaging ability to deal an additional 1.5% of your Magical Power in damage and remove all stacks. This effect stacks up to 20 times."
+      "SecondaryDescription": "PASSIVE - Every 1s you gain a stack of Demise, causing your next damaging ability that hits an enemy god deals an additional 1% of your Magical Power in damage and remove all stacks. This effect stacks up to 20 times."
     },
     "ItemId": 19678,
     "ItemTier": 2,
@@ -10568,6 +11030,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 19677,
     "DeviceName": "Gem of Focus",
+    "Glyph": "n",
     "IconId": 9213,
     "ItemDescription": {
       "Description": "Cast continuously, do not break your focus.",
@@ -10602,6 +11065,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Eye of the Jungle",
+    "Glyph": "n",
     "IconId": 9193,
     "ItemDescription": {
       "Description": "Steal enemy monsters away and gain new sight.",
@@ -10612,7 +11076,7 @@
         },
         {
           "Description": "Magical Power",
-          "Value": "+25"
+          "Value": "+20"
         },
         {
           "Description": "HP5",
@@ -10620,7 +11084,7 @@
         },
         {
           "Description": "Attack Speed",
-          "Value": "+10%"
+          "Value": "+7%"
         }
       ],
       "SecondaryDescription": "PASSIVE - You deal 30% increased damage to Jungle Monsters. Upon defeating a Large Jungle Monster you place a ward at its location that lasts for 30 seconds. While in the jungle you gain +20 HP5 and +15 MP5 Can be upgraded at level 20."
@@ -10640,17 +11104,18 @@
     "ActiveFlag": "y",
     "ChildItemId": 19694,
     "DeviceName": "Seer of the Jungle",
+    "Glyph": "n",
     "IconId": 9195,
     "ItemDescription": {
       "Description": "Gain the sight to see what is hidden.",
       "Menuitems": [
         {
           "Description": "Physical Power",
-          "Value": "+70"
+          "Value": "+65"
         },
         {
           "Description": "Magical Power",
-          "Value": "+105"
+          "Value": "+95"
         },
         {
           "Description": "Physical Protection",
@@ -10658,7 +11123,7 @@
         },
         {
           "Description": "Attack Speed",
-          "Value": "+30%"
+          "Value": "+25%"
         }
       ],
       "SecondaryDescription": "PASSIVE - You deal 35% increased damage to Jungle Monsters and Jungle Bosses. Upon defeating a Large Jungle Monster or Jungle Boss, you gain the ability to see wards for 30s."
@@ -10678,6 +11143,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 19694,
     "DeviceName": "Protector of the Jungle",
+    "Glyph": "n",
     "IconId": 9194,
     "ItemDescription": {
       "Description": "Guard the jungle to gain immense power.",
@@ -10716,6 +11182,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "Warding Sigil",
+    "Glyph": "n",
     "IconId": 9190,
     "ItemDescription": {
       "Description": "Ward off enemy abilities to gain protection.",
@@ -10754,6 +11221,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 19751,
     "DeviceName": "Sigil of The Old Guard",
+    "Glyph": "n",
     "IconId": 9191,
     "ItemDescription": {
       "Description": "Stalwart against abilities.",
@@ -10792,6 +11260,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 19751,
     "DeviceName": "Infused Sigil",
+    "Glyph": "n",
     "IconId": 9192,
     "ItemDescription": {
       "Description": "Absorb attacks to generate an explosion.",
@@ -10830,6 +11299,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 0,
     "DeviceName": "War Flag",
+    "Glyph": "n",
     "IconId": 9205,
     "ItemDescription": {
       "Description": "This starter item restores its user's Health and Mana when in assist range of a slain minion.",
@@ -10851,7 +11321,7 @@
           "Value": "+10"
         }
       ],
-      "SecondaryDescription": "PASSIVE - Getting an assist when an enemy dies provides a stack that gives 1% Movement Speed and 2% Attack Speed for 8s to nearby allies up to 10 stacks. When you've gained 3 or more stacks from assists, once per ability, each time you damage an enemy god you restore 15 Health and Mana to nearby allies within 55 units and gain 10 gold. Can be upgraded at level 17."
+      "SecondaryDescription": "PASSIVE - Getting an assist when an enemy dies provides a stack that gives 1% Movement Speed and 2% Attack Speed for 8s to nearby allies up to 10 stacks. When you've gained 3 or more stacks from assists, once per ability, each time you damage an enemy god you restore 15 Health and Mana to nearby allies within 55 units and gain 10 gold. Can be upgraded at level 15."
     },
     "ItemId": 20698,
     "ItemTier": 1,
@@ -10868,6 +11338,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 20698,
     "DeviceName": "Spartan Flag",
+    "Glyph": "n",
     "IconId": 9207,
     "ItemDescription": {
       "Description": "Mark an area for attack! Charge!",
@@ -10906,6 +11377,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 20698,
     "DeviceName": "War Banner",
+    "Glyph": "n",
     "IconId": 9206,
     "ItemDescription": {
       "Description": "This starter item restores its user's Health and Mana when in assist range of a slain minion.",
@@ -10942,55 +11414,14 @@
   },
   {
     "ActiveFlag": "y",
-    "ChildItemId": 0,
-    "DeviceName": "Worn Shoes",
-    "IconId": 2682,
-    "ItemDescription": {
-      "Description": "",
-      "Menuitems": [],
-      "SecondaryDescription": "<font color='#9E9E6E'>The frayed threads of these shoes hint at power that has long since faded. <font color='#CE6E6E'>Shoes have been removed and the Movement Speed that would have been provided by Shoes is instead gained over your first 7 levels."
-    },
-    "ItemId": 20780,
-    "ItemTier": 1,
-    "Price": 9999,
-    "RestrictedRoles": "",
-    "RootItemId": 20780,
-    "ShortDesc": "Removed from the battleground.",
-    "StartingItem": false,
-    "Type": "Item",
-    "itemIcon_URL": "https://webcdn.hirezstudios.com/smite/item-icons/worn-shoes.jpg",
-    "ret_msg": null
-  },
-  {
-    "ActiveFlag": "y",
-    "ChildItemId": 0,
-    "DeviceName": "Worn Boots",
-    "IconId": 2686,
-    "ItemDescription": {
-      "Description": "",
-      "Menuitems": [],
-      "SecondaryDescription": "<font color='#9E9E6E'>The worn leather of these boots hint at power that has long since faded. <font color='#CE6E6E'>Boots have been removed and the Movement Speed that would have been provided by Boots is instead gained over your first 7 levels."
-    },
-    "ItemId": 20781,
-    "ItemTier": 1,
-    "Price": 9999,
-    "RestrictedRoles": "",
-    "RootItemId": 20781,
-    "ShortDesc": "Removed from the battleground.",
-    "StartingItem": false,
-    "Type": "Item",
-    "itemIcon_URL": "https://webcdn.hirezstudios.com/smite/item-icons/worn-boots.jpg",
-    "ret_msg": null
-  },
-  {
-    "ActiveFlag": "y",
     "ChildItemId": 21546,
     "DeviceName": "Aegis of Judgement",
+    "Glyph": "n",
     "IconId": 10346,
     "ItemDescription": {
       "Description": "Using this item grants the owner invulnerability for a short duration.",
       "Menuitems": [],
-      "SecondaryDescription": "Using this item makes you invulnerable to damage and healing for 1.5s, and prevents you from taking any actions. You may still move. At the end of the invulnerability, you explode dealing 100 + 50% of the Prevented Damage as Magical Damage in a 30 unit radius. The damage dealt by this effect is capped at 30% of your Maximum Health. Cooldown - 140s."
+      "SecondaryDescription": "Using this item makes you invulnerable to damage and healing for 1.5s, and prevents you from taking any actions. You may still move. At the end of the invulnerability, you explode dealing 100 + 50% of the Prevented Damage as Magical Damage in a 30 unit radius. The damage dealt by this effect is capped at 20% of the enemies' Maximum Health. Cooldown - 140s."
     },
     "ItemId": 21475,
     "ItemTier": 4,
@@ -11007,6 +11438,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 21546,
     "DeviceName": "Aegis of Acceleration",
+    "Glyph": "n",
     "IconId": 10345,
     "ItemDescription": {
       "Description": "Using this item grants the owner invulnerability for a short duration.",
@@ -11028,11 +11460,12 @@
     "ActiveFlag": "y",
     "ChildItemId": 21554,
     "DeviceName": "Belt of the Berserker",
+    "Glyph": "n",
     "IconId": 10349,
     "ItemDescription": {
       "Description": "Ally damage buff.",
       "Menuitems": [],
-      "SecondaryDescription": "Using this item grants all allied gods within 70 units 30% Increased Damage dealt to all targets, including objectives, and 50% Attack Speed increase, decaying every 0.5s for 6 seconds. Cooldown - 110s."
+      "SecondaryDescription": "Using this item grants all allied gods within 70 units 20% Increased Damage dealt to all targets, including objectives, and 40% Attack Speed increase, decaying every 0.5s for 6 seconds. Cooldown - 110s."
     },
     "ItemId": 21488,
     "ItemTier": 4,
@@ -11049,11 +11482,12 @@
     "ActiveFlag": "y",
     "ChildItemId": 21554,
     "DeviceName": "Belt of Insatiable Hunger",
+    "Glyph": "n",
     "IconId": 10350,
     "ItemDescription": {
       "Description": "Ally damage buff.",
       "Menuitems": [],
-      "SecondaryDescription": "Using this item grants all allied gods within 70 units 15% Increased Damage dealt to all targets, including objectives, and 25% Attack Speed increase for 8 seconds. If you gain a kill or assist on an Enemy God while this buff is active, the duration refreshes. This can only occur once per use. Cooldown - 110s."
+      "SecondaryDescription": "Using this item grants all allied gods within 70 units 10% Increased Damage dealt to all targets, including objectives, and 25% Attack Speed increase for 8 seconds. If you gain a kill or assist on an Enemy God while this buff is active, the duration refreshes. This can only occur once per use. Cooldown - 110s."
     },
     "ItemId": 21489,
     "ItemTier": 4,
@@ -11070,6 +11504,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 21557,
     "DeviceName": "Scorching Blink Rune",
+    "Glyph": "n",
     "IconId": 10354,
     "ItemDescription": {
       "Description": "Short range teleport.",
@@ -11091,6 +11526,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 21557,
     "DeviceName": "Corrupted Blink Rune",
+    "Glyph": "n",
     "IconId": 10353,
     "ItemDescription": {
       "Description": "Short range teleport.",
@@ -11112,11 +11548,12 @@
     "ActiveFlag": "y",
     "ChildItemId": 21559,
     "DeviceName": "Bracer of Illumination",
+    "Glyph": "n",
     "IconId": 10358,
     "ItemDescription": {
       "Description": "Provides vision and warmth to allies.",
       "Menuitems": [],
-      "SecondaryDescription": "Place a radiant glow at a target location for 90s. Allies who move through this field gain 15% increased Power if above half health or 15% Movement Speed if below Half Health for 8s. This fragment acts as a Sentry Ward. If destroyed the cooldown of the relic is reduced by 20s. On use, a light sprite appears that patrols back and forth on a 60 unit line, revealing enemies along the way. Cooldown - 100s."
+      "SecondaryDescription": "Place a radiant glow at a target location for 90s. Allies who move through this field gain 10% increased Power if above half health or 15% Movement Speed if below Half Health for 12s. This fragment acts as a Sentry Ward. If destroyed the cooldown of the relic is reduced by 20s. On use, a light sprite appears that patrols back and forth on a 80 unit line, revealing enemies along the way. Cooldown - 90s."
     },
     "ItemId": 21477,
     "ItemTier": 4,
@@ -11133,11 +11570,12 @@
     "ActiveFlag": "y",
     "ChildItemId": 21559,
     "DeviceName": "Bracer of Brilliance",
+    "Glyph": "n",
     "IconId": 10357,
     "ItemDescription": {
       "Description": "Provides vision and warmth to allies.",
       "Menuitems": [],
-      "SecondaryDescription": "Place a radiant glow at a target location for 90s. Allies who move through this field gain 20% increased Power and 20% Movement Speed for 8s. This fragment acts as a Sentry Ward. If destroyed the cooldown of the relic is reduced by 20s. Cooldown - 100s."
+      "SecondaryDescription": "Place a radiant glow at a target location for 90s. Allies who move through this field gain 15% increased Power and 20% Movement Speed for 8s. This fragment acts as a Sentry Ward. If destroyed the cooldown of the relic is reduced by 20s. Cooldown - 100s."
     },
     "ItemId": 21508,
     "ItemTier": 4,
@@ -11154,11 +11592,12 @@
     "ActiveFlag": "y",
     "ChildItemId": 21562,
     "DeviceName": "Drowned Ankh",
+    "Glyph": "n",
     "IconId": 10374,
     "ItemDescription": {
       "Description": "Reduces enemy Healing.",
       "Menuitems": [],
-      "SecondaryDescription": "Using this item reduces the Healing received by all enemy gods within 55 units by 40% for 10s and removes 75% of any currently applied shield. Enemies that are healed by god abilities while affected by this curse cause a pool of miasma to form beneath them that persists for 6s. The miasma deals 2% of the enemy's Current Health every 0.5s while enemies are inside it and refreshes the Ankh debuff effect. Cooldown - 100s."
+      "SecondaryDescription": "Using this item reduces the Healing received by all enemy gods within 55 units by 40% for 10s and removes 75% of any currently applied shield. Enemies that are healed by god abilities while affected by this curse cause a pool of miasma to form beneath them that persists for 6s. The miasma deals 4% of the enemy's Current Health every 0.5s while enemies are inside it and refreshes the Ankh debuff effect. Cooldown - 100s."
     },
     "ItemId": 21478,
     "ItemTier": 4,
@@ -11175,6 +11614,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 21562,
     "DeviceName": "Blighted Ankh",
+    "Glyph": "n",
     "IconId": 10373,
     "ItemDescription": {
       "Description": "Reduces enemy Healing.",
@@ -11196,6 +11636,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 21565,
     "DeviceName": "Entangling Wings",
+    "Glyph": "n",
     "IconId": 10369,
     "ItemDescription": {
       "Description": "Increases ally Movement Speed",
@@ -11217,6 +11658,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 21565,
     "DeviceName": "Hastened Wings",
+    "Glyph": "n",
     "IconId": 10370,
     "ItemDescription": {
       "Description": "Increases ally Movement Speed",
@@ -11237,12 +11679,35 @@
   {
     "ActiveFlag": "y",
     "ChildItemId": 21567,
+    "DeviceName": "Emblem of Increasing Peril",
+    "Glyph": "n",
+    "IconId": 10366,
+    "ItemDescription": {
+      "Description": "Reduces enemy gods Attack Speed and Movement Speed.",
+      "Menuitems": [],
+      "SecondaryDescription": "Using this item Slows the Movement Speed of all enemy gods within 35 units by 30% for 5s. Their Attack Speed is reduced by 25% for the duration. Additionally, their Damage Dealt is reduced by 15%. If an enemy deals 10% of an Allied God's Maximum Health within the duration, the debuff's effects are increased by 10% each, stacking up to 3 times. Cooldown - 110s."
+    },
+    "ItemId": 21493,
+    "ItemTier": 4,
+    "Price": 500,
+    "RestrictedRoles": "no restrictions",
+    "RootItemId": 21566,
+    "ShortDesc": "Punish enemy gods for damaging allied gods",
+    "StartingItem": false,
+    "Type": "Active",
+    "itemIcon_URL": "https://webcdn.hirezstudios.com/smite/item-icons/emblem-of-increasing-peril.jpg",
+    "ret_msg": null
+  },
+  {
+    "ActiveFlag": "y",
+    "ChildItemId": 21567,
     "DeviceName": "Emblem of Trembling Terror",
+    "Glyph": "n",
     "IconId": 10365,
     "ItemDescription": {
       "Description": "Reduces enemy gods Attack Speed and Movement Speed.",
       "Menuitems": [],
-      "SecondaryDescription": "Using this item Slows the Movement Speed of all enemy gods within 35 units by 30% for 5s. Their Attack Speed is reduced by 25% for the duration. Additionally, their Damage Dealt is reduced by 15%. If an enemy is dealt 30% of their max. HP during this duration, they are trembled for 1.5s. Cooldown - 110s."
+      "SecondaryDescription": "Using this item Slows the Movement Speed of all enemy gods within 35 units by 30% for 5s. Their Attack Speed is reduced by 25% for the duration. Additionally, their Damage Dealt is reduced by 15%. If an enemy is dealt 15% of their max. HP during this duration, they are trembled for 1.5s. Cooldown - 110s."
     },
     "ItemId": 21494,
     "ItemTier": 4,
@@ -11259,11 +11724,12 @@
     "ActiveFlag": "y",
     "ChildItemId": 21569,
     "DeviceName": "Fortifying Shell",
+    "Glyph": "n",
     "IconId": 10368,
     "ItemDescription": {
       "Description": "Protections and Damage Mitigation Buff.",
       "Menuitems": [],
-      "SecondaryDescription": "Using this item applies a shield to himself and allies within 35 units for 100 Health + 12 Health per God Level for 3 seconds. Additionally, all allies take 40% reduced damage from Basic Attacks while the shield is active. When the shield is broken or expires, Allied Gods gain a new buff providing 15% Damage Mitigation and 20% Movement Speed for 3s. Cooldown - 130s."
+      "SecondaryDescription": "Using this item applies a shield to yourself and allies within 35 units for 100 Health + 12 Health per God Level for 3 seconds. Additionally, all allies take 40% reduced damage from Basic Attacks while the shield is active. When the shield is broken or expires, Allied Gods gain a new buff providing 15% Damage Mitigation and 20% Movement Speed for 3s. Cooldown - 130s."
     },
     "ItemId": 21497,
     "ItemTier": 4,
@@ -11280,6 +11746,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 21569,
     "DeviceName": "Phantom Shell",
+    "Glyph": "n",
     "IconId": 10362,
     "ItemDescription": {
       "Description": "Protections and Damage Mitigation Buff.",
@@ -11301,11 +11768,12 @@
     "ActiveFlag": "y",
     "ChildItemId": 21571,
     "DeviceName": "Cloak of the Avatar",
+    "Glyph": "n",
     "IconId": 10324,
     "ItemDescription": {
       "Description": "Mana and Health restoration.",
       "Menuitems": [],
-      "SecondaryDescription": "Using this item causes you to Enter a meditative state where nearby allies gods within 35 units restore 10 + 5% of their missing health and mana each pulse. You also gain a protective barrier of wind that explodes if an enemy comes within 15 units, knocking them back. Pulses occur once every second for 4s. Cooldown - 130s."
+      "SecondaryDescription": "Using this item causes you to Enter a meditative state where nearby allies gods within 35 units restore 10 + 3% of their missing health and mana each pulse. You also gain a protective barrier of wind that explodes if an enemy comes within 15 units, knocking them back. Pulses occur once every second for 4s. Cooldown - 130s."
     },
     "ItemId": 21479,
     "ItemTier": 4,
@@ -11322,11 +11790,12 @@
     "ActiveFlag": "y",
     "ChildItemId": 21571,
     "DeviceName": "Cloak of the Ascetic",
+    "Glyph": "n",
     "IconId": 10341,
     "ItemDescription": {
       "Description": "Mana and Health restoration.",
       "Menuitems": [],
-      "SecondaryDescription": "Using this item causes you to Enter a meditative state where nearby allies gods within 35 units restore 30 + 6% of their missing health and mana each pulse. Additionally each pulse reduces cooldowns for all abilities by 1.5s. Pulses occur once every second for 4s. Cooldown - 130s."
+      "SecondaryDescription": "Using this item causes you to Enter a meditative state where nearby allies gods within 35 units restore 30 + 4% of their missing health and mana each pulse. Additionally each pulse reduces cooldowns for all abilities by 1.5s. Pulses occur once every second for 4s. Cooldown - 130s."
     },
     "ItemId": 21510,
     "ItemTier": 4,
@@ -11343,11 +11812,12 @@
     "ActiveFlag": "y",
     "ChildItemId": 21573,
     "DeviceName": "Chaotic Beads",
+    "Glyph": "n",
     "IconId": 10312,
     "ItemDescription": {
       "Description": "Removes Crowd Control Effects.",
       "Menuitems": [],
-      "SecondaryDescription": "Using this item removes Crowd Control Effects and makes you immune to new ones for 2s. Any Hard Crowd Control Effect that is cleansed during this time, including on activation, sends out a homing projectile to the Enemy who applied it, dealing 7% of their Maximum Health. Cooldown - 140s."
+      "SecondaryDescription": "Using this item removes Crowd Control Effects and makes you immune to new ones for 2s. Any Hard Crowd Control Effect that is cleansed during this time, including on activation, sends out a homing projectile to the Enemy who applied it, dealing 5% of their Current Health as True Damage. Cooldown - 140s."
     },
     "ItemId": 21480,
     "ItemTier": 4,
@@ -11364,6 +11834,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 21573,
     "DeviceName": "Temporal Beads",
+    "Glyph": "n",
     "IconId": 10313,
     "ItemDescription": {
       "Description": "Removes Crowd Control Effects.",
@@ -11385,11 +11856,12 @@
     "ActiveFlag": "y",
     "ChildItemId": 21576,
     "DeviceName": "Thorns of Overgrowth",
+    "Glyph": "n",
     "IconId": 10316,
     "ItemDescription": {
       "Description": "Upon activation you reflect 30% of all damage you take for the next 5s back to its owner.",
       "Menuitems": [],
-      "SecondaryDescription": "Using this item reflects 25% of all damage you take, before mitigations, for the next 5 seconds, back to its owner as Magical Damage. If you are dealt 120 * your level damage while this effect is active, the effect will end early. While this is active enemies can only lifesteal from you for 50% of their total lifesteal. Additionally, you gain a stack of 5% Movement Speed and Attack Speed for all Enemy Gods within a 40 unit radius. Cooldown - 120s."
+      "SecondaryDescription": "Using this item reflects 25% of all damage you take, before mitigations, for the next 5 seconds, back to its owner as Magical Damage. If you are dealt 120 * your level damage while this effect is active, the effect will end early. While this is active enemies can only lifesteal from you for 50% of their total lifesteal. Additionally, you gain a stack of 5% Movement Speed and Attack Speed for all Enemy Gods within a 70 unit radius. Cooldown - 120s."
     },
     "ItemId": 21495,
     "ItemTier": 4,
@@ -11406,11 +11878,12 @@
     "ActiveFlag": "y",
     "ChildItemId": 21576,
     "DeviceName": "Thorns of Sapping Strength",
+    "Glyph": "n",
     "IconId": 10317,
     "ItemDescription": {
-      "Description": "Upon activation you reflect 35% of all damage you take for the next 2s back to its owner.",
+      "Description": "Upon activation you reflect 35% of all damage you take for the next 3s back to its owner.",
       "Menuitems": [],
-      "SecondaryDescription": "Using this item reflects 35% of all damage you take, before mitigations, for the next 2 seconds, back to its owner as Magical Damage. If you are dealt 120 * your level damage while this effect is active, the effect will end early. While this is active enemies can only lifesteal from you for 75% of their total lifesteal. Each basic attack from enemy gods reduces the cooldown of this item by 0.5s. Cooldown - 80s."
+      "SecondaryDescription": "Using this item reflects 35% of all damage you take, before mitigations, for the next 3 seconds, back to its owner as Magical Damage. If you are dealt 120 * your level damage while this effect is active, the effect will end early. While this is active enemies can only lifesteal from you for 75% of their total lifesteal. Each basic attack from enemy gods reduces the cooldown of this item by 0.5s. Cooldown - 80s."
     },
     "ItemId": 21496,
     "ItemTier": 4,
@@ -11427,11 +11900,12 @@
     "ActiveFlag": "y",
     "ChildItemId": 21578,
     "DeviceName": "Sundering Blast",
+    "Glyph": "n",
     "IconId": 10320,
     "ItemDescription": {
       "Description": "Fires True Damage Projectile.",
       "Menuitems": [],
-      "SecondaryDescription": "Fire a bolt that travels 70 units, stopping on the first Enemy God hit and splashing in a 20 unit radius, dealing 15% of their Current Health as True Damage and reducing any active shields by 75%. Targets hit take 5% increased damage for 5s, stacking 2 times. This relic has 2 charges. Cooldown - 110s."
+      "SecondaryDescription": "Fire a bolt that travels 70 units, stopping on the first Enemy God hit and splashing in a 20 unit radius, dealing 15% of their Current Health as True Damage and reducing any active shields by 75%. Targets hit take 7.5% increased damage for 5s, stacking 2 times. This relic has 2 charges. Cooldown - 110s."
     },
     "ItemId": 21481,
     "ItemTier": 4,
@@ -11448,6 +11922,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 21578,
     "DeviceName": "Sundering Siphon",
+    "Glyph": "n",
     "IconId": 10321,
     "ItemDescription": {
       "Description": "Fires True Damage Projectile.",
@@ -11469,11 +11944,12 @@
     "ActiveFlag": "y",
     "ChildItemId": 21580,
     "DeviceName": "Persistent Teleport",
+    "Glyph": "n",
     "IconId": 10325,
     "ItemDescription": {
       "Description": "Teleport to an allied structure. Not interrupted by damage. ",
       "Menuitems": [],
-      "SecondaryDescription": "Using this item allows you to teleport to any allied structure or ward while Rooted in place. This effect is not interrupted by damage but is interrupted by hard Crowd Control. Kills and assists on enemy gods reduces the cooldown by 10s. Cooldown - 90s."
+      "SecondaryDescription": "Using this item allows you to teleport to any allied structure or ward while Rooted in place. This effect is not interrupted by damage but is interrupted by hard Crowd Control. Kills and assists on enemy gods reduces the cooldown by 10s. Cooldown - 110s."
     },
     "ItemId": 21498,
     "ItemTier": 4,
@@ -11490,6 +11966,7 @@
     "ActiveFlag": "y",
     "ChildItemId": 21580,
     "DeviceName": "Heroic Teleport",
+    "Glyph": "n",
     "IconId": 10340,
     "ItemDescription": {
       "Description": "Teleport to an allied structure. Not interrupted by damage. ",
@@ -11505,6 +11982,364 @@
     "StartingItem": false,
     "Type": "Active",
     "itemIcon_URL": "https://webcdn.hirezstudios.com/smite/item-icons/heroic-teleport.jpg",
+    "ret_msg": null
+  },
+  {
+    "ActiveFlag": "y",
+    "ChildItemId": 0,
+    "DeviceName": "Protector's Mask",
+    "Glyph": "n",
+    "IconId": 5305,
+    "ItemDescription": {
+      "Description": null,
+      "Menuitems": [
+        {
+          "Description": "Health",
+          "Value": "+125"
+        },
+        {
+          "Description": "Mana",
+          "Value": "+100"
+        }
+      ],
+      "SecondaryDescription": "PASSIVE - <font color='#F44242'>Decrease damage dealt by 6% + 0.25% per your god's level. <font color='#42F46E'>Decrease Damage Taken by 6% + 0.25% per your god's level. \nPASSIVE - Getting the assist for an enemy minion or jungle monster dying will provide 8 bonus gold and restore 15 health and 15 mana. If you are not within 30 units of an allied god for 20 seconds this passive is disabled until you are near an allied god again. <n>Can be upgraded at level 15."
+    },
+    "ItemId": 23048,
+    "ItemTier": 1,
+    "Price": 650,
+    "RestrictedRoles": "guardian,warrior",
+    "RootItemId": 23048,
+    "ShortDesc": "Trade damage for tankiness.",
+    "StartingItem": true,
+    "Type": "Item",
+    "itemIcon_URL": "https://webcdn.hirezstudios.com/smite/item-icons/protectors-mask.jpg",
+    "ret_msg": null
+  },
+  {
+    "ActiveFlag": "y",
+    "ChildItemId": 23048,
+    "DeviceName": "Lono's Mask",
+    "Glyph": "n",
+    "IconId": 7071,
+    "ItemDescription": {
+      "Description": null,
+      "Menuitems": [
+        {
+          "Description": "Health",
+          "Value": "+300"
+        },
+        {
+          "Description": "Mana",
+          "Value": "+200"
+        },
+        {
+          "Description": "Crowd Control Reduction",
+          "Value": "+10%"
+        }
+      ],
+      "SecondaryDescription": "Gain 5 stacks of <font color='#F44242'>Cowardice. Each stack reduces your damage dealt and healing output by 10%. For each 60 protections from items, remove a stack of <font color='#F44242'>Cowardice. When you remove a stack of <font color='#F44242'>Cowardice gain a stack of <font color='#42F46E'> Bravery. For each stack of <font color='#42F46E'>Bravery, gain +3% damage mitigation and provide 7 Physical and Magical Protections to all allied gods within 55 units."
+    },
+    "ItemId": 23131,
+    "ItemTier": 2,
+    "Price": 1250,
+    "RestrictedRoles": "guardian,warrior",
+    "RootItemId": 23048,
+    "ShortDesc": "",
+    "StartingItem": true,
+    "Type": "Item",
+    "itemIcon_URL": "https://webcdn.hirezstudios.com/smite/item-icons/lonos-mask.jpg",
+    "ret_msg": null
+  },
+  {
+    "ActiveFlag": "y",
+    "ChildItemId": 0,
+    "DeviceName": "Mystical Earring",
+    "Glyph": "n",
+    "IconId": 11034,
+    "ItemDescription": {
+      "Description": "",
+      "Menuitems": [
+        {
+          "Description": "MP5",
+          "Value": "+15"
+        }
+      ],
+      "SecondaryDescription": ""
+    },
+    "ItemId": 23147,
+    "ItemTier": 1,
+    "Price": 400,
+    "RestrictedRoles": "no restrictions",
+    "RootItemId": 23147,
+    "ShortDesc": "MP5",
+    "StartingItem": false,
+    "Type": "Item",
+    "itemIcon_URL": "https://webcdn.hirezstudios.com/smite/item-icons/mystical-earring.jpg",
+    "ret_msg": null
+  },
+  {
+    "ActiveFlag": "y",
+    "ChildItemId": 23147,
+    "DeviceName": "Gleaming Ear Cuffs",
+    "Glyph": "n",
+    "IconId": 11035,
+    "ItemDescription": {
+      "Description": null,
+      "Menuitems": [
+        {
+          "Description": "Physical Power",
+          "Value": "+20"
+        },
+        {
+          "Description": "Magical Power",
+          "Value": "+30"
+        },
+        {
+          "Description": "Attack Speed",
+          "Value": "+15%"
+        },
+        {
+          "Description": "MP5",
+          "Value": "+15"
+        }
+      ],
+      "SecondaryDescription": null
+    },
+    "ItemId": 23148,
+    "ItemTier": 2,
+    "Price": 900,
+    "RestrictedRoles": "no restrictions",
+    "RootItemId": 23147,
+    "ShortDesc": "Power and Attack Speed",
+    "StartingItem": false,
+    "Type": "Item",
+    "itemIcon_URL": "https://webcdn.hirezstudios.com/smite/item-icons/gleaming-ear-cuffs.jpg",
+    "ret_msg": null
+  },
+  {
+    "ActiveFlag": "y",
+    "ChildItemId": 23147,
+    "DeviceName": "Rose Spike Earrings",
+    "Glyph": "n",
+    "IconId": 11037,
+    "ItemDescription": {
+      "Description": null,
+      "Menuitems": [
+        {
+          "Description": "Health",
+          "Value": "+200"
+        },
+        {
+          "Description": "HP5",
+          "Value": "+15"
+        },
+        {
+          "Description": "MP5",
+          "Value": "+15"
+        }
+      ],
+      "SecondaryDescription": null
+    },
+    "ItemId": 23149,
+    "ItemTier": 2,
+    "Price": 800,
+    "RestrictedRoles": "no restrictions",
+    "RootItemId": 23147,
+    "ShortDesc": "Health and Regen",
+    "StartingItem": false,
+    "Type": "Item",
+    "itemIcon_URL": "https://webcdn.hirezstudios.com/smite/item-icons/rose-spike-earrings.jpg",
+    "ret_msg": null
+  },
+  {
+    "ActiveFlag": "y",
+    "ChildItemId": 23147,
+    "DeviceName": "Jeweled Studs",
+    "Glyph": "n",
+    "IconId": 11036,
+    "ItemDescription": {
+      "Description": null,
+      "Menuitems": [
+        {
+          "Description": "Physical Power",
+          "Value": "+30"
+        },
+        {
+          "Description": "Magical power",
+          "Value": "+50"
+        },
+        {
+          "Description": "Cooldown Reduction",
+          "Value": "+10%"
+        },
+        {
+          "Description": "MP5",
+          "Value": "+20"
+        }
+      ],
+      "SecondaryDescription": null
+    },
+    "ItemId": 23154,
+    "ItemTier": 2,
+    "Price": 1000,
+    "RestrictedRoles": "no restrictions",
+    "RootItemId": 23147,
+    "ShortDesc": "Power and Cooldown Reduction",
+    "StartingItem": false,
+    "Type": "Item",
+    "itemIcon_URL": "https://webcdn.hirezstudios.com/smite/item-icons/jeweled-studs.jpg",
+    "ret_msg": null
+  },
+  {
+    "ActiveFlag": "y",
+    "ChildItemId": 23149,
+    "DeviceName": "Fae-Blessed Hoops",
+    "Glyph": "n",
+    "IconId": 11041,
+    "ItemDescription": {
+      "Description": "Allies dying or being healed by you drop flower shields.",
+      "Menuitems": [
+        {
+          "Description": "Health",
+          "Value": "+300"
+        },
+        {
+          "Description": "HP5",
+          "Value": "+20"
+        },
+        {
+          "Description": "MP5",
+          "Value": "+40"
+        }
+      ],
+      "SecondaryDescription": "Each time an allied god dies within 70 units of you or you heal an allied god with an ability, a flower drops from your ally that can be picked up by you or an allied god. Picking up the flower gives that god a shield equal to 7.5% of their Max HP that lasts for 8s. Flowers last 7s on ground. Picking up a new flower refreshes shield."
+    },
+    "ItemId": 23009,
+    "ItemTier": 3,
+    "Price": 1000,
+    "RestrictedRoles": "no restrictions",
+    "RootItemId": 23147,
+    "ShortDesc": "Allies being healed by you or dying create a shield of flowers",
+    "StartingItem": false,
+    "Type": "Item",
+    "itemIcon_URL": "https://webcdn.hirezstudios.com/smite/item-icons/fae-blessed-hoops.jpg",
+    "ret_msg": null
+  },
+  {
+    "ActiveFlag": "y",
+    "ChildItemId": 23154,
+    "DeviceName": "Sphinx's Bauble",
+    "Glyph": "n",
+    "IconId": 11039,
+    "ItemDescription": {
+      "Description": "Increase your Cooldown Reduction Cap at the cost of damage.",
+      "Menuitems": [
+        {
+          "Description": "Physical Power",
+          "Value": "+55"
+        },
+        {
+          "Description": "Magical Power",
+          "Value": "+80"
+        },
+        {
+          "Description": "MP5",
+          "Value": "+30"
+        },
+        {
+          "Description": "Cooldown Reduction",
+          "Value": "+10%"
+        }
+      ],
+      "SecondaryDescription": "PASSIVE - Your Cooldown Reduction cap is increased from 40% to 60%. Your damage and healing output is decreased by 20%."
+    },
+    "ItemId": 23102,
+    "ItemTier": 3,
+    "Price": 1300,
+    "RestrictedRoles": "no restrictions",
+    "RootItemId": 23147,
+    "ShortDesc": "Overcap your Cooldown Reduction at the cost of damage",
+    "StartingItem": false,
+    "Type": "Item",
+    "itemIcon_URL": "https://webcdn.hirezstudios.com/smite/item-icons/sphinxs-bauble.jpg",
+    "ret_msg": null
+  },
+  {
+    "ActiveFlag": "y",
+    "ChildItemId": 23149,
+    "DeviceName": "Manticore's Spike",
+    "Glyph": "n",
+    "IconId": 11040,
+    "ItemDescription": {
+      "Description": null,
+      "Menuitems": [
+        {
+          "Description": "Health",
+          "Value": "+350"
+        },
+        {
+          "Description": "HP5",
+          "Value": "+30"
+        },
+        {
+          "Description": "MP5",
+          "Value": "+20"
+        },
+        {
+          "Description": "Crowd Control Reduction",
+          "Value": "+20%"
+        }
+      ],
+      "SecondaryDescription": "When you hit an enemy god with Hard Crowd Control, they drop a Spike on the ground that lasts for 7s. When you or an allied god pick up a spike, they gain a buff that causes their next ability to deal bonus damage equal to 3% of their Max HP. This effect lasts 5s and is doubled if you are the one who picks up the spike."
+    },
+    "ItemId": 23143,
+    "ItemTier": 3,
+    "Price": 1000,
+    "RestrictedRoles": "no restrictions",
+    "RootItemId": 23147,
+    "ShortDesc": "Hard Crowd Control an enemy to create a buff your team can pick up.",
+    "StartingItem": false,
+    "Type": "Item",
+    "itemIcon_URL": "https://webcdn.hirezstudios.com/smite/item-icons/manticores-spike.jpg",
+    "ret_msg": null
+  },
+  {
+    "ActiveFlag": "y",
+    "ChildItemId": 23148,
+    "DeviceName": "Griffonwing Earrings",
+    "Glyph": "n",
+    "IconId": 11038,
+    "ItemDescription": {
+      "Description": "Speed up your Basic Attacks at the cost of damage.",
+      "Menuitems": [
+        {
+          "Description": "Physical Power",
+          "Value": "+40"
+        },
+        {
+          "Description": "Magical Power",
+          "Value": "+60"
+        },
+        {
+          "Description": "Attack Speed",
+          "Value": "+25%"
+        },
+        {
+          "Description": "MP5",
+          "Value": "+15"
+        }
+      ],
+      "SecondaryDescription": "Your Basic Attack projectile speed is increased by 40%. Your Basic Attack damage is reduced by 15%."
+    },
+    "ItemId": 23146,
+    "ItemTier": 3,
+    "Price": 900,
+    "RestrictedRoles": "assassin,guardian,warrior",
+    "RootItemId": 23147,
+    "ShortDesc": "Speed up your Basic Attacks at the cost of damage",
+    "StartingItem": false,
+    "Type": "Item",
+    "itemIcon_URL": "https://webcdn.hirezstudios.com/smite/item-icons/griffonwing-earrings.jpg",
     "ret_msg": null
   }
 ]

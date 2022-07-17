@@ -193,7 +193,7 @@ def atalantas_bow(scenario: Scenario, _: God, build: Item):
 
 
 def deathbringer(__: Scenario, _: God, build: Item):
-    build.critical_strike_multiplier += 0.3
+    build.critical_strike_multiplier += 0.25
 
 
 def dominance(__: Scenario, _: God, build: Item):
@@ -265,7 +265,7 @@ def silverbranch_bow(__: Scenario, _: God, build: Item):
 
 def the_crusher(scenario: Scenario, _: God, build: Item):
     build.yellow_ability_damage += scenario.approx_ability_cnt * (
-        20 + 0.15 * build.physical_power
+        20 + 0.2 * build.physical_power
     )
 
 
